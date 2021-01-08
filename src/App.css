@@ -1,0 +1,79 @@
+body {
+  background-image: linear-gradient(
+    #de4b24,
+    #f67530,
+    #e7bd00,
+    #8cb582,
+    #90af9c,
+    #9d5d92,
+    #6b872b
+  );
+  font-family: 'Rubik', sans-serif;
+
+  height: 1000vh;
+  overflow-x: hidden;
+}
+
+nav {
+  align-items: flex-start;
+  background-color: rgba(166, 30, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-weight: 600;
+  justify-content: space-around;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+nav > div {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 12pt;
+}
+
+nav > div > a:hover {
+  background-color: rgba(166, 30, 0, 0.7);
+}
+
+nav a {
+  align-self: flex-end;
+  color: white;
+  font-size: 11pt;
+  padding: 10px 40px;
+
+  text-decoration: none;
+}
+
+#nameNav {
+  font-size: 14pt;
+  margin-right: 30vw;
+  position: relative;
+}
+
+#avoidContainer {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  top: 0;
+}
+
+@keyframes falling {
+  from {
+    top: -5%;
+  }
+  to {
+    top: 100%;
+  }
+}
+.movingObj {
+  animation-name: falling;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
