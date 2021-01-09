@@ -12,13 +12,13 @@ class Navbar extends React.Component {
   render() {
     return (
       <nav className='mainNav'>
-        <a href='/site/home' id='nameNav'>
+        <a href='/home' id='nameNav'>
           JANNA GOLIFF
         </a>
         <div>
-          <a href='/site/portfolio'>PORTFOLIO</a>
-          <a href='/site/about'>ABOUT</a>
-          <a href='/site/contact'>CONTACT</a>
+          <a href='/portfolio'>PORTFOLIO</a>
+          <a href='/about'>ABOUT</a>
+          <a href='/contact'>CONTACT</a>
         </div>
       </nav>
     );

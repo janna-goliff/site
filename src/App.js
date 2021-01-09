@@ -15,19 +15,19 @@ function App() {
     <div>
       <Router>
         <Switch>
-          <Route path='/site/home'>
+          <Route path='/home'>
             <Home />
           </Route>
-          <Route path='/site/portfolio'>
+          <Route path='/portfolio'>
             <Portfolio />
           </Route>
-          <Route path='/site/about'>
+          <Route path='/about'>
             <About />
           </Route>
-          <Route path='/site/contact'>
+          <Route path='/contact'>
             <Contact />
           </Route>
-          <Route path='/site'>
+          <Route path='/'>
             <Launch />
           </Route>
         </Switch>

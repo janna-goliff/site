@@ -10,7 +10,7 @@ class Launch extends React.Component {
 
   handleButtonClick() {
     this.props.history.push({
-      pathname: '/site/home',
+      pathname: '/home',
     });
   }
 
