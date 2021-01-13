@@ -1,26 +1,33 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import './App.css';
+import './Navbar.css';
 
 class Navbar extends React.Component {
-  //   constructor(props) {
-  //     super(props);
-  //   }
-
-  componentDidMount() {}
-
   render() {
     return (
-      <nav className='mainNav'>
-        <a href='/home' id='nameNav'>
-          JANNA GOLIFF
-        </a>
-        <div>
-          <a href='/portfolio'>PORTFOLIO</a>
-          <a href='/about'>ABOUT</a>
-          <a href='/contact'>CONTACT</a>
-        </div>
-      </nav>
+      <div>
+        <nav className='mainNav'>
+          <a href='/home' id='nameNav'>
+            JANNA GOLIFF
+          </a>
+          <div id='dropdownWrapper'>
+            <div id='dropdownMain' className='navoption'>
+              <p id='portfolioNav'>PORTFOLIO</p>
+              <div id='dropdownContent'>
+                <a>PROJECTS</a>
+                <a>POSTERS</a>
+                <a>TRADITIONAL</a>
+              </div>
+            </div>
+            <a href='/about' className='navoption singleoption'>
+              ABOUT
+            </a>
+            <a href='/contact' className='navoption singleoption'>
+              CONTACT
+            </a>
+          </div>
+        </nav>
+      </div>
     );
   }
 }

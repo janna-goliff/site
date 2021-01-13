@@ -1,0 +1,31 @@
+.colorFormInner {
+  border-radius: 20px;
+  height: 20px;
+
+  width: 20px;
+  border: 1.5px solid grey;
+}
+
+.colorFormOutline {
+  align-items: center;
+  border-radius: 30px;
+  display: flex;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  height: 30px;
+  justify-content: center;
+  margin: 5px;
+  width: 30px;
+  border: 1.5px solid grey;
+}
+
+#colorFormWrapper {
+  background-color: white;
+  border-radius: 20px 0 0 0;
+  display: flex;
+  /* padding: 10px; */
+  padding: 10px 0 10px 10px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+}

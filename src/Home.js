@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import './App.css';
 import Navbar from './Navbar.js';
 import ElementAvoid from './ElementAvoid.js';
+import ColorController from './ColorController';
 
 class Home extends React.Component {
   //   constructor(props) {
@@ -16,6 +17,7 @@ class Home extends React.Component {
       <div>
         <Navbar />
         <p>HOME</p>
+
         <div id='avoidContainer'>
           {/* <ElementAvoid
             height='20px'
@@ -30,6 +32,7 @@ class Home extends React.Component {
             left='60vw'
           /> */}
         </div>
+        <ColorController />
       </div>
     );
   }
