@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import './App.css';
 
-class Contact extends React.Component {
+class PortfolioProjects extends React.Component {
   //   constructor(props) {
   //     super(props);
   //   }
@@ -12,10 +12,10 @@ class Contact extends React.Component {
   render() {
     return (
       <div>
-        <p>CONTACT</p>
+        <p>portfolio</p>
       </div>
     );
   }
 }
 
-export default withRouter(Contact);
+export default withRouter(PortfolioProjects);

@@ -13,7 +13,6 @@ class About extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
         <p>ABOUT</p>
       </div>
     );

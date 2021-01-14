@@ -10,6 +10,7 @@ class ColorController extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
     this.handleMouseLeave = this.handleMouseLeave.bind(this);
+    this.handleColorChange = this.handleColorChange.bind(this);
   }
 
   handleClick(e, num) {
@@ -18,18 +19,6 @@ class ColorController extends React.Component {
       selected: num,
     });
     this.props.sendData(this.state.selected);
-    // console.log('was clicked.');
-    // console.log(num);
-    // for (let i = 0; i < colors.length; i++) {
-    //   const currColorSelector = document.getElementById('colorOuter' + `${i}`);
-    //   if (i === num) {
-    //     // changes to correct color
-    //     currColorSelector.style.backgroundColor = colors[i];
-    //   } else {
-    //     // resets all others
-    //     currColorSelector.style.backgroundColor = 'white';
-    //   }
-    // }
   }
 
   handleMouseEnter(e, num) {
@@ -44,8 +33,14 @@ class ColorController extends React.Component {
     currColorSelector.style.boxShadow = `0 2px 4px 0 rgba(0, 0, 0, 0.15)`;
   }
 
+  handleColorChange() {
+    document.getElementById('outerWrapper').style.backgroundColor =
+      colors[this.props.color];
+  }
+
   componentDidMount() {
     const outerWrapper = document.getElementById('outerWrapper');
+    this.handleColorChange();
     // outerWrapper.style.backgroundColor = colors[this.state.selected];
     for (let i = 0; i < colors.length; i++) {
       const currColorSelector = document.getElementById('colorOuter' + `${i}`);
@@ -64,7 +59,7 @@ class ColorController extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log(`${this.state.selected}`);
+    this.handleColorChange();
   }
 
   render() {

@@ -1,0 +1,24 @@
+.displayColumn {
+  display: flex;
+  flex-direction: column;
+  margin: 70px 8px;
+}
+
+.displayColumn > div {
+  margin-bottom: 13px;
+}
+
+#mainWrapper {
+  background-color: red;
+  display: inline-block;
+}
+
+.outerWrapperPieces {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
