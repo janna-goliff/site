@@ -1,3 +1,30 @@
+hr {
+  border: 3px solid white;
+  height: 10px;
+  margin: 0;
+  width: 70vw;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12pt;
+  font-weight: 800;
+  padding: 5px 15px;
+  margin: 5px;
+}
+
+button:hover {
+  box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+h2 {
+  font-weight: 900;
+}
 .displayColumn {
   display: flex;
   flex-direction: column;
@@ -8,9 +35,67 @@
   margin-bottom: 13px;
 }
 
+.individualProject {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .stacked {
+  background-color: white;
+  display: inline-block;
+  position: relative;
+  width: 40vw;
+} */
+
 #mainWrapper {
   background-color: red;
   display: inline-block;
+}
+
+#projectContainer {
+  margin-bottom: 30px;
+  width: 30vw;
+}
+
+#projectHeader {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  width: 100vw;
+}
+
+.projectIntro {
+  background-color: chartreuse;
+  margin: 0 10vw;
+  position: relative;
+  width: 60vw;
+  height: 40vh;
+}
+
+.projectName {
+  margin: 30px;
+}
+
+.one {
+  left: 7vw;
+  top: 0;
+  /* z-index: 10; */
+}
+
+.two {
+  background-color: aqua;
+  left: 40px;
+  top: 5vh;
+  /* z-index: 11; */
+}
+
+.three {
+  background-color: blueviolet;
+  right: 7vw;
+  top: 10vh;
+  /* z-index: 13; */
 }
 
 .outerWrapperPieces {

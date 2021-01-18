@@ -1,7 +1,36 @@
 import React from 'react';
 import './App.css';
 import './Navbar.css';
-import { colors } from './colors.js';
+import { colors, colorsDark } from './colors.js';
+
+function updateNavbarColors(num) {
+  // gets reference number for current color of page
+  const currColorNum = num; //this.props.color;
+  // makes dropdown content have a color relational to background color
+  const dropdownContentLinks = document.getElementById('dropdownContent')
+    .childNodes;
+  for (let i = 0; i < dropdownContentLinks.length; i++) {
+    dropdownContentLinks[i].style.backgroundColor = colors[currColorNum];
+    dropdownContentLinks[i].addEventListener('mouseenter', (e) => {
+      e.target.style.backgroundColor = colorsDark[currColorNum];
+    });
+    dropdownContentLinks[i].addEventListener('mouseleave', (e) => {
+      e.target.style.backgroundColor = colors[currColorNum];
+    });
+  }
+
+  // makes navoptions have relational color hover state
+  const navoptions = document.getElementsByClassName('navoption');
+  for (let i = 0; i < navoptions.length; i++) {
+    navoptions[i].style.backgroundColor = colors[currColorNum];
+    navoptions[i].addEventListener('mouseenter', (e) => {
+      e.target.style.backgroundColor = colorsDark[currColorNum];
+    });
+    navoptions[i].addEventListener('mouseleave', (e) => {
+      e.target.style.backgroundColor = colors[currColorNum];
+    });
+  }
+}
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -12,6 +41,7 @@ class Navbar extends React.Component {
   handleColorChange() {
     document.getElementById('navbarOuter').style.backgroundColor =
       colors[this.props.color];
+    updateNavbarColors(this.props.color);
   }
 
   componentDidUpdate() {
@@ -21,7 +51,6 @@ class Navbar extends React.Component {
   componentDidMount() {
     this.handleColorChange();
   }
-
   render() {
     return (
       <div>
@@ -35,15 +64,15 @@ class Navbar extends React.Component {
               <div id='dropdownContent'>
                 <a href='/portfolio/projects'>PROJECTS</a>
                 <a href='/portfolio/posters'>POSTERS</a>
-                <a href='/portfolio/projects'>TRADITIONAL</a>
+                <a href='/portfolio/traditional'>TRADITIONAL</a>
               </div>
             </div>
             <a href='/about' className='navoption singleoption'>
               ABOUT
             </a>
-            <a href='/contact' className='navoption singleoption'>
+            {/* <a href='/contact' className='navoption singleoption'>
               CONTACT
-            </a>
+            </a> */}
           </div>
         </nav>
       </div>

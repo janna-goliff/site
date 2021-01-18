@@ -24,13 +24,15 @@ class ColorController extends React.Component {
   handleMouseEnter(e, num) {
     e.preventDefault();
     const currColorSelector = document.getElementById('colorOuter' + `${num}`);
-    currColorSelector.style.boxShadow = `0 0 2px 2px ${colorsRGBA[num]}`;
+    //currColorSelector.style.boxShadow = `0 0 2px 2px ${colorsRGBA[num]}`;
+    currColorSelector.style.border = '3px solid white';
   }
 
   handleMouseLeave(e, num) {
     e.preventDefault();
     const currColorSelector = document.getElementById('colorOuter' + `${num}`);
-    currColorSelector.style.boxShadow = `0 2px 4px 0 rgba(0, 0, 0, 0.15)`;
+    //currColorSelector.style.boxShadow = `0 2px 4px 0 rgba(0, 0, 0, 0.15)`;
+    currColorSelector.style.border = `3px solid ${colors[num]}`;
   }
 
   handleColorChange() {
@@ -45,6 +47,7 @@ class ColorController extends React.Component {
     for (let i = 0; i < colors.length; i++) {
       const currColorSelector = document.getElementById('colorOuter' + `${i}`);
       currColorSelector.style.backgroundColor = colors[i];
+      currColorSelector.style.border = `3px solid ${colors[i]}`;
 
       currColorSelector.addEventListener('click', (e) =>
         this.handleClick(e, i)

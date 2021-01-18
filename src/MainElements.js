@@ -22,17 +22,27 @@ class MainElements extends React.Component {
       selected: num,
     });
     document.body.style.backgroundColor = colors[num];
-    const list = document.getElementsByTagName('A');
+    // changes link colors depending on color selected
+    const listA = document.getElementsByTagName('A');
+    const listButtons = document.getElementsByTagName('BUTTON');
     if (num === 0) {
+      // if a light background is chosen, make text darker
       document.body.style.color = '#4d4d4d';
-
-      for (let i = 0; i < list.length; i++) {
-        list[i].style.color = '#4d4d4d';
+      for (let i = 0; i < listA.length; i++) {
+        listA[i].style.color = '#4d4d4d';
+      }
+      for (let i = 0; i < listButtons.length; i++) {
+        listButtons[i].style.color = '#4d4d4d';
+        listButtons[i].style.borderColor = '#4d4d4d';
       }
     } else {
       document.body.style.color = 'white';
-      for (let i = 0; i < list.length; i++) {
-        list[i].style.color = 'white';
+      for (let i = 0; i < listA.length; i++) {
+        listA[i].style.color = 'white';
+      }
+      for (let i = 0; i < listButtons.length; i++) {
+        listButtons[i].style.color = 'white';
+        listButtons[i].style.borderColor = 'white';
       }
     }
   }

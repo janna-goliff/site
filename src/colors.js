@@ -8,6 +8,16 @@ const colors = [
   '#8E2571',
 ];
 
+const colorsDark = [
+  '#bdbdbd',
+  '#B90F0F',
+  '#D76904',
+  '#CC9404',
+  '#2A5633',
+  '#0C2A64',
+  '#620C4A',
+];
+
 const colorsRGBA = [
   'rgba(232, 232, 232, 0.45)',
   'rgba(231, 51, 51, 0.45)',
@@ -31,4 +41,4 @@ const motion = [
   'https://i.imgur.com/UvHFbLT.gif', // jumping frog
   'https://i.imgur.com/hkldbYH.gif', // self portrait
 ];
-export { colors, colorsRGBA, pieces, motion };
+export { colors, colorsDark, colorsRGBA, pieces, motion };
