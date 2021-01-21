@@ -3,10 +3,40 @@ import '../App.css';
 import './ToggleLightDark.css';
 import { colors, colorsDark, colorsRGBA } from '../colors.js';
 
+function toggle() {
+  const lightMode = localStorage.getItem('lightMode');
+  if (lightMode === null || lightMode === 'false') {
+    localStorage.setItem('lightMode', 'true');
+  } else {
+    localStorage.setItem('lightMode', 'false');
+  }
+
+  // console.log('local storage toggle');
+  // console.log(localStorage);
+}
+
+function updateSwitch(lightMode) {
+  const toggleBackground = document.getElementsByClassName(
+    'toggleBackground'
+  )[0];
+  const toggleSwitch = document.getElementsByClassName('toggleSwitch')[0];
+  if (/*this.state.lightMode*/ lightMode || lightMode === null) {
+    toggleSwitch.style.float = 'left';
+    toggleSwitch.style.backgroundColor = 'white';
+    toggleSwitch.innerHTML = '☀️';
+    toggleBackground.style.backgroundColor = '#c4c4c4';
+  } else {
+    toggleSwitch.style.float = 'right';
+    toggleSwitch.style.backgroundColor = '#656565';
+    toggleSwitch.innerHTML = '🌙';
+    toggleBackground.style.backgroundColor = 'black';
+  }
+}
+
 class ToggleLightDark extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { lightMode: true };
+    //this.state = { lightMode: true };
     this.handleClick = this.handleClick.bind(this);
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
     this.handleMouseLeave = this.handleMouseLeave.bind(this);
@@ -15,25 +45,15 @@ class ToggleLightDark extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    this.setState({
-      lightMode: !this.state.lightMode,
-    });
-    const modeNum = this.state.lightMode ? 0 : 1;
-    this.props.sendData(modeNum);
-    console.log('clicked!');
-    const toggleBackground = document.getElementsByClassName(
-      'toggleBackground'
-    )[0];
-    const toggleSwitch = document.getElementsByClassName('toggleSwitch')[0];
-    if (this.state.lightMode) {
-      toggleSwitch.style.float = 'left';
-      toggleSwitch.style.backgroundColor = 'white';
-      toggleBackground.style.backgroundColor = '#c4c4c4';
-    } else {
-      toggleSwitch.style.float = 'right';
-      toggleSwitch.style.backgroundColor = '#656565';
-      toggleBackground.style.backgroundColor = 'black';
+    toggle();
+    const lightModeString = localStorage.getItem('lightMode');
+    let lightMode = false;
+    if (lightModeString === 'true') {
+      lightMode = true;
     }
+
+    this.props.update();
+    updateSwitch(lightMode);
   }
 
   handleMouseEnter(e, num) {
@@ -61,27 +81,23 @@ class ToggleLightDark extends React.Component {
       'toggleBackground'
     )[0];
     toggleBackground.addEventListener('click', (e) => this.handleClick(e));
-    // this.handleColorChange();
-    // // outerWrapper.style.backgroundColor = colors[this.state.selected];
-    // for (let i = 0; i < colors.length; i++) {
-    //   const currColorSelector = document.getElementById('colorOuter' + `${i}`);
-    //   currColorSelector.style.backgroundColor = colors[i];
-    //   currColorSelector.style.border = `3px solid ${colors[i]}`;
 
-    //   currColorSelector.addEventListener('click', (e) =>
-    //     this.handleClick(e, i)
-    //   );
-    //   currColorSelector.addEventListener('mouseenter', (e) =>
-    //     this.handleMouseEnter(e, i)
-    //   );
-    //   currColorSelector.addEventListener('mouseleave', (e) =>
-    //     this.handleMouseLeave(e, i)
-    //   );
-    // }
+    let modeNum = this.props.currMode;
+    let mode = false;
+    if (modeNum === 0) {
+      mode = true;
+    }
+    updateSwitch(mode);
   }
 
   componentDidUpdate() {
     this.handleColorChange();
+    let modeNum = this.props.currMode;
+    let mode = false;
+    if (modeNum === 0) {
+      mode = true;
+    }
+    updateSwitch(mode);
   }
 
   render() {

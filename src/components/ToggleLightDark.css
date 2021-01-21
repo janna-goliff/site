@@ -14,12 +14,19 @@
   width: 48px;
 }
 
+.toggleBackground:hover {
+  cursor: pointer;
+}
+
 .toggleSwitch {
   background-color: white;
   border-radius: 25px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
   float: left;
   height: 25px;
   margin: 2.5px;
+  text-align: center;
   transition: float 2s;
   width: 25px;
 }

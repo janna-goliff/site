@@ -15,7 +15,7 @@ class Piece extends React.Component {
 
   handleClickPiece(e) {
     e.preventDefault();
-    console.log('clicked pic!');
+    // console.log('clicked pic!');
     // adds overlay
     const newDiv = document.createElement('div');
     newDiv.setAttribute('id', 'divOverlay');
@@ -64,7 +64,7 @@ class Piece extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log(`${this.state.selected}`);
+    // console.log(`${this.state.selected}`);
   }
 
   render() {

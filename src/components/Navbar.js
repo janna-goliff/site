@@ -7,8 +7,8 @@ function updateNavbarColors(modeNum) {
   // gets reference number for current color of page
   //const currColorNum = num; //this.props.color;
   // makes dropdown content have a color relational to background color
-  console.log('inside update navbar colors');
-  console.log(modeNum);
+  // console.log('inside update navbar colors');
+  // console.log(modeNum);
   const dropdownContentLinks = document.getElementById('dropdownContent')
     .childNodes;
   for (let i = 0; i < dropdownContentLinks.length; i++) {
@@ -49,7 +49,7 @@ class Navbar extends React.Component {
 
   componentDidUpdate() {
     this.handleColorChange();
-    console.log('navbar updated');
+    // console.log('navbar updated');
   }
 
   componentDidMount() {

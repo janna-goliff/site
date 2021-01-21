@@ -14,39 +14,19 @@ import { colors, colorsDark } from './colors';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
-  function getDataFromMainElements(mode) {
-    console.log('sent data to app level');
-    document.body.style.backgroundColor = colors[mode];
-    console.log(`background color should be: ${colors[mode]}`);
-    // changes link colors depending on color selected
-    const listA = document.getElementsByTagName('A');
-    const listButtons = document.getElementsByTagName('BUTTON');
-    if (mode === 0) {
-      // if a light background is chosen, make text darker
-      document.body.style.color = '#656565';
-      for (let i = 0; i < listA.length; i++) {
-        listA[i].style.color = '#656565';
-      }
-      for (let i = 0; i < listButtons.length; i++) {
-        listButtons[i].style.color = '#656565';
-        listButtons[i].style.borderColor = '#656565';
-      }
-    } else {
-      document.body.style.color = '#C4C4C4';
-      for (let i = 0; i < listA.length; i++) {
-        listA[i].style.color = '#C4C4C4';
-      }
-      for (let i = 0; i < listButtons.length; i++) {
-        listButtons[i].style.color = '#C4C4C4';
-        listButtons[i].style.borderColor = '#C4C4C4';
-      }
-    }
-  }
+  function getDataFromMainElements() {}
 
+  // if (boolean === null) {
+  //   localStorage.setItem('boolean', true);
+  // } else {
+  //   localStorage.setItem('boolean', !boolean);
+  // }
   // return <div className='App' onLoad={onLoad()}></div>;
+  // sendDataToApp={getDataFromMainElements}
+
   return (
     <div>
-      <MainElements sendDataToApp={getDataFromMainElements} />
+      <MainElements />
       <Router>
         <Switch>
           {/* <Route path='/home'>
