@@ -1,0 +1,25 @@
+.outerWrapper {
+  padding: 10px 20px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.toggleBackground {
+  align-items: center;
+  background-color: #c4c4c4;
+  border-radius: 30px;
+  height: 30px;
+  width: 48px;
+}
+
+.toggleSwitch {
+  background-color: white;
+  border-radius: 25px;
+  float: left;
+  height: 25px;
+  margin: 2.5px;
+  transition: float 2s;
+  width: 25px;
+}

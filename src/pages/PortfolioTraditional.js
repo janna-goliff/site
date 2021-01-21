@@ -1,9 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import './App.css';
-import Navbar from './Navbar.js';
+import '../App.css';
 
-class Portfolio extends React.Component {
+class PortfolioTraditional extends React.Component {
   //   constructor(props) {
   //     super(props);
   //   }
@@ -13,11 +12,10 @@ class Portfolio extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
         <p>portfolio</p>
       </div>
     );
   }
 }
 
-export default withRouter(Portfolio);
+export default withRouter(PortfolioTraditional);

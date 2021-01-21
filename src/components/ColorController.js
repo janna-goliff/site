@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
 import './ColorController.css';
-import { colors, colorsRGBA } from './colors.js';
+import { colors, colorsRGBA } from '../colors.js';
 
 class ColorController extends React.Component {
   constructor(props) {

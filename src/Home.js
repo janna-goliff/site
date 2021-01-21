@@ -1,10 +1,10 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import './App.css';
-import Navbar from './Navbar.js';
+import Navbar from './components/Navbar.js';
 // import ElementAvoid from './ElementAvoid.js';
-import ColorController from './ColorController';
-import Piece from './Piece';
+import ColorController from './components/ColorController';
+import Piece from './components/Piece';
 
 import { colors, colorsRGBA, pieces } from './colors.js';
 

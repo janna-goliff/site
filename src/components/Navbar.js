@@ -1,33 +1,35 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
 import './Navbar.css';
-import { colors, colorsDark } from './colors.js';
+import { colors, colorsDark } from '../colors.js';
 
-function updateNavbarColors(num) {
+function updateNavbarColors(modeNum) {
   // gets reference number for current color of page
-  const currColorNum = num; //this.props.color;
+  //const currColorNum = num; //this.props.color;
   // makes dropdown content have a color relational to background color
+  console.log('inside update navbar colors');
+  console.log(modeNum);
   const dropdownContentLinks = document.getElementById('dropdownContent')
     .childNodes;
   for (let i = 0; i < dropdownContentLinks.length; i++) {
-    dropdownContentLinks[i].style.backgroundColor = colors[currColorNum];
+    dropdownContentLinks[i].style.backgroundColor = colors[modeNum];
     dropdownContentLinks[i].addEventListener('mouseenter', (e) => {
-      e.target.style.backgroundColor = colorsDark[currColorNum];
+      e.target.style.backgroundColor = colorsDark[modeNum];
     });
     dropdownContentLinks[i].addEventListener('mouseleave', (e) => {
-      e.target.style.backgroundColor = colors[currColorNum];
+      e.target.style.backgroundColor = colors[modeNum];
     });
   }
 
   // makes navoptions have relational color hover state
   const navoptions = document.getElementsByClassName('navoption');
   for (let i = 0; i < navoptions.length; i++) {
-    navoptions[i].style.backgroundColor = colors[currColorNum];
+    navoptions[i].style.backgroundColor = colors[modeNum];
     navoptions[i].addEventListener('mouseenter', (e) => {
-      e.target.style.backgroundColor = colorsDark[currColorNum];
+      e.target.style.backgroundColor = colorsDark[modeNum];
     });
     navoptions[i].addEventListener('mouseleave', (e) => {
-      e.target.style.backgroundColor = colors[currColorNum];
+      e.target.style.backgroundColor = colors[modeNum];
     });
   }
 }
@@ -39,13 +41,15 @@ class Navbar extends React.Component {
   }
 
   handleColorChange() {
+    let modeNum = this.props.color ? 1 : 0;
     document.getElementById('navbarOuter').style.backgroundColor =
-      colors[this.props.color];
-    updateNavbarColors(this.props.color);
+      colors[modeNum];
+    updateNavbarColors(modeNum);
   }
 
   componentDidUpdate() {
     this.handleColorChange();
+    console.log('navbar updated');
   }
 
   componentDidMount() {

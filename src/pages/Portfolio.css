@@ -7,9 +7,9 @@ hr {
 
 button {
   background-color: rgba(0, 0, 0, 0);
-  border: 2px solid white;
+  border: 2px solid #656565;
   border-radius: 20px;
-  color: white;
+  color: #656565;
   font-family: 'Raleway', sans-serif;
   font-size: 12pt;
   font-weight: 800;
@@ -18,7 +18,7 @@ button {
 }
 
 button:hover {
-  box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 2px 2px rgba(101, 101, 101, 0.5);
   cursor: pointer;
 }
 
@@ -49,7 +49,7 @@ h2 {
 } */
 
 #mainWrapper {
-  background-color: red;
+  /* background-color: red; */
   display: inline-block;
 }
 

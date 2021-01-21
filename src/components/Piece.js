@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
 import './Piece.css';
-import { colors, colorsRGBA } from './colors.js';
+import { colors, colorsRGBA } from '../colors.js';
 
 class Piece extends React.Component {
   constructor(props) {

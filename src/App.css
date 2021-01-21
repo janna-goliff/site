@@ -1,6 +1,6 @@
 body {
-  background-color: #43704d;
-  color: white;
+  background-color: #f6f6f6;
+  color: #656565;
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
   overflow-x: hidden;
@@ -9,7 +9,7 @@ body {
 }
 
 a {
-  color: white;
+  color: #656565;
   text-decoration: none;
 }
 /*

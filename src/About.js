@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import './App.css';
-import Navbar from './Navbar.js';
+import Navbar from './components/Navbar.js';
 
 class About extends React.Component {
   //   constructor(props) {

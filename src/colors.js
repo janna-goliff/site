@@ -1,22 +1,6 @@
-const colors = [
-  '#e8e8e8',
-  '#E73333',
-  '#FB881E',
-  '#E5BA21',
-  '#43704D',
-  '#25498E',
-  '#8E2571',
-];
+const colors = ['#f6f6f6', '#2e2e2e'];
 
-const colorsDark = [
-  '#bdbdbd',
-  '#B90F0F',
-  '#D76904',
-  '#CC9404',
-  '#2A5633',
-  '#0C2A64',
-  '#620C4A',
-];
+const colorsDark = ['#c4c4c4', '#1e1e1e'];
 
 const colorsRGBA = [
   'rgba(232, 232, 232, 0.45)',
