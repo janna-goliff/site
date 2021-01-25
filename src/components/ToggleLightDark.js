@@ -103,7 +103,6 @@ class ToggleLightDark extends React.Component {
   render() {
     return (
       <div className='outerWrapper'>
-        <p className='colorFormLabel'>mode</p>
         <div className='toggleBackground'>
           <div className='toggleSwitch'></div>
         </div>

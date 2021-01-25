@@ -107,3 +107,52 @@ h2 {
   left: 0;
   width: 100vw;
 }
+
+.projectContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectContainer > * {
+  padding: 70px;
+}
+
+.projectTwoElements {
+  display: flex;
+  flex-direction: row;
+}
+
+.projectTwoElements > * {
+  padding: 10px;
+}
+
+.projectIntroMainText {
+  margin: auto;
+  width: 45vw;
+}
+
+.phoneGif {
+  border-radius: 50px;
+  height: 500px;
+  object-fit: cover;
+  width: 270px;
+}
+
+.projectGrid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto;
+}
+
+.projectGrid > * {
+  width: 12vw;
+  height: auto;
+}
+
+.fullSpreadImage {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100vw;
+  height: auto;
+}

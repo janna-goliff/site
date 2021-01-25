@@ -38,3 +38,8 @@ a {
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
+
+.bumper {
+  height: 50px;
+  width: 100vw;
+}
