@@ -20,14 +20,14 @@ function updateSwitch(lightMode) {
     'toggleBackground'
   )[0];
   const toggleSwitch = document.getElementsByClassName('toggleSwitch')[0];
-  if (/*this.state.lightMode*/ lightMode || lightMode === null) {
+  if (lightMode || lightMode === null) {
     toggleSwitch.style.float = 'left';
     toggleSwitch.style.backgroundColor = 'white';
     toggleSwitch.innerHTML = '☀️';
-    toggleBackground.style.backgroundColor = '#c4c4c4';
+    toggleBackground.style.backgroundColor = '#e3e3e3';
   } else {
     toggleSwitch.style.float = 'right';
-    toggleSwitch.style.backgroundColor = '#656565';
+    toggleSwitch.style.backgroundColor = '#131313';
     toggleSwitch.innerHTML = '🌙';
     toggleBackground.style.backgroundColor = 'black';
   }

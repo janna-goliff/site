@@ -1,6 +1,10 @@
-const colors = ['#f6f6f6', '#2e2e2e'];
+const colors = ['#fafafa', '#2e2e2e'];
 
-const colorsDark = ['#c4c4c4', '#1e1e1e'];
+const colorsDark = ['#ea5455', '#7a2122'];
+
+const textColorHover = ['#fafafa', '#131313'];
+
+const textColorHoverRet = ['#131313', '#fafafa'];
 
 const colorsRGBA = [
   'rgba(232, 232, 232, 0.45)',
@@ -25,4 +29,12 @@ const motion = [
   'https://i.imgur.com/UvHFbLT.gif', // jumping frog
   'https://i.imgur.com/hkldbYH.gif', // self portrait
 ];
-export { colors, colorsDark, colorsRGBA, pieces, motion };
+export {
+  colors,
+  colorsDark,
+  textColorHover,
+  textColorHoverRet,
+  colorsRGBA,
+  pieces,
+  motion,
+};

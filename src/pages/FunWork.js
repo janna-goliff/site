@@ -5,7 +5,7 @@ import { colors, pieces, motion } from '../colors.js';
 import Piece from '../components/Piece.js';
 import './Portfolio.css';
 
-class PortfolioPosters extends React.Component {
+class LogoDesign1 extends React.Component {
   //   constructor(props) {
   //     super(props);
   //   }
@@ -41,4 +41,4 @@ class PortfolioPosters extends React.Component {
   }
 }
 
-export default withRouter(PortfolioPosters);
+export default withRouter(LogoDesign1);

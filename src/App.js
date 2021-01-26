@@ -5,9 +5,10 @@ import About from './About.js';
 import Contact from './Contact.js';
 import Home from './Home.js';
 import Portfolio from './pages/Portfolio.js';
-import PortfolioProjects from './pages/PortfolioProjects.js';
-import PortfolioPosters from './pages/PortfolioPosters.js';
-import PortfolioTraditional from './pages/PortfolioTraditional.js';
+import IdentityDesign1 from './pages/IdentityDesign1.js';
+import LogoDesign1 from './pages/LogoDesign1.js';
+import AppDesign1 from './pages/AppDesign1.js';
+import FunWork from './pages/FunWork.js';
 import ElementAvoid from './ElementAvoid.js';
 
 import { colors, colorsDark } from './colors';
@@ -32,17 +33,17 @@ function App() {
           {/* <Route path='/home'>
             <Home />
           </Route> */}
-          <Route path='/portfolio/projects'>
-            <PortfolioProjects />
+          <Route path='/portfolio/biennialredesign'>
+            <IdentityDesign1 />
           </Route>
-          <Route path='/portfolio/posters'>
-            <PortfolioPosters />
+          <Route path='/portfolio/logo'>
+            <LogoDesign1 />
           </Route>
-          <Route path='/portfolio/traditional'>
-            <PortfolioTraditional />
+          <Route path='/portfolio/eventtracker'>
+            <AppDesign1 />
           </Route>
-          <Route path='/portfolio'>
-            <Portfolio />
+          <Route path='/funwork'>
+            <FunWork />
           </Route>
           <Route path='/about'>
             <About />

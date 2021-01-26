@@ -7,9 +7,9 @@ hr {
 
 button {
   background-color: rgba(0, 0, 0, 0);
-  border: 2px solid #656565;
+  border: 2px solid #131313;
   border-radius: 20px;
-  color: #656565;
+  color: #131313;
   font-family: 'Raleway', sans-serif;
   font-size: 12pt;
   font-weight: 800;
@@ -55,7 +55,7 @@ h2 {
 
 #projectContainer {
   margin-bottom: 30px;
-  width: 30vw;
+  /* width: 30vw; */
 }
 
 #projectHeader {
@@ -64,6 +64,11 @@ h2 {
   flex-direction: column;
   margin-top: 10vh;
   width: 100vw;
+}
+
+.inlineLink {
+  text-decoration: underline solid black;
+  font-size: 12pt;
 }
 
 .projectIntro {
@@ -128,15 +133,17 @@ h2 {
 }
 
 .projectIntroMainText {
+  font-weight: 600;
   margin: auto;
+  margin-left: 30px;
   width: 45vw;
 }
 
 .phoneGif {
   border-radius: 50px;
-  height: 500px;
+  height: 600px;
   object-fit: cover;
-  width: 270px;
+  width: 330px;
 }
 
 .projectGrid {

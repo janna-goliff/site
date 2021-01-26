@@ -1,6 +1,6 @@
 body {
-  background-color: #f6f6f6;
-  color: #656565;
+  background-color: #fafafa;
+  color: #131313;
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
   overflow-x: hidden;
@@ -9,7 +9,7 @@ body {
 }
 
 a {
-  color: #656565;
+  color: #131313;
   text-decoration: none;
 }
 /*
@@ -40,6 +40,6 @@ a {
 }
 
 .bumper {
-  height: 50px;
+  height: 78px;
   width: 100vw;
 }

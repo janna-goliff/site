@@ -30,24 +30,27 @@ class MainElements extends React.Component {
     // changes link colors depending on color selected
     const listA = document.getElementsByTagName('A');
     const listButtons = document.getElementsByTagName('BUTTON');
+    const line = document.getElementById('line');
     if (mode === 0) {
       // if a light background is chosen, make text darker
-      document.body.style.color = '#656565';
+      document.body.style.color = '#131313';
+      line.style.backgroundColor = '#d7d7d7';
       for (let i = 0; i < listA.length; i++) {
-        listA[i].style.color = '#656565';
+        listA[i].style.color = '#131313';
       }
       for (let i = 0; i < listButtons.length; i++) {
-        listButtons[i].style.color = '#656565';
-        listButtons[i].style.borderColor = '#656565';
+        listButtons[i].style.color = '#131313';
+        listButtons[i].style.borderColor = '#131313';
       }
     } else {
-      document.body.style.color = '#C4C4C4';
+      document.body.style.color = '#e3e3e3';
+      line.style.backgroundColor = '#525252';
       for (let i = 0; i < listA.length; i++) {
-        listA[i].style.color = '#C4C4C4';
+        listA[i].style.color = '#e3e3e3';
       }
       for (let i = 0; i < listButtons.length; i++) {
-        listButtons[i].style.color = '#C4C4C4';
-        listButtons[i].style.borderColor = '#C4C4C4';
+        listButtons[i].style.color = '#e3e3e3';
+        listButtons[i].style.borderColor = '#e3e3e3';
       }
     }
   }
