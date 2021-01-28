@@ -22,10 +22,10 @@ class AppDesign1 extends React.Component {
               className='phoneGif'
             />
             <p className='projectIntroMainText'>
-              EVENT TRACKER: A conceptual project and design exercise using
-              Figma to mock behavior for a college event tracking app. I was
-              inspired by my own need of managing the constant flood of events
-              coming from my university.
+              A conceptual project and design exercise using Figma to mock
+              behavior for a college event tracking app. I was inspired by my
+              own need of managing the constant flood of events coming from my
+              university.
               <br />
               <br />
               See the Figma project{' '}
@@ -38,7 +38,7 @@ class AppDesign1 extends React.Component {
               .
             </p>
           </div>
-          <div className='projectTwoElements'>
+          {/* <div className='projectTwoElements'>
             <div className='projectGrid'>
               <img src='https://i.imgur.com/1UVtb1m.png' alt='image mockup 1' />
               <img src='https://i.imgur.com/1UVtb1m.png' alt='image mockup 1' />
@@ -48,7 +48,7 @@ class AppDesign1 extends React.Component {
               <img src='https://i.imgur.com/1UVtb1m.png' alt='image mockup 1' />
             </div>
             <p className='projectIntroMainText'>filler text</p>
-          </div>
+          </div> */}
           <img
             src='https://i.imgur.com/PtaubZ6.png'
             alt='final compilation of event tracker'

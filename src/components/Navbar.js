@@ -83,7 +83,7 @@ class Navbar extends React.Component {
             <div id='dropdownMain' className='navoption'>
               <p id='portfolioNav'>PORTFOLIO</p>
               <div id='dropdownContent'>
-                <a href='/portfolio/biennialredesign'>FULL IDENTITY</a>
+                <a href='/portfolio/biennialredesign'>IDENTITY REDESIGN</a>
                 <a href='/portfolio/logo'>LOGO</a>
                 <a href='/portfolio/eventtracker'>APP DESIGN</a>
               </div>

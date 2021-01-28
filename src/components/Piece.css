@@ -25,15 +25,22 @@ img {
 
 .imageOverlayDisplay {
   align-items: center;
+  color: white;
   display: flex;
   height: 100%;
   justify-content: center;
 }
 
+.imageOverlayDisplay > p {
+  margin: 20px;
+}
+
 .pieceDescription {
+  color: white;
   display: none;
   position: absolute;
   margin: 20px;
+  width: 30vw;
 }
 
 #mainPieceWrapper {
