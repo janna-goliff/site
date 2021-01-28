@@ -12,6 +12,16 @@ a {
   color: #131313;
   text-decoration: none;
 }
+
+h2 {
+  letter-spacing: 4px;
+  margin: 30px auto;
+}
+
+h3 {
+  letter-spacing: 2px;
+  font-weight: 800;
+}
 /*
 *
 *   MOVING OBJECTS

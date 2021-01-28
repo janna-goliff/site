@@ -14,6 +14,7 @@ class AppDesign1 extends React.Component {
       <div>
         <div className='bumper'></div>
         <div className='projectContainer'>
+          <h2 className='projectName'>EVENT TRACKER</h2>
           <div className='projectTwoElements'>
             <img
               src='https://i.imgur.com/qJcJv1C.gif'

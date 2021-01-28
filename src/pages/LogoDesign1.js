@@ -15,25 +15,31 @@ class LogoDesign1 extends React.Component {
   render() {
     return (
       <div>
-        <div className='outerWrapperPieces'>
-          <div id='column1' className='displayColumn'>
-            <Piece imgaddress={pieces[0]} description={'filler description1'} />
-            <Piece imgaddress={pieces[2]} description={'filler description2'} />
-          </div>
-          <div id='column2' className='displayColumn'>
-            <Piece imgaddress={pieces[1]} description={'filler description5'} />
-            <Piece imgaddress={pieces[3]} description={'filler description6'} />
-          </div>
-        </div>
-
-        <div className='outerWrapperPieces'>
-          <div id='column1' className='displayColumn'>
-            <Piece imgaddress={motion[0]} description={'filler description1'} />
-            <Piece imgaddress={motion[2]} description={'filler description2'} />
-          </div>
-          <div id='column2' className='displayColumn'>
-            <Piece imgaddress={motion[1]} description={'filler description5'} />
-            <Piece imgaddress={motion[3]} description={'filler description6'} />
+        <div className='bumper'></div>
+        <div className='projectContainer headerContainer centeredContainer'>
+          <h2 className='projectName'>GRACE'S ORGANIC PET FOOD LOGO</h2>
+          <div className='projectTwoElements'>
+            <img
+              src='https://i.imgur.com/w88nCe3.png'
+              alt={`logo of Grace's Organic pet food`}
+              style={{ height: '400px', width: 'auto' }}
+            />
+            <p className='projectIntroMainText'>
+              Grace's Organic Pet Food is a family-run business that makes pet
+              food using locally-sourced, organic ingredients. I was put into
+              contact with them through Penn Student Design.
+              <br />
+              <br />
+              They were looking for fairly detailed logo design, and requested I
+              incorporate an image of a dog with their ingredients.
+              <br />
+              <br />
+              Visit their site{' '}
+              <a className='inlineLink' href='https://www.gracesorganic.com/'>
+                here
+              </a>
+              .
+            </p>
           </div>
         </div>
       </div>

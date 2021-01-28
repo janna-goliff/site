@@ -7,7 +7,7 @@ import Navbar from './Navbar.js';
 import ToggleLightDark from './ToggleLightDark';
 import Piece from './Piece';
 
-import { colors, colorsRGBA, pieces } from '../colors.js';
+import { colors, colorsDark, pieces } from '../colors.js';
 
 class MainElements extends React.Component {
   constructor(props) {
@@ -31,26 +31,54 @@ class MainElements extends React.Component {
     const listA = document.getElementsByTagName('A');
     const listButtons = document.getElementsByTagName('BUTTON');
     const line = document.getElementById('line');
+    const underlines = document.getElementsByClassName('inlineLink');
     if (mode === 0) {
-      // if a light background is chosen, make text darker
+      // lightMode
       document.body.style.color = '#131313';
       line.style.backgroundColor = '#d7d7d7';
       for (let i = 0; i < listA.length; i++) {
         listA[i].style.color = '#131313';
       }
+      for (let i = 0; i < underlines.length; i++) {
+        underlines[i].style.textDecoration = 'underline solid #131313';
+      }
       for (let i = 0; i < listButtons.length; i++) {
         listButtons[i].style.color = '#131313';
         listButtons[i].style.borderColor = '#131313';
+        listButtons[i].addEventListener('mouseenter', (e) => {
+          listButtons[i].style.color = 'white';
+          listButtons[i].style.borderColor = colorsDark[mode];
+          listButtons[i].style.backgroundColor = colorsDark[mode];
+        });
+        listButtons[i].addEventListener('mouseleave', (e) => {
+          listButtons[i].style.color = '#131313';
+          listButtons[i].style.borderColor = '#131313';
+          listButtons[i].style.backgroundColor = 'rgba(0, 0, 0, 0)';
+        });
       }
     } else {
+      // darkMode
       document.body.style.color = '#e3e3e3';
       line.style.backgroundColor = '#525252';
       for (let i = 0; i < listA.length; i++) {
         listA[i].style.color = '#e3e3e3';
       }
+      for (let i = 0; i < underlines.length; i++) {
+        underlines[i].style.textDecoration = 'underline solid #e3e3e3';
+      }
       for (let i = 0; i < listButtons.length; i++) {
         listButtons[i].style.color = '#e3e3e3';
         listButtons[i].style.borderColor = '#e3e3e3';
+        listButtons[i].addEventListener('mouseenter', (e) => {
+          listButtons[i].style.color = 'white';
+          listButtons[i].style.borderColor = colorsDark[mode];
+          listButtons[i].style.backgroundColor = colorsDark[mode];
+        });
+        listButtons[i].addEventListener('mouseleave', (e) => {
+          listButtons[i].style.color = '#e3e3e3';
+          listButtons[i].style.borderColor = '#e3e3e3';
+          listButtons[i].style.backgroundColor = 'rgba(0, 0, 0, 0)';
+        });
       }
     }
   }

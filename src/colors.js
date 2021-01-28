@@ -17,8 +17,8 @@ const colorsRGBA = [
 ];
 
 const pieces = [
-  'https://i.imgur.com/14BiEjo.png', //  roxy pink floyd style
-  'https://i.imgur.com/ieovTBX.png', // q the cat movie villain poster
+  'https://i.imgur.com/jIxKuGs.png', //  roxy pink floyd style
+  'https://i.imgur.com/SDQBTCU.png', // q the cat movie villain poster
   'https://i.imgur.com/JGNdOUb.png', // visit the park
   'https://i.imgur.com/omWEDRU.png', // losing space
 ];

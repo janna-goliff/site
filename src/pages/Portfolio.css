@@ -18,7 +18,10 @@ button {
 }
 
 button:hover {
-  box-shadow: 0 0 2px 2px rgba(101, 101, 101, 0.5);
+  /* box-shadow: 0 0 2px 2px rgba(101, 101, 101, 0.5); */
+  background-color: #ea5455;
+  border: 2px solid #ea5455;
+  color: white;
   cursor: pointer;
 }
 
@@ -62,7 +65,6 @@ h2 {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: 10vh;
   width: 100vw;
 }
 
@@ -73,14 +75,12 @@ h2 {
 
 .projectIntro {
   background-color: chartreuse;
-  margin: 0 10vw;
-  position: relative;
   width: 60vw;
   height: 40vh;
 }
 
-.projectName {
-  margin: 30px;
+.subprojectName {
+  /* margin: 30px; */
 }
 
 .one {
@@ -120,7 +120,7 @@ h2 {
 }
 
 .projectContainer > * {
-  padding: 70px;
+  padding: 60px;
 }
 
 .projectTwoElements {
@@ -162,4 +162,32 @@ h2 {
   padding-right: 0;
   width: 100vw;
   height: auto;
+}
+
+.centeredContainer {
+  justify-content: center;
+}
+
+.headerContainer > * {
+  padding: 0;
+}
+
+.projectName {
+  padding: 20px;
+}
+
+.subProjectDescription {
+  font-weight: 600;
+  width: 60vw;
+}
+
+#landscape {
+  height: 512px;
+  width: auto;
+}
+
+.publicationGrid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto;
 }

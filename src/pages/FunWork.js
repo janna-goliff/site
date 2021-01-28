@@ -15,6 +15,7 @@ class LogoDesign1 extends React.Component {
   render() {
     return (
       <div>
+        <div className='bumper'></div>
         <div className='outerWrapperPieces'>
           <div id='column1' className='displayColumn'>
             <Piece imgaddress={pieces[0]} description={'filler description1'} />

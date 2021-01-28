@@ -1,8 +1,8 @@
 //import logo from './logo.svg';
 import './App.css';
 import MainElements from './components/MainElements.js';
-import About from './About.js';
-import Contact from './Contact.js';
+import About from './pages/About.js';
+import Contact from './pages/Contact.js';
 import Home from './Home.js';
 import Portfolio from './pages/Portfolio.js';
 import IdentityDesign1 from './pages/IdentityDesign1.js';
