@@ -13,7 +13,7 @@ class IdentityDesign1 extends React.Component {
     return (
       <div>
         <div className='bumper'></div>
-        <div id='projectHeader'>
+        <div id='projectHeader' className='projectContainer'>
           <h2 className='projectName'>
             FIFTH URAL INDUSTRIAL BIENNIAL REDESIGN
           </h2>
@@ -123,9 +123,9 @@ class IdentityDesign1 extends React.Component {
                 width='1045'
                 height='490'
                 src='https://www.youtube.com/embed/ZAcdEvXHJx8'
-                frameborder='0'
+                frameBorder='0'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                allowfullscreen
+                allowFullScreen
               ></iframe>
             </div>
             <p className='subProjectDescription'></p>

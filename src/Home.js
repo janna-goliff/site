@@ -7,6 +7,7 @@ import ColorController from './components/ColorController';
 import Piece from './components/Piece';
 
 import { colors, colorsRGBA, pieces } from './colors.js';
+import ResponsiveSquare from './components/ResponsiveSquare';
 
 class Home extends React.Component {
   componentDidUpdate() {}

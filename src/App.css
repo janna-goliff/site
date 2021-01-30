@@ -30,6 +30,13 @@ h3 {
   letter-spacing: 2px;
   font-weight: 800;
 }
+
+#resEle {
+  background-color: white;
+  border-radius: 0;
+  height: 100px;
+  width: 100px;
+}
 /*
 *
 *   MOVING OBJECTS

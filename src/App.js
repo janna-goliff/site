@@ -10,6 +10,7 @@ import LogoDesign1 from './pages/LogoDesign1.js';
 import LandingPageDesign1 from './pages/LandingPageDesign1';
 import AppDesign1 from './pages/AppDesign1.js';
 import AppDesign2 from './pages/AppDesign2.js';
+import WebDev1 from './pages/WebDev1.js';
 import FunWork from './pages/FunWork.js';
 import ElementAvoid from './ElementAvoid.js';
 
@@ -49,6 +50,9 @@ function App() {
           </Route>
           <Route path='/portfolio/spiralqlanding'>
             <LandingPageDesign1 />
+          </Route>
+          <Route path='/portfolio/treehouse'>
+            <WebDev1 />
           </Route>
           <Route path='/funwork'>
             <FunWork />

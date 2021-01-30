@@ -120,10 +120,15 @@ h2 {
   align-items: center;
   display: flex;
   flex-direction: column;
+  width: 100vw;
 }
 
 .projectContainer > * {
-  padding: 60px;
+  margin: 60px;
+}
+
+.projectContainer > *:nth-child(2) {
+  margin-top: 0;
 }
 
 .projectTwoElements {
@@ -155,6 +160,17 @@ h2 {
   grid-template-columns: auto auto auto;
 }
 
+.projectGridSquare {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 40vw 40vw;
+}
+
+.projectGridSquare > * {
+  width: 100%;
+  height: auto;
+}
+
 .projectGrid > * {
   width: 12vw;
   height: auto;
@@ -176,7 +192,9 @@ h2 {
 }
 
 .projectName {
-  padding: 20px;
+  letter-spacing: 4px;
+  margin: 30px auto;
+  text-align: center;
 }
 
 .subProjectDescription {
@@ -217,10 +235,17 @@ h2 {
   width: auto;
 }
 
+.caption {
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 8pt;
+}
 @media screen and (max-width: 600px) {
   .publicationGrid {
     grid-template-columns: 100vw;
   }
+
   .publicationGrid > * {
     align-items: center;
     height: auto;
@@ -231,5 +256,24 @@ h2 {
   #landscape {
     height: auto;
     width: 90vw;
+  }
+
+  .projectOneElement {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .projectTwoElements {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .projectThreeElements {
+    flex-direction: column;
+  }
+
+  .projectIntroMainText {
+    width: 70vw;
+    margin: auto 15vw;
   }
 }

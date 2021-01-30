@@ -88,6 +88,7 @@ class Navbar extends React.Component {
                 <a href='/portfolio/eventtracker'>APP DESIGN 1</a>
                 <a href='/portfolio/artlog'>APP DESIGN 2</a>
                 <a href='/portfolio/spiralqlanding'>LANDING PAGE</a>
+                <a href='/portfolio/treehouse'>WEB DEV</a>
               </div>
             </div>
             <a href='/funwork' className='navoption singleoption'>
