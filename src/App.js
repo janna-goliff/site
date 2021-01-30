@@ -7,6 +7,7 @@ import Home from './Home.js';
 import Portfolio from './pages/Portfolio.js';
 import IdentityDesign1 from './pages/IdentityDesign1.js';
 import LogoDesign1 from './pages/LogoDesign1.js';
+import LandingPageDesign1 from './pages/LandingPageDesign1';
 import AppDesign1 from './pages/AppDesign1.js';
 import FunWork from './pages/FunWork.js';
 import ElementAvoid from './ElementAvoid.js';
@@ -41,6 +42,9 @@ function App() {
           </Route>
           <Route path='/portfolio/eventtracker'>
             <AppDesign1 />
+          </Route>
+          <Route path='/portfolio/spiralqlanding'>
+            <LandingPageDesign1 />
           </Route>
           <Route path='/funwork'>
             <FunWork />
