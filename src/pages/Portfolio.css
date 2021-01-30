@@ -199,6 +199,24 @@ h2 {
   margin: 30px auto;
 }
 
+.projectThreeElements {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+.projectThreeElements > * {
+  padding: 20px;
+}
+
+.appPage {
+  height: 500px;
+  width: auto;
+}
+
 @media screen and (max-width: 600px) {
   .publicationGrid {
     grid-template-columns: 100vw;
