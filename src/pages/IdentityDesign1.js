@@ -17,7 +17,7 @@ class IdentityDesign1 extends React.Component {
           <h2 className='projectName'>
             FIFTH URAL INDUSTRIAL BIENNIAL REDESIGN
           </h2>
-          <div id='projectContainer'>
+          <div id='subprojectContainer'>
             <a href='biennialredesign#poster'>
               <button>poster</button>
             </a>
@@ -69,17 +69,17 @@ class IdentityDesign1 extends React.Component {
                 width='534'
                 height='300'
                 src='https://www.youtube.com/embed/5ULGQxR_6Kc'
-                frameborder='0'
+                frameBorder='0'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                allowfullscreen
+                allowFullScreen
               ></iframe>
               <iframe
                 width='534'
                 height='300'
                 src='https://www.youtube.com/embed/yppPBZEoWnk'
-                frameborder='0'
+                frameBorder='0'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                allowfullscreen
+                allowFullScreen
               ></iframe>
             </div>
             <p className='subProjectDescription'>

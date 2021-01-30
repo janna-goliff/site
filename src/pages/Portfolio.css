@@ -56,8 +56,11 @@ h2 {
   display: inline-block;
 }
 
-#projectContainer {
+#subprojectContainer {
   margin-bottom: 30px;
+  margin: auto;
+  margin-bottom: 30px;
+  display: flex;
   /* width: 30vw; */
 }
 
@@ -190,4 +193,21 @@ h2 {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: auto auto;
+}
+
+@media screen and (max-width: 600px) {
+  .publicationGrid {
+    grid-template-columns: 100vw;
+  }
+  .publicationGrid > * {
+    align-items: center;
+    height: auto;
+    justify-items: center;
+    width: 90vw;
+  }
+
+  #landscape {
+    height: auto;
+    width: 90vw;
+  }
 }

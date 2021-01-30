@@ -12,7 +12,19 @@ class Home extends React.Component {
   componentDidUpdate() {}
 
   render() {
-    return <div id='maindiv'></div>;
+    return (
+      <div id='maindiv'>
+        <div className='bumper'></div>
+        <div className='fullSpread'>
+          <h1>
+            Welcome to my portfolio!
+            <br />
+            <br />
+            Thanks for visiting.
+          </h1>
+        </div>
+      </div>
+    );
   }
 }
 

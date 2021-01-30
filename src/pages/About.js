@@ -25,7 +25,8 @@ class About extends React.Component {
               and computer science.
               <br />
               <br />
-              I've recently been doing work in web design, including [].
+              I've recently been doing work in web design, including a video and
+              chat web app I made in a team with two of my classmates!
             </p>
           </div>
         </div>

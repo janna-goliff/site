@@ -75,3 +75,9 @@ nav {
 #portfolioNav:hover {
   cursor: default;
 }
+
+@media screen and (max-width: 600px) {
+  #line {
+    top: 114px;
+  }
+}
