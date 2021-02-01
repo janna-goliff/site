@@ -33,7 +33,7 @@ class About extends React.Component {
               <a class='inlineLink' href='https://github.com/janna-goliff/site'>
                 here
               </a>
-              .
+              . Deployed using AWS Amplify.
             </p>
           </div>
         </div>
