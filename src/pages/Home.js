@@ -1,0 +1,31 @@
+import React from 'react';
+import { withRouter } from 'react-router-dom';
+import '../App.css';
+import Navbar from '../components/Navbar.js';
+// import ElementAvoid from './ElementAvoid.js';
+import ColorController from '../components/ColorController';
+import Piece from '../components/Piece';
+
+import { colors, colorsRGBA, pieces } from '../colors.js';
+import ResponsiveSquare from '../components/ResponsiveSquare';
+
+class Home extends React.Component {
+  componentDidUpdate() {}
+
+  render() {
+    return (
+      <div id='maindiv'>
+        <div className='bumper'></div>
+        <div className='welcomeBanner'>
+          <h1 id='exBigText'>
+            Hi! <div id='wavingHand'>👋</div>
+          </h1>
+          <h1>Thanks for visiting.</h1>
+          <h1>Hope you have a good time!</h1>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default withRouter(Home);

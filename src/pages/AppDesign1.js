@@ -38,17 +38,62 @@ class AppDesign1 extends React.Component {
               .
             </p>
           </div>
-          {/* <div className='projectTwoElements'>
+          <div className='projectTwoElements'>
             <div className='projectGrid'>
-              <img src='https://i.imgur.com/1UVtb1m.png' alt='image mockup 1' />
-              <img src='https://i.imgur.com/1UVtb1m.png' alt='image mockup 1' />
-              <img src='https://i.imgur.com/1UVtb1m.png' alt='image mockup 1' />
-              <img src='https://i.imgur.com/1UVtb1m.png' alt='image mockup 1' />
-              <img src='https://i.imgur.com/1UVtb1m.png' alt='image mockup 1' />
-              <img src='https://i.imgur.com/1UVtb1m.png' alt='image mockup 1' />
+              <p className='gridDescription'>initial black and white mockups</p>
+              <img
+                src='https://i.imgur.com/2tSNaN5.png'
+                alt='upcoming events screen in black and white'
+              />
+              <img
+                src='https://i.imgur.com/0tPupH9.png'
+                alt='event preview in black and white'
+              />
+              <img
+                src='https://i.imgur.com/ZnQQN1X.png'
+                alt='event detail in black and white'
+              />
+              <img
+                src='https://i.imgur.com/4ZfJ66J.png'
+                alt='calendar view in black and white'
+              />
+              <img
+                src='https://i.imgur.com/JkDSiA3.png'
+                alt='search results in black and white'
+              />
+              <img
+                src='https://i.imgur.com/4ZfJ66J.png'
+                alt='search screen in black and white'
+              />
+
+              <p className='gridDescription'>final colors and designs</p>
+              <img
+                src='https://i.imgur.com/ftahclj.png'
+                alt='upcoming events screen in color'
+              />
+              <img
+                src='https://i.imgur.com/fEmFVuX.png'
+                alt='event preview in color'
+              />
+              <img
+                src='https://i.imgur.com/8faeZxG.png'
+                alt='event detail in color'
+              />
+              <img
+                src='https://i.imgur.com/TfWAXck.png'
+                alt='calendar view in color'
+              />
+              <img
+                src='https://i.imgur.com/CwZ2GGe.png'
+                alt='search results in color'
+              />
+              <img
+                src='https://i.imgur.com/ncWHlNg.png'
+                alt='search screen in color'
+              />
             </div>
-            <p className='projectIntroMainText'>filler text</p>
-          </div> */}
+            {/* <p className='projectIntroMainText'>filler text</p> */}
+          </div>
           <img
             src='https://i.imgur.com/PtaubZ6.png'
             alt='final compilation of event tracker'

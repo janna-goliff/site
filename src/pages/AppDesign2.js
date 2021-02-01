@@ -22,10 +22,10 @@ class AppDesign1 extends React.Component {
               className='appPage'
             />
             <p className='projectIntroMainText'>
-              A conceptual project and design exercise using Figma to mock
-              behavior for an app to log the artmkaing process. Users can add
-              tags to their pieces to sort by, create and edit descriptions, and
-              set final images to be displayed.
+              (IN PROGRESS) A conceptual project and design exercise using Figma
+              to mock behavior for an app to log the artmkaing process. Users
+              can add tags to their pieces to sort by, create and edit
+              descriptions, and set final images to be displayed.
               <br />
               <br />
               See the Figma project{' '}

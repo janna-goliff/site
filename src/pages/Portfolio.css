@@ -71,11 +71,6 @@ h2 {
   width: 100vw;
 }
 
-.inlineLink {
-  text-decoration: underline solid black;
-  font-size: 12pt;
-}
-
 .projectIntro {
   background-color: chartreuse;
   width: 60vw;
@@ -124,7 +119,7 @@ h2 {
 }
 
 .projectContainer > * {
-  margin: 60px;
+  margin-top: 60px;
 }
 
 .projectContainer > *:nth-child(2) {
@@ -160,6 +155,18 @@ h2 {
   grid-template-columns: auto auto auto;
 }
 
+.projectGrid > img {
+  background-color: rgba(207, 207, 207, 0.3);
+  border-radius: 25px;
+
+  padding: 10px;
+  width: 20vw;
+}
+
+.projectGrid > img:hover {
+  box-shadow: 0 0 3px 3px rgba(109, 109, 109, 0.15);
+}
+
 .projectGridSquare {
   display: grid;
   grid-gap: 10px;
@@ -174,6 +181,13 @@ h2 {
 .projectGrid > * {
   width: 12vw;
   height: auto;
+}
+.gridDescription {
+  font-size: 12px;
+  font-weight: 600;
+  grid-column-end: span 3;
+  text-align: center;
+  width: 100%;
 }
 
 .fullSpreadImage {

@@ -75,7 +75,7 @@ class Piece extends React.Component {
         </div>
         <img
           src={this.props.imgaddress}
-          alt='portfolio_img'
+          alt={'portfolio_img' + this.props.description}
           onMouseEnter={(e) => this.handleMouseEnterPiece(e)}
           onMouseLeave={(e) => this.handleMouseLeavePiece(e)}
           onClick={this.handleClickPiece}

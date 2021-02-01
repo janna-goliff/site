@@ -3,7 +3,7 @@ import './App.css';
 import MainElements from './components/MainElements.js';
 import About from './pages/About.js';
 import Contact from './pages/Contact.js';
-import Home from './Home.js';
+import Home from './pages/Home.js';
 import Portfolio from './pages/Portfolio.js';
 import IdentityDesign1 from './pages/IdentityDesign1.js';
 import LogoDesign1 from './pages/LogoDesign1.js';
