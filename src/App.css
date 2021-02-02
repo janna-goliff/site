@@ -131,4 +131,13 @@ h3 {
   .bumper {
     height: 115px;
   }
+
+  .welcomeBanner {
+    margin-top: 5vh;
+    width: 85vw;
+  }
+
+  .welcomeBanner > * {
+    font-size: xx-large;
+  }
 }

@@ -17,6 +17,7 @@ class About extends React.Component {
         <div className='projectContainer centeredContainer'>
           <div className='projectTwoElements'>
             <img
+              id='profilePic'
               src='https://i.imgur.com/YIWvuqn.png'
               alt='profile picture of Janna with a squiggly decoration'
             />
@@ -30,7 +31,10 @@ class About extends React.Component {
               <br />
               <br />I also coded this site myself using React! Find
               documentation of it on my Github{' '}
-              <a class='inlineLink' href='https://github.com/janna-goliff/site'>
+              <a
+                className='inlineLink'
+                href='https://github.com/janna-goliff/site'
+              >
                 here
               </a>
               . Deployed using AWS Amplify.

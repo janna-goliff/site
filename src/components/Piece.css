@@ -52,3 +52,14 @@ img {
   height: 90vh;
   width: auto;
 }
+
+@media screen and (max-width: 600px) {
+  .imageOverlayDisplay {
+    flex-direction: column;
+  }
+
+  #pieceImage {
+    height: auto;
+    width: 90vw;
+  }
+}

@@ -28,6 +28,7 @@ button:hover {
 h2 {
   font-weight: 900;
 }
+
 .displayColumn {
   display: flex;
   flex-direction: column;
@@ -225,6 +226,8 @@ h2 {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: auto auto;
+  justify-items: center;
+  align-items: center;
 }
 
 .centeredBelow {
@@ -255,6 +258,7 @@ h2 {
   font-weight: 600;
   font-size: 8pt;
 }
+
 @media screen and (max-width: 600px) {
   .publicationGrid {
     grid-template-columns: 100vw;
@@ -277,6 +281,7 @@ h2 {
     display: flex;
     flex-direction: column;
   }
+
   .projectTwoElements {
     align-items: center;
     flex-direction: column;
@@ -289,5 +294,27 @@ h2 {
   .projectIntroMainText {
     width: 70vw;
     margin: auto 15vw;
+  }
+
+  .outerWrapperPieces {
+    flex-direction: column;
+  }
+
+  #mainPieceWrapper {
+    margin: 10px auto;
+    width: 80vw;
+  }
+
+  #mainPieceWrapper img {
+    width: 100%;
+  }
+
+  .displayColumn {
+    margin: 0 8px;
+  }
+
+  #profilePic {
+    height: 60vw;
+    width: 60vw;
   }
 }
