@@ -116,6 +116,29 @@ h3 {
   transform-origin: bottom right;
 }
 
+#welcomeGif {
+  border-radius: 0;
+  margin: auto;
+  position: relative;
+  /* top: -15em; */
+  width: 100vw;
+  z-index: 50;
+}
+
+#welcomeText {
+  color: white;
+  z-index: 51;
+  margin: auto;
+  position: absolute;
+  top: 4em;
+
+  width: 100vw;
+}
+
+#exBigText {
+  text-shadow: 0 0 8px rgba(18, 28, 43, 0.5);
+}
+
 @keyframes wave {
   0% {
     transform: rotate(0);

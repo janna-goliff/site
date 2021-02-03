@@ -16,12 +16,25 @@ class Home extends React.Component {
     return (
       <div id='maindiv'>
         <div className='bumper'></div>
-        <div className='welcomeBanner'>
+        {/* <div className='welcomeBanner'>
           <h1 id='exBigText'>
             Hi! <div id='wavingHand'>👋</div>
           </h1>
           <h1>Thanks for visiting.</h1>
           <h1>Hope you have a good time!</h1>
+        </div> */}
+
+        <img
+          id='welcomeGif'
+          src='https://i.imgur.com/NPiFTHT.gif'
+          alt='nature scene with flying bird'
+        />
+        <div id='welcomeText'>
+          <h1 id='exBigText'>
+            Welcome! <div id='wavingHand'>👋</div>
+          </h1>
+          {/* <h1>Thanks for visiting.</h1>
+          <h1>Hope you have a good time!</h1> */}
         </div>
       </div>
     );
