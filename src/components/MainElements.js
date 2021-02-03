@@ -85,6 +85,10 @@ class MainElements extends React.Component {
 
   componentDidMount() {
     this.updateMainElements();
+    const bumper = document.getElementsByClassName('bumper')[0];
+    const navbar = document.getElementById('navbarOuter');
+    console.log(navbar.offsetHeight);
+    bumper.style.height = navbar.offsetHeight + 'px';
   }
 
   render() {

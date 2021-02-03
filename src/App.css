@@ -120,9 +120,9 @@ h3 {
   border-radius: 0;
   margin: auto;
   position: relative;
-  /* top: -15em; */
-  width: 100vw;
+  top: -5px;
   z-index: 50;
+  width: 100%;
 }
 
 #welcomeText {
@@ -162,5 +162,14 @@ h3 {
 
   .welcomeBanner > * {
     font-size: xx-large;
+  }
+
+  #welcomeGif {
+    top: 1.5em;
+  }
+
+  #welcomeText {
+    font-size: 8pt;
+    top: 8em;
   }
 }
