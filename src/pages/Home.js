@@ -10,6 +10,22 @@ import { colors, colorsRGBA, pieces } from '../colors.js';
 import ResponsiveSquare from '../components/ResponsiveSquare';
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
+  }
+
+  handleMouseEnter() {
+    const hand = document.getElementById('wavingHand');
+    hand.setAttribute('src', 'https://i.imgur.com/qXPxJrj.gif/');
+  }
+
+  handleMouseLeave() {
+    const hand = document.getElementById('wavingHand');
+    hand.setAttribute('src', 'https://i.imgur.com/kRoQDOo.png');
+  }
+
   componentDidUpdate() {}
 
   render() {
@@ -31,7 +47,14 @@ class Home extends React.Component {
         />
         <div id='welcomeText'>
           <h1 id='exBigText'>
-            Welcome! <div id='wavingHand'>👋</div>
+            Welcome!{' '}
+            <img
+              onMouseEnter={this.handleMouseEnter}
+              onMouseLeave={this.handleMouseLeave}
+              id='wavingHand'
+              src='https://i.imgur.com/kRoQDOo.png'
+              alt='waving hand animation'
+            />
           </h1>
           {/* <h1>Thanks for visiting.</h1>
           <h1>Hope you have a good time!</h1> */}

@@ -107,13 +107,18 @@ h3 {
 
 #wavingHand {
   position: relative;
-  top: -0.1em;
+  display: inline;
+  height: 1em;
+  width: auto;
+  top: 0.1em;
+  /* background-image: url('https://i.imgur.com/kRoQDOo.png'); */
 }
 
 #wavingHand:hover {
-  animation: wave 0.5s 2;
+  /* animation: wave 0.5s 2;
   cursor: default;
-  transform-origin: bottom right;
+  transform-origin: bottom right; */
+  /* background-image: url('https://i.imgur.com/qXPxJrj.gif/'); */
 }
 
 #welcomeGif {

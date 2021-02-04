@@ -259,6 +259,11 @@ h2 {
   font-size: 8pt;
 }
 
+@media screen and (min-width: 768px) {
+  .projectGrid > img {
+    border-radius: 15px;
+  }
+}
 @media screen and (max-width: 600px) {
   .publicationGrid {
     grid-template-columns: 100vw;
@@ -269,6 +274,10 @@ h2 {
     height: auto;
     justify-items: center;
     width: 90vw;
+  }
+
+  .projectGrid > img {
+    border-radius: 15px;
   }
 
   #landscape {
