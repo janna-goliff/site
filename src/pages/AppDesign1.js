@@ -35,6 +35,10 @@ class AppDesign1 extends React.Component {
               >
                 here
               </a>
+              . Or see the lo-fi prototype{' '}
+              <a href='https://www.figma.com/file/nx1FMAU2KMrDkNY2P8b9Lo/EventTracker-lo-fideilty?node-id=0%3A1'>
+                here
+              </a>
               .
             </p>
           </div>
