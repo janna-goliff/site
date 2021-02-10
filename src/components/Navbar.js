@@ -84,11 +84,12 @@ class Navbar extends React.Component {
               <p id='portfolioNav'>PORTFOLIO</p>
               <div id='dropdownContent'>
                 <a href='/portfolio/biennialredesign'>IDENTITY REDESIGN</a>
-                <a href='/portfolio/logo'>LOGO</a>
-                <a href='/portfolio/eventtracker'>APP DESIGN 1</a>
-                <a href='/portfolio/artlog'>APP DESIGN 2</a>
+                <a href='/portfolio/treehouse'>WEB APP DEVELOPMENT</a>
+                <a href='/portfolio/bookshare'>WEB DESIGN</a>
+                <a href='/portfolio/logo'>LOGO FOR GRACE'S ORGANICS</a>
+                <a href='/portfolio/eventtracker'>APP DESIGN</a>
+                {/* <a href='/portfolio/artlog'>APP DESIGN 2</a> */}
                 <a href='/portfolio/spiralqlanding'>LANDING PAGE</a>
-                <a href='/portfolio/treehouse'>WEB DEV</a>
               </div>
             </div>
             <a href='/funwork' className='navoption singleoption'>

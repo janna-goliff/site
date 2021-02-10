@@ -4,6 +4,7 @@ import '../App.css';
 import { colors, pieces, motion } from '../colors.js';
 import Piece from '../components/Piece.js';
 import './Portfolio.css';
+import Expandable from '../components/Expandable.js';
 
 class WebDev1 extends React.Component {
   //   constructor(props) {
@@ -57,16 +58,26 @@ class WebDev1 extends React.Component {
             </div>
           </div>
           <div className='projectGridSquare'>
-            <img src='https://i.imgur.com/eTL6Rxd.png' alt='login page' />
-            <img
-              src='https://i.imgur.com/X8qYXqQ.png'
-              alt='main home page after user login'
+            <Expandable
+              imgaddress='https://i.imgur.com/eTL6Rxd.png'
+              description='login page'
+              classes={''}
             />
-            <img
-              src='https://i.imgur.com/WH99wLe.png'
-              alt='status feed of friend statues'
+            <Expandable
+              imgaddress='https://i.imgur.com/X8qYXqQ.png'
+              description='main home page after user login'
+              classes={''}
             />
-            <img src='https://i.imgur.com/WJmVn70.png' alt='messaging view' />
+            <Expandable
+              imgaddress='https://i.imgur.com/WH99wLe.png'
+              description='status feed of friend statues'
+              classes={''}
+            />
+            <Expandable
+              imgaddress='https://i.imgur.com/WJmVn70.png'
+              description='messaging view'
+              classes={''}
+            />
           </div>
         </div>
       </div>

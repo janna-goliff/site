@@ -156,7 +156,13 @@ h2 {
   grid-template-columns: auto auto auto;
 }
 
-.projectGrid > img {
+.projectGridDesktop {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto;
+}
+
+.projectGrid img {
   background-color: rgba(207, 207, 207, 0.3);
   border-radius: 25px;
 
@@ -164,8 +170,7 @@ h2 {
   width: 20vw;
 }
 
-.projectGrid > img:hover {
-  box-shadow: 0 0 3px 3px rgba(109, 109, 109, 0.15);
+.projectGrid img:hover {
 }
 
 .projectGridSquare {
@@ -174,13 +179,13 @@ h2 {
   grid-template-columns: 40vw 40vw;
 }
 
-.projectGridSquare > * {
+.projectGridSquare * {
   width: 100%;
   height: auto;
 }
 
-.projectGrid > * {
-  width: 12vw;
+.projectGrid * {
+  /* width: 12vw; */
   height: auto;
 }
 .gridDescription {
@@ -230,6 +235,10 @@ h2 {
   align-items: center;
 }
 
+.one-col {
+  grid-template-columns: auto;
+}
+
 .centeredBelow {
   margin: 30px auto;
 }
@@ -259,6 +268,15 @@ h2 {
   font-size: 8pt;
 }
 
+.appScreen {
+  width: 25vw;
+}
+
+.bigImg {
+  height: auto;
+  width: 90vw;
+}
+
 @media screen and (min-width: 768px) {
   .projectGrid > img {
     border-radius: 15px;
@@ -269,7 +287,7 @@ h2 {
     grid-template-columns: 100vw;
   }
 
-  .publicationGrid > * {
+  .publicationGrid * {
     align-items: center;
     height: auto;
     justify-items: center;

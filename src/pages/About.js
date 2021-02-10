@@ -27,7 +27,12 @@ class About extends React.Component {
               <br />
               <br />
               I've recently been doing work in web design, including a video and
-              chat web app I made in a team with two of my classmates!
+              chat web app I made in a team with two of my classmates! I'm also
+              a web developer for{' '}
+              <a href='https://grassrootsgov.org/' className='inlineLink'>
+                GrassrootsGov
+              </a>
+              , an in-development online platform for poltical organizing.
               <br />
               <br />I also coded this site myself using React! Find
               documentation of it on my Github{' '}

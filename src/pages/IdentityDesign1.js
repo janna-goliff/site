@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import '../App.css';
+import Expandable from '../components/Expandable';
 
 class IdentityDesign1 extends React.Component {
   //   constructor(props) {
@@ -42,15 +43,17 @@ class IdentityDesign1 extends React.Component {
             <a name='poster'>
               <h3 className='subprojectName'>POSTER</h3>
             </a>
-            <div className='publicationGrid'>
-              <img
-                src='https://i.imgur.com/sBFiOvP.jpg'
-                alt='poster design for the ural industrial biennial'
+            <div className='publicationGrid one-col'>
+              <Expandable
+                imgaddress='https://i.imgur.com/sBFiOvP.jpg'
+                description='poster design for the ural industrial biennial'
+                className={''}
               />
-              <img
+              <Expandable
                 id='landscape'
-                src='https://i.imgur.com/72TeFav.png'
-                alt='poster mockup for the ural industrial biennial'
+                imgaddress='https://i.imgur.com/72TeFav.png'
+                description='poster mockup for the ural industrial biennial'
+                className={''}
               />
             </div>
             <p className='subProjectDescription'>
@@ -92,21 +95,25 @@ class IdentityDesign1 extends React.Component {
               <h3 className='subprojectName'>PUBLICATION</h3>
             </a>
             <div className='publicationGrid'>
-              <img
-                src='https://i.imgur.com/FqtTfHE.jpg'
-                alt='publication mockup of book cover'
+              <Expandable
+                imgaddress='https://i.imgur.com/FqtTfHE.jpg'
+                description='publication mockup of book cover'
+                className={''}
               />
-              <img
-                src='https://i.imgur.com/mdamSfJ.jpg'
-                alt='publication mockup of book aritst page'
+              <Expandable
+                imgaddress='https://i.imgur.com/mdamSfJ.jpg'
+                description='publication mockup of book aritst page'
+                className={''}
               />
-              <img
-                src='https://i.imgur.com/6mfd30w.jpg'
-                alt='publication mockup of book title page'
+              <Expandable
+                imgaddress='https://i.imgur.com/6mfd30w.jpg'
+                description='publication mockup of book title page'
+                className={''}
               />
-              <img
-                src='https://i.imgur.com/GmfwRMd.jpg'
-                alt='publication mockup of book cover front and back'
+              <Expandable
+                imgaddress='https://i.imgur.com/GmfwRMd.jpg'
+                description='publication mockup of book cover front and back'
+                className={''}
               />
             </div>
             <p className='subProjectDescription'>
