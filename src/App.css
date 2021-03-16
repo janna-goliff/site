@@ -178,3 +178,7 @@ h3 {
     top: 8em;
   }
 }
+
+svg {
+  padding: 10px;
+}
