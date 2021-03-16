@@ -182,3 +182,71 @@ h3 {
 svg {
   padding: 10px;
 }
+
+#dataVizContainerIntro {
+  /* background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(4, 15, 51, 1) ); */
+  background-color:  rgba(4, 15, 51, 1);
+  width: 100vw;
+}
+
+#dataVizContainer {
+  background-color:  rgba(4, 15, 51, 1);
+  width: 100vw;
+}
+
+.dvHeader {
+  color:white;
+  margin: 3em auto .5em auto;
+}
+
+.dvSubheading {
+  color:white;
+  font-size: 1.5em;
+}
+
+.dvBody {
+  color: white;
+  font-weight: 700;
+  width: 40vw;
+}
+
+.flexHorizontal {
+  align-items:center;
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: center;
+}
+
+.flexVertical {
+  align-items:center;
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.numberStat {
+  color: white;
+  font-weight: 900;
+  font-size: xxx-large;
+  font-family: monospace;
+  letter-spacing: 4px;
+}
+
+.together {
+  margin: 1em;
+}
+.together p {
+  margin: .1em;
+}
+
+#white {
+  color: white !important;
+  text-decoration: underline;
+}

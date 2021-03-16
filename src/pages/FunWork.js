@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import '../App.css';
-import { colors, pieces, motion } from '../colors.js';
+import { /*colors,*/ pieces, motion } from '../colors.js';
 import Piece from '../components/Piece.js';
 import './Portfolio.css';
 

@@ -1,13 +1,13 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import '../App.css';
-import Navbar from '../components/Navbar.js';
-// import ElementAvoid from './ElementAvoid.js';
-import ColorController from '../components/ColorController';
-import Piece from '../components/Piece';
+// import Navbar from '../components/Navbar.js';
+// // import ElementAvoid from './ElementAvoid.js';
+// import ColorController from '../components/ColorController';
+// import Piece from '../components/Piece';
 
-import { colors, colorsRGBA, pieces } from '../colors.js';
-import ResponsiveSquare from '../components/ResponsiveSquare';
+// import { colors, colorsRGBA, pieces } from '../colors.js';
+// import ResponsiveSquare from '../components/ResponsiveSquare';
 
 class Home extends React.Component {
   constructor(props) {

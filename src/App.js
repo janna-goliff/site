@@ -4,7 +4,7 @@ import MainElements from './components/MainElements.js';
 import About from './pages/About.js';
 import Contact from './pages/Contact.js';
 import Home from './pages/Home.js';
-import Portfolio from './pages/Portfolio.js';
+// import Portfolio from './pages/Portfolio.js';
 import IdentityDesign1 from './pages/IdentityDesign1.js';
 import LogoDesign1 from './pages/LogoDesign1.js';
 import LandingPageDesign1 from './pages/LandingPageDesign1';
@@ -15,9 +15,9 @@ import WebDev1 from './pages/WebDev1.js';
 import FunWork from './pages/FunWork.js';
 
 import DataViz1 from './pages/DataViz1.js';
-import ElementAvoid from './ElementAvoid.js';
+// import ElementAvoid from './ElementAvoid.js';
 
-import { colors, colorsDark } from './colors';
+// import { colors, colorsDark } from './colors';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
