@@ -5,7 +5,8 @@ import React from 'react';
 import * as d3 from 'd3';
 import { withRouter } from 'react-router-dom';
 import '../App.css';
-import data from './vgsales.csv';
+let data =
+  'https://raw.githubusercontent.com/janna-goliff/site/main/src/pages/vgsales.csv';
 
 let color = [
   '#DF0108', //red

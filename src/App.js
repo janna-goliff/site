@@ -13,6 +13,7 @@ import AppDesign2 from './pages/AppDesign2.js';
 import WebAppDesign1 from './pages/WebAppDesign1.js';
 import WebDev1 from './pages/WebDev1.js';
 import FunWork from './pages/FunWork.js';
+import WordGenerator from './pages/WordGenerator.js';
 
 import DataViz1 from './pages/DataViz1.js';
 // import ElementAvoid from './ElementAvoid.js';
@@ -59,6 +60,9 @@ function App() {
           </Route>
           <Route path='/portfolio/treehouse'>
             <WebDev1 />
+          </Route>
+          <Route path='/portfolio/wordgen'>
+            <WordGenerator />
           </Route>
           <Route path='/portfolio/dataviz1'>
             <DataViz1 />

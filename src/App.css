@@ -185,22 +185,22 @@ svg {
 
 #dataVizContainerIntro {
   /* background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(4, 15, 51, 1) ); */
-  background-color:  rgba(4, 15, 51, 1);
+  background-color: rgba(4, 15, 51, 1);
   width: 100vw;
 }
 
 #dataVizContainer {
-  background-color:  rgba(4, 15, 51, 1);
+  background-color: rgba(4, 15, 51, 1);
   width: 100vw;
 }
 
 .dvHeader {
-  color:white;
-  margin: 3em auto .5em auto;
+  color: white;
+  margin: 3em auto 0.5em auto;
 }
 
 .dvSubheading {
-  color:white;
+  color: white;
   font-size: 1.5em;
 }
 
@@ -211,18 +211,18 @@ svg {
 }
 
 .flexHorizontal {
-  align-items:center;
+  align-items: center;
   display: flex;
   flex-direction: row;
-  
+
   justify-content: center;
 }
 
 .flexVertical {
-  align-items:center;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  
+
   justify-content: center;
   text-align: center;
 }
@@ -243,10 +243,21 @@ svg {
   margin: 1em;
 }
 .together p {
-  margin: .1em;
+  margin: 0.1em;
 }
 
 #white {
   color: white !important;
   text-decoration: underline;
+}
+
+.generatorField {
+  height: 30vh;
+  width: 30vw;
+}
+
+#genOutput {
+  width: 40vw;
+  font-weight: 600;
+  font-size: large;
 }
