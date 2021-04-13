@@ -92,6 +92,7 @@ class Navbar extends React.Component {
                 <a href='/portfolio/spiralqlanding'>LANDING PAGE</a>
                 {/* <a href='/portfolio/wordgen'>TEXT GENERATOR</a>/ */}
                 <a href='/portfolio/dataviz1'>DATA VIZ</a>
+                <a href='/portfolio/mapproject1'>PHILLY MAP PROJECT</a>
               </div>
             </div>
             <a href='/funwork' className='navoption singleoption'>
