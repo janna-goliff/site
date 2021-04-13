@@ -283,6 +283,36 @@ h2 {
   flex-direction: row;
 }
 
+.emphasisLink a {
+  font-size: 1em;
+  font-weight: 800;
+}
+
+.threeRow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.threeRow img {
+  width: 20vw;
+  margin: 1.5em;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media screen and (min-width: 768px) {
   .projectGrid > img {
     border-radius: 15px;
