@@ -41,12 +41,11 @@ d3.csv(data).then(function (data) {
 
   let dataByConsole = d3.group(data, (d) => d.Platform);
   let j = 0;
+
   dataByConsole.forEach(function (value, key, map) {
     mapConsoleIndex.set(key, j % 11);
     j++;
   });
-
-  console.log(mapConsoleIndex);
 });
 
 function getMostPopularGameGlobal(startYear, endYear) {
@@ -90,6 +89,187 @@ function getMostPopularGameGlobal(startYear, endYear) {
     selected.append(name);
     selected.append(platform);
     selected.append(num);
+  });
+}
+
+let yearArrayByGenre = [];
+let keysAreYears = new Map();
+
+function createPieChartGenreCustom(startYear) {
+  let svg = d3.select('#genrePieCustom');
+  let width = svg.attr('width');
+  let height = svg.attr('height');
+  let radius = Math.min(width, height) / 2;
+  d3.csv(data).then(function (data) {
+    // format data into numbers
+    data.forEach(function (d) {
+      if (isNaN(+d.Year)) {
+        d.Year = -1;
+      }
+    });
+
+    //remove null years (indicated by -1)
+    data = data.filter(function (d) {
+      return d.Year >= 1980 && d.Year <= 2019;
+    });
+
+    // get data array indexed by genre
+    let dataByGenre = d3.group(data, (d) => d.Genre);
+    let genreValues = [];
+    let genreNames = [];
+    let genreNamesMap = new Map();
+    let sumValues = 0;
+    let newArr = [];
+    // a map where key is the genre name and the values are an array corresponding to the year for that genre
+
+    let currValue = [];
+    let j = 0;
+    console.log('dataByGenre, ', dataByGenre);
+    dataByGenre.forEach(function (value, key, map) {
+      sumValues += value.length;
+      genreValues.push(value.length);
+      genreNames.push(key);
+      genreNamesMap.set(key, j);
+      j++;
+
+      //newArr = new Array(genreNames.length);
+      value.forEach(function (valueI, keyI, mapI) {
+        // console.log('inner value: ', valueI);
+        // new arr indexes correspond to genre, array value is an array of years
+        const currGenre = valueI.Genre;
+        const genreIndex = genreNamesMap.get(currGenre);
+        if (keysAreYears.has(valueI.Year)) {
+          let currArr = keysAreYears.get(valueI.Year);
+          if (currArr[genreIndex]) {
+            currArr[genreIndex] += 1;
+          } else {
+            currArr[genreIndex] = 1;
+          }
+        } else {
+          let arr = new Array(genreNames.length);
+          arr[genreIndex] = 1;
+          keysAreYears.set(valueI.Year, arr);
+        }
+        // if (newArr[genreIndex] === undefined) {
+        //   let singleYearArr = [];
+        //   singleYearArr[valueI.Year] = 1;
+        //   newArr[genreIndex] = singleYearArr;
+        // } else if (newArr[genreIndex][valueI.Year] === undefined) {
+        //   newArr[genreIndex][valueI.Year - 1980] = 1;
+        // } else {
+        //   newArr[genreIndex][valueI.Year - 1980] += 1;
+        // }
+      });
+      // value.forEach(function (valueI, keyI, mapI) {
+      //   let currentArr = [];
+      //   if (mapGenreToYearArray.has(key)) {
+      //     currentArr = mapGenreToYearArray.get(key);
+      //     if (currentArr === NaN) {
+      //       currentArr[valueI.Year - 1980] = 1;
+      //     } else {
+      //       currentArr[valueI.Year - 1980] += 1;
+      //     }
+      //   } else {
+      //     currentArr[valueI.Year - 1980] = 1;
+      //     mapGenreToYearArray.set(key, currentArr);
+      //   }
+      // });
+    });
+    console.log('map:', genreNamesMap);
+    console.log('SORT:', keysAreYears);
+    // currValue[0] = 0;
+    // currValue[1] = genreValues[0];
+    // for (let i = 2; i < genreValues.length; i++) {
+    //   currValue[i] = currValue[i - 1] + genreValues[i];
+    // }
+    let g = svg
+      .append('g')
+      .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
+
+    // Generate the pie
+    let pie = d3.pie();
+    // Generate the arcs
+    let arc = d3.arc().innerRadius(0).outerRadius(radius);
+
+    //Generate groups
+    const year = '1984';
+    console.log(keysAreYears.get(year));
+    let arcs = g
+      .selectAll('arc')
+      .data(pie(keysAreYears.get(year)))
+      .enter()
+      .append('g')
+      .attr('class', 'arc genreArc');
+
+    // legend
+    let genreMap = [];
+    let label = g
+      .selectAll('labels')
+      .data(pie(keysAreYears.get(year)))
+      .enter()
+      .append('g')
+      .attr('class', 'labels');
+    label
+      .append('circle')
+      .attr('cx', 240)
+      .attr('cy', function (d, i) {
+        return -7 + -100 + i * 25;
+      })
+      .attr('r', 7)
+      .style('fill', function (d, i) {
+        genreMap[i] = genreNames[i];
+        return color[mapGenreIndex.get(genreNames[i])];
+      });
+    label
+      .append('text')
+      .attr('x', 260)
+      .attr('y', function (d, i) {
+        return -100 + i * 25;
+      })
+      .style('fill', function (d, i) {
+        return /*color[d.index]*/ color[mapGenreIndex.get(genreNames[i])];
+      })
+      .text(function (d, i) {
+        return genreNames[i];
+      })
+      .attr('text-anchor', 'left');
+
+    //Draw arc paths
+    let mult = 0;
+    arcs
+      .append('path')
+      .attr('fill', function (d, i) {
+        return color[mapGenreIndex.get(genreMap[i])];
+      })
+      .transition()
+      .delay(function (d, i) {
+        return d.index * 500;
+      })
+      .duration(function (d, i) {
+        return 500;
+      })
+      .attrTween('d', function (d) {
+        var i = d3.interpolate(d.startAngle + 0.01, d.endAngle);
+        return function (t) {
+          d.endAngle = i(t);
+          return arc(d);
+        };
+      });
+
+    // add number labels
+    arcs
+      .attr('d', arc)
+      .append('text')
+      .attr('fill', 'black')
+      .text(function (d, i) {
+        return d.data;
+      })
+      .attr('font-weight', '500')
+      .attr('transform', function (d) {
+        return 'translate(' + arc.centroid(d) + ')';
+      })
+      .style('text-anchor', 'middle')
+      .style('font-size', 17);
   });
 }
 
@@ -140,7 +320,7 @@ function pieChartGenre(startYear, endYear) {
       .data(pie(genreValues))
       .enter()
       .append('g')
-      .attr('class', 'arc');
+      .attr('class', 'genreArc');
 
     // legend
     let genreMap = [];
@@ -149,7 +329,8 @@ function pieChartGenre(startYear, endYear) {
       .data(pie(genreValues))
       .enter()
       .append('g')
-      .attr('class', 'labels');
+      .attr('class', 'labels genreLabels');
+
     label
       .append('circle')
       .attr('cx', 240)
@@ -468,6 +649,61 @@ function makeDataView(start, end) {
   );
 }
 
+function onYearChangeGenre(e) {
+  // displays the value of the slider
+  const display = document.getElementById('yearGenreDisplay');
+  display.innerHTML = 'Year being displayed: ' + e.target.value;
+
+  // tween between current year and last
+  let arc = d3.selectAll('.genreArc');
+  let arcs = d3.selectAll('.genreArc g');
+
+  let pie = d3.pie();
+  let newAngles = pie(keysAreYears.get(e.target.value.toString()));
+  console.log('newAngles: ', newAngles);
+  arcs
+    .data(newAngles)
+    .select('path')
+    .transition()
+    .duration(function (d, i) {
+      return 500;
+    })
+
+    .attrTween('d', function (d, ind) {
+      var i = d3.interpolate(d.startAngle + 0.01, d.endAngle);
+      let newSet;
+
+      return function (t) {
+        d.endAngle = i(t);
+        return arc(d);
+      };
+    });
+}
+
+function renderCustomPie(startYear) {
+  return (
+    <>
+      <div className='flexVertical'>
+        <input
+          type='range'
+          id='yearGenre'
+          name='yearGenre'
+          min='1980'
+          max='2019'
+          step='1'
+          className='slider'
+          onChange={(e) => onYearChangeGenre(e)}
+        />
+        <label for='yearGenre'>Year for Genre</label>
+        <p id='yearGenreDisplay' style={{ color: 'white' }}>
+          Year being displayed: 1980
+        </p>
+        <svg width='720' height='400' id={'genrePieCustom'}></svg>
+      </div>
+    </>
+  );
+}
+
 class DataViz1 extends React.Component {
   //   constructor(props) {
   //     super(props);
@@ -479,15 +715,16 @@ class DataViz1 extends React.Component {
 
     yearTotalSalesBarChart();
 
-    for (let i = 1980; i < 2020; i += 5) {
-      pieChartGenre(i, i + 4);
-      pieChartConsole(i, i + 4);
-      getMostPopularGameGlobal(i, i + 4);
-    }
+    // for (let i = 1980; i < 2020; i += 5) {
+    //   pieChartGenre(i, i + 4);
+    //   pieChartConsole(i, i + 4);
+    //   getMostPopularGameGlobal(i, i + 4);
+    // }
 
-    pieChartGenre(1980, 2019);
-    pieChartConsole(1980, 2019);
+    // pieChartGenre(1980, 2019);
+    // pieChartConsole(1980, 2019);
     //getMostPopularGameGlobal(1980, 2019);
+    createPieChartGenreCustom(1980);
   }
 
   render() {
@@ -512,15 +749,16 @@ class DataViz1 extends React.Component {
           <svg width='1500' height='600' id='yearTotalSales'></svg>
         </div>
         <div className='flexVertical' id='dataVizContainer'>
-          {makeDataView(1980, 1984)}
-          {makeDataView(1985, 1989)}
+          {/* {makeDataView(1980, 1984)} */}
+          {renderCustomPie(1980)}
+          {/* {makeDataView(1985, 1989)}
           {makeDataView(1990, 1994)}
           {makeDataView(1995, 1999)}
           {makeDataView(2000, 2004)}
           {makeDataView(2005, 2009)}
           {makeDataView(2010, 2014)}
           {makeDataView(2015, 2019)}
-          {makeDataView(1980, 2019)}
+          {makeDataView(1980, 2019)} */}
         </div>
       </div>
     );
