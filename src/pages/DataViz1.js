@@ -404,17 +404,17 @@ function pieChartConsole(startYear, endYear) {
   });
 }
 
-function update2(year) {
-  let svg = d3.select('#genreChartNEW');
+function update2(year,type) {
+  let svg = d3.select('#' + type + 'ChartNEW');
   let margin = 400;
   let width = svg.attr('width') - margin;
-  let height = svg.attr('height') - (margin/2);
+  let height = svg.attr('height') - (margin/4);
 
   let xScale = d3.scaleBand().range([0, width]).padding(0.4);
   let yScale = d3.scaleLinear().range([height, 0]);
   let g = svg
     .append('g')
-    .attr('transform', 'translate(' + 200 + ',' + 100 + ')');
+    .attr('transform', 'translate(' + 200 + ',' + 10 + ')');
 
     
   d3.csv(data).then(function (data) {
@@ -431,21 +431,45 @@ function update2(year) {
       d.Global_Sales = +d.Global_Sales;
     });
 
-    //sorts data by Genre
-    data = data.slice().sort((a, b) => d3.ascending(a.Genre, b.Genre));
-
     //remove null years (indicated by -1)
     data = data.filter(function (d) {
       return d.Year != -1 && d.Year === year;
     });
+    let dataByYear;
+    //sorts data by Genre
+    if (type==='genre') {
+      data = data.slice().sort((a, b) => d3.ascending(a.Genre, b.Genre));
 
-    // set x domain
-    let dataByYear = d3.group(data, (d) => d.Genre);
-    xScale.domain(
+      // set x domain
+       dataByYear = d3.group(data, (d) => d.Genre);
+      xScale.domain(
       data.map(function (d) {
-        return d.Genre;
-      })
-    );
+          return d.Genre;
+        })
+      );
+    }
+
+    if (type==='platform') {
+      data = data.slice().sort((a, b) => d3.ascending(a.Platform, b.Platform));
+      // set x domain
+      dataByYear = d3.group(data, (d) => d.Platform);
+      xScale.domain(
+        data.map(function (d) {
+          return d.Platform;
+        })
+      );
+    }
+
+    if (type==='publisher') {
+      data = data.slice().sort((a, b) => d3.ascending(a.Publisher, b.Publisher));
+      // set x domain
+      dataByYear = d3.group(data, (d) => d.Publisher);
+      xScale.domain(
+        data.map(function (d) {
+          return d.Publisher;
+        })
+      );
+    }
 
     // set y domain
     let genreNames = [];
@@ -466,15 +490,29 @@ function update2(year) {
     g.append('g')
       .attr('transform', 'translate(0,' + height + ')')
       .call(d3.axisBottom(xScale))
-      .append('text')
-      .attr('dx', '22em')
-      .attr('dy', '2em')
-      .attr('font-family', 'Raleway, sans-serif')
-      .style('font-size', '3em')
-      .attr('text-anchor', 'end')
-      .attr('fill', 'white')
-      .text('Genre');
+     
 
+      console.log("genreNamesLength: ", genreNames.length)
+    if (genreNames.length > 10 && type==='publisher') {
+      g
+      .selectAll("text")
+      .style("text-anchor", "start")
+      .attr("dx", "1em")
+      .attr("dy", "-.5em")
+      // .attr('transform', 'translate(10,30)')
+      .attr('transform', 'rotate(90)')
+      
+    }
+
+    g.append('text')
+    .attr("className", "currText")
+    .attr('dx', '20em')
+    .attr('dy', '2em')
+    .attr('font-family', 'Raleway, sans-serif')
+    .style('font-size', '3em')
+    .attr('text-anchor', 'end')
+    .attr('fill', 'white')
+    // .text(type);
     // y axis group element
     g.append('g')
       .call(
@@ -488,10 +526,10 @@ function update2(year) {
       .append('text')
       .attr('transform', 'rotate(-90)')
       .attr('y', 6)
-      .attr('dx', '-2em')
+      .attr('dx', '0')
       .attr('dy', '-2em')
       .attr('font-family', 'Raleway, sans-serif')
-      .style('font-size', '2em')
+      .style('font-size', '3em')
       .attr('text-anchor', 'end')
       .attr('fill', 'white')
       .text('Number of games');
@@ -519,7 +557,6 @@ function update2(year) {
         return height - yScale(d[1].length);
       })
       .attr('fill', function (d, i) {
-        console.log("d: ", d[0])
         return color(d[0]);
       });
   });
@@ -599,7 +636,7 @@ function yearTotalSalesBarChart() {
       .append('text')
       .attr('transform', 'rotate(-90)')
       .attr('y', 6)
-      .attr('dx', '-2em')
+      .attr('dx', '0em')
       .attr('dy', '-2em')
       .attr('font-family', 'Raleway, sans-serif')
       .style('font-size', '3em')
@@ -667,35 +704,46 @@ class DataViz1 extends React.Component {
     constructor(props) {
       super(props);
       this.state = {};
-      this.onInputchange = this.onInputchange.bind(this);
+      this.onGenreChange = this.onGenreChange.bind(this);
+      this.onPlatformChange = this.onPlatformChange.bind(this);
+      this.onPublisherChange = this.onPublisherChange.bind(this);
     }
 
-    onInputchange(event) {
+    onGenreChange(event) {
       let value = event.target.value
       console.log("VALUE: ", value)
-      update2(value)
+      update2(value, "genre")
       this.setState({
         genreValue: event.target.value
       });
-      
-      
     }
+
+    onPlatformChange(event) {
+      let value = event.target.value
+      console.log("VALUE: ", value)
+      update2(value, "platform")
+      this.setState({
+        platformValue: event.target.value
+      });
+    }
+
+    onPublisherChange(event) {
+      let value = event.target.value
+      console.log("VALUE: ", value)
+      update2(value, "publisher")
+      this.setState({
+        publisherValue: event.target.value
+      });
+    }
+
   componentDidMount() {
     const navbar = document.getElementsByClassName('navbarWrapper')[0];
     navbar.classList.add('hide');
 
     yearTotalSalesBarChart();
-
-    // for (let i = 1980; i < 2020; i += 5) {
-    //   pieChartGenre(i, i + 4);
-    //   pieChartConsole(i, i + 4);
-    //   getMostPopularGameGlobal(i, i + 4);
-    // }
-
-    // pieChartGenre(1980, 2019);
-    // pieChartConsole(1980, 2019);
-    //getMostPopularGameGlobal(1980, 2019);
-    update2(1985)
+    update2(1985, "genre")
+    update2(1985, "platform")
+    update2(1985, "publisher")
   }
 
   componentDidUpdate() {
@@ -703,8 +751,21 @@ class DataViz1 extends React.Component {
     while (parent.firstChild) {
       parent.removeChild(parent.firstChild);
     }
+
+    const parent2 = document.getElementById("platformChartNEW")
+    while (parent2.firstChild) {
+      parent2.removeChild(parent2.firstChild);
+    }
+
+    const parent3 = document.getElementById("publisherChartNEW")
+    while (parent3.firstChild) {
+      parent3.removeChild(parent3.firstChild);
+    }
+
     console.log(this.state.genreValue)
-    update2(parseInt(this.state.genreValue))
+    update2(parseInt(this.state.genreValue), "genre")
+    update2(parseInt(this.state.platformValue), "platform")
+    update2(parseInt(this.state.publisherValue), "publisher")
   }
 
   
@@ -730,8 +791,21 @@ class DataViz1 extends React.Component {
           </p>
           
           <svg width='1500' height='600' id='yearTotalSales'></svg>
-          <svg width='1500' height='500' id='genreChartNEW'></svg>
-          <input id="genreYearSlider" name="genreYearSlider" type="range" min="1985" max="2010" onChange={this.onInputchange}/>
+          
+          <h2 className='dvSubheading'>{this.state.genreValue ? this.state.genreValue : '1985'}</h2>
+          <svg className='fadeInOpacity' width='1500' height='400' id='genreChartNEW'></svg>
+          <input id="genreYearSlider" name="genreYearSlider" type="range" min="1985" max="2010" onChange={this.onGenreChange}/>
+          <h2 className='dvSubheading'>Genre</h2>
+          
+          <h2 className='dvSubheading'>{this.state.platformValue ? this.state.platformValue : '1985'}</h2>
+          <svg className='fadeInOpacity' width='1500' height='400' id='platformChartNEW'></svg>
+          <input id="platformYearSlider" name="platformYearSlider" type="range" min="1985" max="2010" onChange={this.onPlatformChange}/>
+          <h2 className='dvSubheading'>Platform</h2>
+
+          <h2 className='dvSubheading'>{this.state.publisherValue ? this.state.publisherValue : '1985'}</h2>
+          <svg className='fadeInOpacity' width='2000' height='400' id='publisherChartNEW'></svg>
+          <input id="publisherYearSlider" name="publisherYearSlider" type="range" min="1985" max="2010" onChange={this.onPublisherChange}/>
+          <h2 className='dvSubheading'>Publisher</h2>
         </div>
         {/* <div className='flexVertical' id='dataVizContainer'>
           {makeDataView(1980, 1984)}
