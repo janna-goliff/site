@@ -5,6 +5,7 @@ import React from 'react';
 import * as d3 from 'd3';
 import { withRouter } from 'react-router-dom';
 import '../App.css';
+import { sort } from 'd3';
 let data =
   'https://raw.githubusercontent.com/janna-goliff/site/main/src/pages/vgsales.csv';
 
@@ -91,6 +92,74 @@ function getMostPopularGameGlobal(startYear, endYear) {
     selected.append(platform);
     selected.append(num);
   });
+}
+// heavily refernces https://www.d3-graph-gallery.com/graph/pie_changeData.html
+function update(year) {
+  let svg = d3.select('#genrePieNEW');
+  let width = svg.attr('width');
+  let height = svg.attr('height');
+  let radius = Math.min(width, height) / 2;
+  d3.csv(data).then(function (dataNew_) {
+
+  
+  // format data into numbers
+  dataNew_.forEach(function (d) {
+    if (isNaN(+d.Year) || +d.Year !== year) {
+      d.Year = -1;
+    }
+  });
+  //remove null years (indicated by -1)
+  dataNew = dataNew_.filter(function (d) {
+    return d.Year !== -1 ;
+  });
+  // get data array indexed by genre
+  let dataNew = d3.group(dataNew, (d) => d.Genre);
+  console.log("DATANEW: ", dataNew)
+  let iterator = dataNew.keys()
+  let final = iterator.next()
+  let arr = []
+  while (!final.done) {
+    console.log(final.value)
+    arr.push(final.value)
+    final = iterator.next()
+  }
+
+  // console.log("ARRAY???", arr)
+
+  let color = d3.scaleOrdinal()
+    .domain(arr)
+    .range(d3.schemeBlues)
+  
+  // get the position of each group from pie chart
+  let pie = d3.pie()
+  .value(function(d) {return d.value;})
+  .sort(function(a,b) {console.log(a); return d3.ascending(a.key, b.key);})
+
+  let prepared_data = pie(dataNew)
+  let u = svg.selectAll("path")
+  .data(prepared_data)
+
+  u
+  .enter()
+  .append('path')
+  .merge(u)
+  .transition()
+  .duration(1000)
+  .attr('d', d3.arc()
+    .innerRadius(0)
+    .outerRadius(radius)
+  )
+  .attr('fill', function(d){ return(color(d[0])) })
+  .attr("stroke", "white")
+  .style("stroke-width", "2px")
+  .style("opacity", 1)
+
+  // remove the group that is not present anymore
+  u
+  .exit()
+  .remove()
+  }) 
+  
 }
 
 function pieChartGenre(startYear, endYear) {
@@ -335,9 +404,9 @@ function pieChartConsole(startYear, endYear) {
   });
 }
 
-function yearTotalSalesBarChart() {
-  let svg = d3.select('#yearTotalSales');
-  let margin = 200;
+function update2(year) {
+  let svg = d3.select('#genreChartNEW');
+  let margin = 400;
   let width = svg.attr('width') - margin;
   let height = svg.attr('height') - margin;
 
@@ -345,7 +414,117 @@ function yearTotalSalesBarChart() {
   let yScale = d3.scaleLinear().range([height, 0]);
   let g = svg
     .append('g')
-    .attr('transform', 'translate(' + 100 + ',' + 100 + ')');
+    .attr('transform', 'translate(' + 200 + ',' + 100 + ')');
+
+    
+  d3.csv(data).then(function (data) {
+    data.forEach(function (d) {
+      if (isNaN(+d.Year)) {
+        d.Year = -1;
+      }
+      d.Rank = +d.Rank;
+      d.Year = +d.Year;
+      d.NA_Sales = +d.NA_Sales;
+      d.EU_Sales = +d.EU_Sales;
+      d.JP_Sales = +d.JP_Sales;
+      d.Other_Sales = +d.Other_Sales;
+      d.Global_Sales = +d.Global_Sales;
+    });
+
+    //sorts data by Genre
+    data = data.slice().sort((a, b) => d3.ascending(a.Genre, b.Genre));
+
+    //remove null years (indicated by -1)
+    data = data.filter(function (d) {
+      return d.Year != -1 && d.Year === year;
+    });
+
+    // set x domain
+    let dataByYear = d3.group(data, (d) => d.Genre);
+    xScale.domain(
+      data.map(function (d) {
+        return d.Genre;
+      })
+    );
+
+    // set y domain
+    let totalSalesArray = Array.from(dataByYear, ([key, values]) => {
+      return values.length;
+    });
+    yScale.domain([0, d3.max(totalSalesArray)]);
+
+    // x axis group element
+    g.append('g')
+      .attr('transform', 'translate(0,' + height + ')')
+      .call(d3.axisBottom(xScale))
+      .append('text')
+      .attr('dx', '22em')
+      .attr('dy', '2em')
+      .attr('font-family', 'Raleway, sans-serif')
+      .style('font-size', '3em')
+      .attr('text-anchor', 'end')
+      .attr('fill', 'white')
+      .text('Genre');
+
+    // y axis group element
+    g.append('g')
+      .call(
+        d3
+          .axisLeft(yScale)
+          .tickFormat(function (d) {
+            return d;
+          })
+          .ticks(10)
+      )
+      .append('text')
+      .attr('transform', 'rotate(-90)')
+      .attr('y', 6)
+      .attr('dx', '-2em')
+      .attr('dy', '-2em')
+      .attr('font-family', 'Raleway, sans-serif')
+      .style('font-size', '2em')
+      .attr('text-anchor', 'end')
+      .attr('fill', 'white')
+      .text('Number of games');
+
+    g.selectAll('.domain').attr('stroke', 'white');
+    g.selectAll('.tick line').attr('stroke', 'white');
+    g.selectAll('.tick text').attr('fill', 'white');
+
+    g.selectAll('.bar')
+      .data(dataByYear)
+      .enter()
+      .append('rect')
+      .attr('class', 'bar')
+      .attr('x', function (d) {
+        return xScale(d[0]);
+      })
+      .attr('y', function (d) {
+        return yScale(d[1].length);
+      })
+      .attr('width', xScale.bandwidth())
+      .transition()
+      .duration(1500)
+      .attr('height', function (d) {
+        return height - yScale(d[1].length);
+      })
+      .attr('fill', function (d, i) {
+        return 'white';
+      });
+  });
+}
+
+function yearTotalSalesBarChart() {
+  let svg = d3.select('#yearTotalSales');
+  let margin = 350;
+  let width = svg.attr('width') - margin;
+  let height = svg.attr('height') - margin;
+
+  let xScale = d3.scaleBand().range([0, width]).padding(0.4);
+  let yScale = d3.scaleLinear().range([height, 0]);
+  let g = svg
+    .append('g')
+    .attr('transform', 'translate(' + 200 + ',' + 100 + ')');
 
   d3.csv(data).then(function (data) {
     data.forEach(function (d) {
@@ -479,15 +658,16 @@ class DataViz1 extends React.Component {
 
     yearTotalSalesBarChart();
 
-    for (let i = 1980; i < 2020; i += 5) {
-      pieChartGenre(i, i + 4);
-      pieChartConsole(i, i + 4);
-      getMostPopularGameGlobal(i, i + 4);
-    }
+    // for (let i = 1980; i < 2020; i += 5) {
+    //   pieChartGenre(i, i + 4);
+    //   pieChartConsole(i, i + 4);
+    //   getMostPopularGameGlobal(i, i + 4);
+    // }
 
-    pieChartGenre(1980, 2019);
-    pieChartConsole(1980, 2019);
+    // pieChartGenre(1980, 2019);
+    // pieChartConsole(1980, 2019);
     //getMostPopularGameGlobal(1980, 2019);
+    update2(2010)
   }
 
   render() {
@@ -509,9 +689,11 @@ class DataViz1 extends React.Component {
             . It represents an incomplete set, and the sales of video games by
             year is reflected below.
           </p>
+          
           <svg width='1500' height='600' id='yearTotalSales'></svg>
+          <svg width='1500' height='600' id='genreChartNEW'></svg>
         </div>
-        <div className='flexVertical' id='dataVizContainer'>
+        {/* <div className='flexVertical' id='dataVizContainer'>
           {makeDataView(1980, 1984)}
           {makeDataView(1985, 1989)}
           {makeDataView(1990, 1994)}
@@ -521,7 +703,7 @@ class DataViz1 extends React.Component {
           {makeDataView(2010, 2014)}
           {makeDataView(2015, 2019)}
           {makeDataView(1980, 2019)}
-        </div>
+        </div> */}
       </div>
     );
   }
