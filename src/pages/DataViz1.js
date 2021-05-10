@@ -93,74 +93,6 @@ function getMostPopularGameGlobal(startYear, endYear) {
     selected.append(num);
   });
 }
-// heavily refernces https://www.d3-graph-gallery.com/graph/pie_changeData.html
-function update(year) {
-  let svg = d3.select('#genrePieNEW');
-  let width = svg.attr('width');
-  let height = svg.attr('height');
-  let radius = Math.min(width, height) / 2;
-  d3.csv(data).then(function (dataNew_) {
-
-  
-  // format data into numbers
-  dataNew_.forEach(function (d) {
-    if (isNaN(+d.Year) || +d.Year !== year) {
-      d.Year = -1;
-    }
-  });
-  //remove null years (indicated by -1)
-  dataNew = dataNew_.filter(function (d) {
-    return d.Year !== -1 ;
-  });
-  // get data array indexed by genre
-  let dataNew = d3.group(dataNew, (d) => d.Genre);
-  console.log("DATANEW: ", dataNew)
-  let iterator = dataNew.keys()
-  let final = iterator.next()
-  let arr = []
-  while (!final.done) {
-    console.log(final.value)
-    arr.push(final.value)
-    final = iterator.next()
-  }
-
-  // console.log("ARRAY???", arr)
-
-  let color = d3.scaleOrdinal()
-    .domain(arr)
-    .range(d3.schemeBlues)
-  
-  // get the position of each group from pie chart
-  let pie = d3.pie()
-  .value(function(d) {return d.value;})
-  .sort(function(a,b) {console.log(a); return d3.ascending(a.key, b.key);})
-
-  let prepared_data = pie(dataNew)
-  let u = svg.selectAll("path")
-  .data(prepared_data)
-
-  u
-  .enter()
-  .append('path')
-  .merge(u)
-  .transition()
-  .duration(1000)
-  .attr('d', d3.arc()
-    .innerRadius(0)
-    .outerRadius(radius)
-  )
-  .attr('fill', function(d){ return(color(d[0])) })
-  .attr("stroke", "white")
-  .style("stroke-width", "2px")
-  .style("opacity", 1)
-
-  // remove the group that is not present anymore
-  u
-  .exit()
-  .remove()
-  }) 
-  
-}
 
 function pieChartGenre(startYear, endYear) {
   let svg = d3.select('#genrePie' + startYear + endYear);
@@ -407,7 +339,7 @@ function pieChartConsole(startYear, endYear) {
 function update2(year,type) {
   let svg = d3.select('#' + type + 'ChartNEW');
   let margin = 400;
-  let width = svg.attr('width') - margin;
+  let width = svg.attr('width') - (margin );
   let height = svg.attr('height') - (margin/4);
 
   let xScale = d3.scaleBand().range([0, width]).padding(0.4);
@@ -431,6 +363,25 @@ function update2(year,type) {
       d.Global_Sales = +d.Global_Sales;
     });
 
+    let allDomainValues
+    if (type==='genre') { 
+      allDomainValues = Array.from(d3.group(data, (d) => d.Genre), ([key, values]) => {
+        return key;
+      });
+    }  
+
+    if (type==='platform') { 
+      allDomainValues = Array.from(d3.group(data, (d) => d.Platform), ([key, values]) => {
+        return key;
+      });
+    }  
+
+    if (type==='publisher') { 
+      allDomainValues = Array.from(d3.group(data, (d) => d.Publisher), ([key, values]) => {
+        return key;
+      });
+    }  
+
     //remove null years (indicated by -1)
     data = data.filter(function (d) {
       return d.Year != -1 && d.Year === year;
@@ -441,7 +392,7 @@ function update2(year,type) {
       data = data.slice().sort((a, b) => d3.ascending(a.Genre, b.Genre));
 
       // set x domain
-       dataByYear = d3.group(data, (d) => d.Genre);
+      dataByYear = d3.group(data, (d) => d.Genre);
       xScale.domain(
       data.map(function (d) {
           return d.Genre;
@@ -482,7 +433,7 @@ function update2(year,type) {
 
     // make colors
     var color = d3.scaleOrdinal()
-    .domain(genreNames)
+    .domain(allDomainValues)
     .range(d3.schemeDark2);
 
     
@@ -504,14 +455,14 @@ function update2(year,type) {
       
     }
 
-    g.append('text')
-    .attr("className", "currText")
-    .attr('dx', '20em')
-    .attr('dy', '2em')
-    .attr('font-family', 'Raleway, sans-serif')
-    .style('font-size', '3em')
-    .attr('text-anchor', 'end')
-    .attr('fill', 'white')
+    // g.append('text')
+    // .attr("className", "currText")
+    // .attr('dx', '20em')
+    // .attr('dy', '2em')
+    // .attr('font-family', 'Raleway, sans-serif')
+    // .style('font-size', '3em')
+    // .attr('text-anchor', 'end')
+    // .attr('fill', 'white')
     // .text(type);
     // y axis group element
     g.append('g')
@@ -791,21 +742,22 @@ class DataViz1 extends React.Component {
           </p>
           
           <svg width='1500' height='600' id='yearTotalSales'></svg>
+          <h1 className='dvHeader'>Explore video games by category over the years</h1>
           
           <h2 className='dvSubheading'>{this.state.genreValue ? this.state.genreValue : '1985'}</h2>
           <svg className='fadeInOpacity' width='1500' height='400' id='genreChartNEW'></svg>
           <input id="genreYearSlider" name="genreYearSlider" type="range" min="1985" max="2010" onChange={this.onGenreChange}/>
-          <h2 className='dvSubheading'>Genre</h2>
+          <h2 className='dvSubheading'>by genre</h2>
           
           <h2 className='dvSubheading'>{this.state.platformValue ? this.state.platformValue : '1985'}</h2>
           <svg className='fadeInOpacity' width='1500' height='400' id='platformChartNEW'></svg>
           <input id="platformYearSlider" name="platformYearSlider" type="range" min="1985" max="2010" onChange={this.onPlatformChange}/>
-          <h2 className='dvSubheading'>Platform</h2>
+          <h2 className='dvSubheading'>by platform</h2>
 
           <h2 className='dvSubheading'>{this.state.publisherValue ? this.state.publisherValue : '1985'}</h2>
-          <svg className='fadeInOpacity' width='2000' height='400' id='publisherChartNEW'></svg>
+          <svg className='fadeInOpacity' width='1600' height='400' id='publisherChartNEW'></svg>
           <input id="publisherYearSlider" name="publisherYearSlider" type="range" min="1985" max="2010" onChange={this.onPublisherChange}/>
-          <h2 className='dvSubheading'>Publisher</h2>
+          <h2 className='dvSubheading'>by publisher</h2>
         </div>
         {/* <div className='flexVertical' id='dataVizContainer'>
           {makeDataView(1980, 1984)}
