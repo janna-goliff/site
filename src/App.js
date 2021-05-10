@@ -1,5 +1,6 @@
 //import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 import MainElements from './components/MainElements.js';
 import About from './pages/About.js';
 import Contact from './pages/Contact.js';
