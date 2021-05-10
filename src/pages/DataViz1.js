@@ -408,7 +408,7 @@ function update2(year) {
   let svg = d3.select('#genreChartNEW');
   let margin = 400;
   let width = svg.attr('width') - margin;
-  let height = svg.attr('height') - margin;
+  let height = svg.attr('height') - (margin/2);
 
   let xScale = d3.scaleBand().range([0, width]).padding(0.4);
   let yScale = d3.scaleLinear().range([height, 0]);
@@ -448,11 +448,20 @@ function update2(year) {
     );
 
     // set y domain
+    let genreNames = [];
     let totalSalesArray = Array.from(dataByYear, ([key, values]) => {
+      genreNames.push(key)
       return values.length;
     });
+
     yScale.domain([0, d3.max(totalSalesArray)]);
 
+    // make colors
+    var color = d3.scaleOrdinal()
+    .domain(genreNames)
+    .range(d3.schemeDark2);
+
+    
     // x axis group element
     g.append('g')
       .attr('transform', 'translate(0,' + height + ')')
@@ -491,6 +500,7 @@ function update2(year) {
     g.selectAll('.tick line').attr('stroke', 'white');
     g.selectAll('.tick text').attr('fill', 'white');
 
+    console.log("rerendering bars!")
     g.selectAll('.bar')
       .data(dataByYear)
       .enter()
@@ -509,7 +519,8 @@ function update2(year) {
         return height - yScale(d[1].length);
       })
       .attr('fill', function (d, i) {
-        return 'white';
+        console.log("d: ", d[0])
+        return color(d[0]);
       });
   });
 }
@@ -647,11 +658,28 @@ function makeDataView(start, end) {
   );
 }
 
-class DataViz1 extends React.Component {
-  //   constructor(props) {
-  //     super(props);
-  //   }
+// function updateGenre() {
+//   const value = document.getElementById("genreYearSlider").value
+//   update2(value)
+// }
 
+class DataViz1 extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {};
+      this.onInputchange = this.onInputchange.bind(this);
+    }
+
+    onInputchange(event) {
+      let value = event.target.value
+      console.log("VALUE: ", value)
+      update2(value)
+      this.setState({
+        genreValue: event.target.value
+      });
+      
+      
+    }
   componentDidMount() {
     const navbar = document.getElementsByClassName('navbarWrapper')[0];
     navbar.classList.add('hide');
@@ -667,8 +695,19 @@ class DataViz1 extends React.Component {
     // pieChartGenre(1980, 2019);
     // pieChartConsole(1980, 2019);
     //getMostPopularGameGlobal(1980, 2019);
-    update2(2010)
+    update2(1985)
   }
+
+  componentDidUpdate() {
+    const parent = document.getElementById("genreChartNEW")
+    while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+    }
+    console.log(this.state.genreValue)
+    update2(parseInt(this.state.genreValue))
+  }
+
+  
 
   render() {
     return (
@@ -691,7 +730,8 @@ class DataViz1 extends React.Component {
           </p>
           
           <svg width='1500' height='600' id='yearTotalSales'></svg>
-          <svg width='1500' height='600' id='genreChartNEW'></svg>
+          <svg width='1500' height='500' id='genreChartNEW'></svg>
+          <input id="genreYearSlider" name="genreYearSlider" type="range" min="1985" max="2010" onChange={this.onInputchange}/>
         </div>
         {/* <div className='flexVertical' id='dataVizContainer'>
           {makeDataView(1980, 1984)}
