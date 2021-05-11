@@ -298,3 +298,18 @@ svg {
 	}
 }
 
+.faded {
+  background-color: rgba(255, 255, 255, .1);
+}
+
+.margin-neg {
+  margin-top: -3em;
+}
+
+.mb-1 {
+  padding-bottom: 2em;
+}
+
+.margin-neg-small {
+  margin-top: -.5em;
+}

@@ -566,7 +566,7 @@ function yearTotalSalesBarChart() {
       .attr('transform', 'translate(0,' + height + ')')
       .call(d3.axisBottom(xScale))
       .append('text')
-      .attr('dx', '22em')
+      .attr('dx', '20em')
       .attr('dy', '2em')
       .attr('font-family', 'Raleway, sans-serif')
       .style('font-size', '3em')
@@ -742,22 +742,40 @@ class DataViz1 extends React.Component {
           </p>
           
           <svg width='1500' height='600' id='yearTotalSales'></svg>
-          <h1 className='dvHeader'>Explore video games by category over the years</h1>
+          <h1 className='dvHeader margin-neg'>Explore video games by category over the years</h1>
           
-          <h2 className='dvSubheading'>{this.state.genreValue ? this.state.genreValue : '1985'}</h2>
-          <svg className='fadeInOpacity' width='1500' height='400' id='genreChartNEW'></svg>
-          <input id="genreYearSlider" name="genreYearSlider" type="range" min="1985" max="2010" onChange={this.onGenreChange}/>
-          <h2 className='dvSubheading'>by genre</h2>
           
-          <h2 className='dvSubheading'>{this.state.platformValue ? this.state.platformValue : '1985'}</h2>
-          <svg className='fadeInOpacity' width='1500' height='400' id='platformChartNEW'></svg>
-          <input id="platformYearSlider" name="platformYearSlider" type="range" min="1985" max="2010" onChange={this.onPlatformChange}/>
-          <h2 className='dvSubheading'>by platform</h2>
+          <div className='faded mb-1'>
+            <h2 className='dvSubheading'>by genre</h2>
+            <svg className='fadeInOpacity' width='1500' height='400' id='genreChartNEW'></svg>
+            <h2 className='dvSubheading margin-neg'>{this.state.genreValue ? this.state.genreValue : '1985'}</h2>
+            <input id="genreYearSlider" name="genreYearSlider" type="range" min="1985" max="2010" onChange={this.onGenreChange}/>
+            
+          </div>
+          
+          <div className='mb-1'>
+            <h2 className='dvSubheading'>by platform</h2>
+            <svg className='fadeInOpacity' width='1500' height='400' id='platformChartNEW'></svg>
+            <h2 className='dvSubheading margin-neg'>{this.state.platformValue ? this.state.platformValue : '1985'}</h2>
+            <input id="platformYearSlider" name="platformYearSlider" type="range" min="1985" max="2010" onChange={this.onPlatformChange}/>
+          </div>
+         
+          
+          <div  className='faded mb-1'>
+            <h2 className='dvSubheading'>by publisher</h2>
+            <svg className='fadeInOpacity' width='1600' height='400' id='publisherChartNEW'></svg>
+            <h2 className='dvSubheading margin-neg-small'>{this.state.publisherValue ? this.state.publisherValue : '1985'}</h2>
+            <input id="publisherYearSlider" name="publisherYearSlider" type="range" min="1985" max="2010" onChange={this.onPublisherChange}/>
+            
+          </div>
 
-          <h2 className='dvSubheading'>{this.state.publisherValue ? this.state.publisherValue : '1985'}</h2>
-          <svg className='fadeInOpacity' width='1600' height='400' id='publisherChartNEW'></svg>
-          <input id="publisherYearSlider" name="publisherYearSlider" type="range" min="1985" max="2010" onChange={this.onPublisherChange}/>
-          <h2 className='dvSubheading'>by publisher</h2>
+          <h3 className='dvSubheading'>Insights</h3>
+          <p className='dvBody'>
+            From 1985 to 2010, there was a huge shift in video game sales. Although the data given is incomplete, there is a clear upwards trend in the popularity of video games over time.
+            When looking at popular consoles, it is interesting to note that the number of consoles did not increase dramatically over time, and the market for consoles themselves seems to have been fairly dominated by the same consoles and their variants over the past few decades.
+            In contrast, the amount of video game publishers creating popular video games skyrocketed, to the point that it is difficult to even fully render them on screen. While some companies have maintained success over time, such as Electronic Arts and Nintendo, there are a large amount of newer companies entering the scene as early as 2000.
+            
+          </p>
         </div>
         {/* <div className='flexVertical' id='dataVizContainer'>
           {makeDataView(1980, 1984)}
