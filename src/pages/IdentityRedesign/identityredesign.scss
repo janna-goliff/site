@@ -1,0 +1,76 @@
+#subprojectContainer {
+    button {
+        background-color: transparent;
+        border: 2px solid var(--green1);
+        border-radius: 1000px;
+        color: var(--green1);
+        font-size: 16px;
+        font-weight: 600;
+
+        margin: 1em;
+        padding: .75em 1.25em;
+        transition: .2s ease all;
+    }
+
+    button:hover {
+        cursor: pointer;
+        padding: .75em 1.5em;
+    }
+}
+
+.individualProject {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 0 4em 1em 4em;
+    width: 100%;
+}
+
+.individualProject {
+    a {
+        color: var(--green1);
+        text-decoration: none;
+    }
+
+    .mainContent {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .mainContent .individual {
+        margin-bottom: 1em;
+    }
+
+    .mainContent.projectGrid {
+        max-width: 700px;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 700px) {
+        .mainContent.projectGrid {
+           display: grid;
+           grid-template-columns: 45% 45%;
+        }
+    }
+
+    .mainContent.projectGrid > div {
+        margin: auto;
+        width: min-content;
+    }
+
+    .mainContent.projectGrid img {
+        margin: 1em .5em;
+        min-width: 300px;
+        width: 30%;
+    }
+
+}
+
+.subProjectDescription {
+    margin: 1em 4em;
+}

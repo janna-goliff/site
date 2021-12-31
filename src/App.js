@@ -1,92 +1,60 @@
-//import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 import './App.css';
-import React from 'react';
-import MainElements from './components/MainElements.js';
-import About from './pages/About.js';
-import Contact from './pages/Contact.js';
-import Home from './pages/Home.js';
-// import Portfolio from './pages/Portfolio.js';
-import IdentityDesign1 from './pages/IdentityDesign1.js';
-import LogoDesign1 from './pages/LogoDesign1.js';
-import LandingPageDesign1 from './pages/LandingPageDesign1';
-import AppDesign1 from './pages/AppDesign1.js';
-import AppDesign2 from './pages/AppDesign2.js';
-import WebAppDesign1 from './pages/WebAppDesign1.js';
-import WebDev1 from './pages/WebDev1.js';
-import FunWork from './pages/FunWork.js';
-import MapProject1 from './pages/MapProject1';
-import WordGenerator from './pages/WordGenerator.js';
-
-import DataViz1 from './pages/DataViz1.js';
-// import ElementAvoid from './ElementAvoid.js';
-
-// import { colors, colorsDark } from './colors';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Landing from "./pages/Landing/Landing";
+import About from "./pages/About/About";
+import IdentityRedesign from "./pages/IdentityRedesign/IdentityRedesign";
+import WebDesignExercise1 from "./pages/WebDesignExercise1/WebDesignExercise1";
+import DataViz1 from "./pages/DataViz1/DataViz1";
+import LogoDesign1 from "./pages/LogoDesign1/LogoDesign1";
+import AppDesign1 from "./pages/AppDesign1/AppDesign1";
+import BeepboopWork from "./pages/BeepboopWork/BeepboopWork";
+import DataPortraits from "./pages/DataPortraits/DataPortraits";
+import WebAppDev1 from "./pages/WebAppDev1/WebAppDev1";
+import FunWork from "./pages/FunWork/FunWork";
 
 function App() {
-  function getDataFromMainElements() {}
-
-  // if (boolean === null) {
-  //   localStorage.setItem('boolean', true);
-  // } else {
-  //   localStorage.setItem('boolean', !boolean);
-  // }
-  // return <div className='App' onLoad={onLoad()}></div>;
-  // sendDataToApp={getDataFromMainElements}
-
   return (
-    <div>
-      <MainElements />
-      <Router>
-        <Switch>
-          {/* <Route path='/home'>
-            <Home />
-          </Route> */}
-          <Route path='/portfolio/biennialredesign'>
-            <IdentityDesign1 />
-          </Route>
-          <Route path='/portfolio/logo'>
-            <LogoDesign1 />
-          </Route>
-          <Route path='/portfolio/eventtracker'>
-            <AppDesign1 />
-          </Route>
-          <Route path='/portfolio/bookshare'>
-            <WebAppDesign1 />
-          </Route>
-          <Route path='/portfolio/artlog'>
-            <AppDesign2 />
-          </Route>
-          <Route path='/portfolio/spiralqlanding'>
-            <LandingPageDesign1 />
-          </Route>
-          <Route path='/portfolio/treehouse'>
-            <WebDev1 />
-          </Route>
-          <Route path='/portfolio/wordgen'>
-            <WordGenerator />
-          </Route>
-          <Route path='/portfolio/dataviz1'>
-            <DataViz1 />
-          </Route>
-          <Route path='/portfolio/mapproject1'>
-            <MapProject1 />
-          </Route>
-          <Route path='/funwork'>
-            <FunWork />
-          </Route>
-          <Route path='/about'>
+    <Router>
+      <Switch>
+          <Route exact path="/about">
             <About />
           </Route>
-          <Route path='/contact'>
-            <Contact />
+          <Route exact path="/design/biennialredesign">
+            <IdentityRedesign />
           </Route>
-          <Route path='/'>
-            <Home />
+          <Route exact path="/design/webdesignexercise1">
+            <WebDesignExercise1 />
+          </Route>
+          <Route exact path="/design/dataviz1">
+            <DataViz1 />
+          </Route>
+          <Route exact path="/design/logodesign1">
+            <LogoDesign1 />
+          </Route>
+          <Route exact path="/design/appdesign1">
+            <AppDesign1 />
+          </Route>
+          <Route exact path="/webdev/beepboop">
+            <BeepboopWork />
+          </Route>
+          <Route exact path="/webdev/treehouse">
+            <WebAppDev1 />
+          </Route>
+          <Route exact path="/webdev/dataportraits">
+            <DataPortraits />
+          </Route>
+          <Route exact path="/funstuff">
+            <FunWork />
+          </Route>
+          <Route path="/">
+            <Landing />
           </Route>
         </Switch>
-      </Router>
-    </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,112 @@
+.navbar_wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 1.5em 0.5em;
+}
+
+.navbar_wrapper {
+    .navbar_name {
+        color: var(--green1);
+        font-family: 'Cormorant Unicase', serif;
+        font-size: 2em;
+        font-weight: 700;
+        text-decoration: none;
+
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .navbar_links {
+        display: flex;
+        margin-top: .5em;
+    }
+
+    .navbar_links .main_section_wrapper {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .navbar_links .main_section {
+        color: var(--green1);
+        font-size: 1.5em;
+        font-weight: 500;
+        margin: 0;
+        text-decoration: none;
+    }
+
+    #designNav {
+        cursor: default;
+    }
+
+    .navbar_links .main_section + .underline {
+        background-color: var(--green1);
+        height: 2px;
+        width: 0;
+
+        transition: .2s ease;
+    }
+
+    .navbar_links .main_section:hover + .underline, 
+    #dropdownMain:hover .underline,
+    #dropdownMain2:hover .underline {
+        width: 100%;
+    }
+
+    // dropdown stuff
+    #dropdownContent {
+        background-color: var(--tan1);
+        box-shadow: 0 4px 4px 2px rgba(0, 0, 0, 0.15);
+        display: block;
+        visibility: hidden;
+        flex-direction: column;
+        position: absolute;
+        z-index: 1;
+      }
+      
+      #dropdownMain:hover #dropdownContent {
+        visibility: visible;
+      }
+      
+      #dropdownMain #dropdownContent > * {
+        color: var(--green1);
+        display: block;
+        font-weight: 600;
+        padding: 15px 40px;
+        text-decoration: none;
+        transition: .2s ease;
+      }
+
+      #dropdownMain #dropdownContent > *:hover {
+        background-color: var(--tan2);
+      }
+
+      // dropdown stuff
+    #dropdownContent2 {
+        background-color: var(--tan1);
+        box-shadow: 0 4px 4px 2px rgba(0, 0, 0, 0.15);
+        display: block;
+        visibility: hidden;
+        flex-direction: column;
+        position: absolute;
+        z-index: 1;
+      }
+      
+      #dropdownMain2:hover #dropdownContent2 {
+        visibility: visible;
+      }
+      
+      #dropdownMain2 #dropdownContent2 > * {
+        color: var(--green1);
+        display: block;
+        font-weight: 600;
+        padding: 15px 40px;
+        text-decoration: none;
+        transition: .2s ease;
+      }
+
+      #dropdownMain2 #dropdownContent2 > *:hover {
+        background-color: var(--tan2);
+      }
+}

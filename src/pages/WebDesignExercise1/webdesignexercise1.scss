@@ -1,0 +1,41 @@
+.main_container {
+    .larger_img {
+        margin: 1em auto;
+        min-width: 300px;
+        width: 50%;
+    }
+
+    .webDesignGrid {
+        display: grid;
+        grid-gap: 1em .5em;
+        grid-template-columns: 50% 50%;
+        margin: auto;
+        width: 90%;
+    }
+
+    .webDesignGrid {
+        .grid_img {
+            min-width: 300px;
+            width: 100%;
+        }
+
+        .grid_img img {
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .main_container {
+        .webDesignGrid {
+            grid-template-columns: 100%;
+        }
+
+        .webDesignGrid {
+            .grid_img {
+                margin: 1em auto;
+                min-width: 300px;
+            }
+        }
+    }
+}
