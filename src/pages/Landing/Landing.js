@@ -28,8 +28,8 @@ function Landing() {
                     <h1>Most recent work: Beepboop Mobile-first Redesign</h1>
                 </div>
                 <div className="landing_frame_container">
-                    <PhoneFrame imageSrc={home_mobile_redesign} imageAlt="screenshot" />
-                    <PhoneFrame imageSrc={book_mobile_redesign} imageAlt="screenshot" />
+                    <img className="phone_frame_image" src={home_mobile_redesign} alt={"screenshot"} />
+                    <img className="phone_frame_image" src={book_mobile_redesign} alt={"screenshot"} />
                 </div>
             </div>
         </>
