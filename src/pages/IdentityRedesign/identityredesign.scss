@@ -1,9 +1,9 @@
 #subprojectContainer {
     button {
         background-color: transparent;
-        border: 2px solid var(--green1);
+        border: 2px solid var(--mainContentColor);
         border-radius: 1000px;
-        color: var(--green1);
+        color: var(--mainContentColor);
         font-size: 16px;
         font-weight: 600;
 
@@ -30,7 +30,7 @@
 
 .individualProject {
     a {
-        color: var(--green1);
+        color: var(--mainContentColor);
         text-decoration: none;
     }
 

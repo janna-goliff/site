@@ -10,20 +10,22 @@ function Landing() {
     return (
         <>
             <Navbar />
-            <PageHeader headerContent="Design, development, etc"/>
             <div className="landing_body">
-                <div className="header_container">
+                <div className="mainTicket">
+                    <div className="ticketHeader">Welcome!</div>
+                    <div className="ticketBody">
+                        <div className="topContent">
+                            <div className="textContent">thanks for visiting</div>
+                            <div className="decorativeRect"></div>
+                        </div>
+                        <div className="bottomContent">
+                            <div>I'm <a href="/about" className="aboutLink">Janna<div className="spacer">_</div>Goliff</a>, a</div>
+                            <div>designer and developer</div></div> 
+                    </div>
+                </div>
+                <div className="header_container landing">
                     <svg className="star_icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144"><rect x="67.2" width="9.6" height="144"/><rect x="67.2" width="9.6" height="144" transform="translate(-26.35 98.35) rotate(-60)"/><rect x="67.2" width="9.6" height="144" transform="translate(98.35 -26.35) rotate(60)"/><circle cx="72" cy="72" r="18.47"/></svg>
                     <h1>Most recent work: Beepboop Mobile-first Redesign</h1>
-                    <div>
-                        As a full-stack software engineer and design intern at Beepboop, I architected the complete redesign of their student-facing website, the Speak App.
-                        <br />
-                        <br />
-                        My work included developing mockups of mobile-friendly designs in Figma, implementing them on the frontend using React, and creating and optimizing API endpoints on the backend using Firebase and Node.js
-                        <br />
-                        <br />
-                        Design and engineering choices were informed by prioritization of acessibility for non-digital natives and users in areas with slow internet connections and/or users without a desktop computer.
-                    </div>
                 </div>
                 <div className="landing_frame_container">
                     <PhoneFrame imageSrc={home_mobile_redesign} imageAlt="screenshot" />

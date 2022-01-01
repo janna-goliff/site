@@ -721,7 +721,7 @@ class DataViz1 extends React.Component {
           <p className='dvBody'>
             This data on video game sales was taken from Kaggle and can be found{' '}
             <a
-              style={{ color: 'var(--green1)' }}
+              style={{ color: 'var(--mainContentColor)' }}
               id='black'
               href='https://www.kaggle.com/gregorut/videogamesales'
             >

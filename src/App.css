@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@400;500;600;700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  --green1: #0C4E1B;
-  --tan1: #EFEBDD;
-  --tan2: #ded7bd;
+  /* --mainContentColor: #0C4E1B; */
+  --mainContentColor: #C75D3D;
+  --tan1: #F9F7F3;
+  --tan1Alt: #FCF6E5;
+  --tan2: #e9e6df;
 }
 
 #root {
@@ -11,7 +13,7 @@
 }
 
 body {
-  background-color: var(--tan1);
+  background-color: #F9F7F3;
   font-family: 'Raleway', Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -19,7 +21,7 @@ body {
 }
 
 a {
-  color: var(--green1);
+  color: var(--mainContentColor);
   font-weight: 600;
 }
 
@@ -27,13 +29,17 @@ a {
   display: flex;
   flex-direction: column;
   font-size: 1em;
-  margin: 0 4em 1em 4em;
+  margin: 2.5em 2em 1em 2em;
   position: relative;
   width: auto;
 }
 
+.header_container:not(.landing) {
+  margin: 2em 2em 1em 4em;
+}
+
 .header_container h1 {
-  color: var(--green1);
+  color: var(--mainContentColor);
 }
 
 .landing_body {
@@ -61,5 +67,5 @@ a {
 
 .star_icon circle,
 .star_icon rect {
-  fill: var(--green1);
+  fill: var(--mainContentColor);
 }
