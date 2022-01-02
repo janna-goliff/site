@@ -12,7 +12,8 @@
 .gen_img_container {
     align-items: center;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     margin-bottom: 1em;
     width: 100%;
 }
@@ -27,6 +28,6 @@
 
     .gen_img {
         margin: auto;
-        width: 85%;
+        width: 700px;
     }
 }

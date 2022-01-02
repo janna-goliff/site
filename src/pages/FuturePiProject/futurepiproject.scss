@@ -1,0 +1,21 @@
+.future_pi_project {
+    .container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 2em auto;
+        width: 90%;
+    }
+
+    .container {
+        .phone_frame_image {
+            border-radius: 10px;
+            margin-right: 30px;
+            width: 500px;
+        }
+
+        .main_text {
+            font-size: 16px;
+        }
+    }
+}

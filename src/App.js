@@ -14,6 +14,7 @@ import AppDesign1 from "./pages/AppDesign1/AppDesign1";
 import BeepboopWork from "./pages/BeepboopWork/BeepboopWork";
 import DataPortraits from "./pages/DataPortraits/DataPortraits";
 import WebAppDev1 from "./pages/WebAppDev1/WebAppDev1";
+import FuturePiProject from "./pages/FuturePiProject/FuturePiProject";
 import FunWork from "./pages/FunWork/FunWork";
 
 function App() {
@@ -46,6 +47,9 @@ function App() {
           </Route>
           <Route exact path="/webdev/dataportraits">
             <DataPortraits />
+          </Route>
+          <Route exact path="/engineering/futurepiproject">
+            <FuturePiProject />
           </Route>
           <Route exact path="/funstuff">
             <FunWork />

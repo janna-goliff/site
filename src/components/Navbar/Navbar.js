@@ -13,6 +13,7 @@ function Navbar() {
                         <div className="underline" />
                     </div>
                     <div id='dropdownContent2'>
+                        <a href='/engineering/futurepiproject'>2050: an Earth Odyssey</a>
                         <a href='/webdev/beepboop'>Beepboop internship</a>
                         <a href='/webdev/dataportraits'>Data portraits</a>
                         <a href='/webdev/treehouse'>Web app development (CIS557)</a>
