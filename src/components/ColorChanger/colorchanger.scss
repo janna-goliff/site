@@ -1,0 +1,36 @@
+.color_changer_wrapper {
+  width: 100%;
+}
+
+.color_changer_wrapper .change_bar {
+  display: flex;
+  width: 100%;
+}
+
+.color_changer_wrapper.orange {
+  --mainContentColor: #C75D3D;
+  --tan1: #F9F7F3;
+  --tan1Alt: #FCF6E5;
+  --tan2: #e9e6df;
+}
+
+.color_changer_wrapper.purple {
+  --mainContentColor: #c73d8d;
+  --tan1: #F9F7F3;
+  --tan1Alt: #FCF6E5;
+  --tan2: #e9e6df;
+}
+
+.color_changer_wrapper.green {
+  --mainContentColor: #13582e;
+  --tan1: #F9F7F3;
+  --tan1Alt: #FCF6E5;
+  --tan2: #e9e6df;
+}
+
+.color_changer_wrapper.black {
+  --mainContentColor: #000000;
+  --tan1: #F9F7F3;
+  --tan1Alt: #FCF6E5;
+  --tan2: #e9e6df;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
+import ColorChanger from "../../components/ColorChanger/ColorChanger";
 import "./dataportraits.scss";
 import Expandable from "../../components/Expandable/Expandable";
 import bernie_orig from "../../assets/dataportraits/bernie_orig.jpg";
@@ -8,7 +9,7 @@ import bernie_filter from "../../assets/dataportraits/bernie_filter.jpg";
 
 function WebAppDev1() {
     return (
-        <>
+        <ColorChanger>
             <Navbar />
             <div className="data_portaits">
                 <div className="header_container">
@@ -44,7 +45,7 @@ function WebAppDev1() {
                     />
                 </div>
             </div>
-        </>
+        </ColorChanger>
     );
 }
 

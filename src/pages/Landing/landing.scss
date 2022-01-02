@@ -17,6 +17,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
+    margin-top: 30px;
     padding: 15px;
 }
 
@@ -88,8 +89,39 @@
     }
 }
 
-.header_container h1 {
-    color: var(--mainContentColor);
-    font-size: 32px;
-    font-weight: 600;
+a.header_container {
+    text-decoration: none;
+}
+
+.header_container {
+    h1 {
+        color: var(--mainContentColor);
+        font-size: 32px;
+        font-weight: 600;
+    }
+    
+    .divider {
+        align-self: center;
+        border: 2px solid var(--mainContentColor);
+        border-radius: 1000px;
+        display: flex;
+        height: 7px;
+        width: 110%;
+    }
+    
+    .divider .filler {
+        background-color: var(--mainContentColor);
+        border-radius: 1000px;
+        height: 100%;
+        transition: .4s ease all;
+        width: 0%;
+    }
+}
+
+a.header_container:hover .filler {
+    width: 100%;
+}
+
+.landing_frame_container .phone_frame_image {
+    margin-top: 10px;
 }

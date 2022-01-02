@@ -5,6 +5,7 @@ import React from 'react';
 import "./dataviz1.scss";
 import * as d3 from 'd3';
 import Navbar from "../../components/Navbar/Navbar";
+import ColorChanger from "../../components/ColorChanger/ColorChanger";
 
 let data =
   'https://raw.githubusercontent.com/janna-goliff/site/main/src/pages/vgsales.csv';
@@ -710,6 +711,7 @@ class DataViz1 extends React.Component {
 
   render() {
     return (
+      <ColorChanger>
       <div className="pageContainer">
         <Navbar />
         <div className="header_container">
@@ -765,6 +767,7 @@ class DataViz1 extends React.Component {
           </p>
         </div>
       </div>
+      </ColorChanger>
     );
   }
 }

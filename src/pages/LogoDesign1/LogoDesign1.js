@@ -1,12 +1,13 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
+import ColorChanger from "../../components/ColorChanger/ColorChanger";
 import "./logodesign1.scss";
 import Expandable from "../../components/Expandable/Expandable";
 import logo_img from "../../assets/graces_organics_logo.png";
 
 function LogoDesign1() {
     return (
-        <>
+        <ColorChanger>
             <Navbar />
             <div className="logo_1_body">
                 <div className="header_container">
@@ -28,7 +29,7 @@ function LogoDesign1() {
                     </div>
                 </div>
             </div>
-        </>
+        </ColorChanger>
     );
 }
 

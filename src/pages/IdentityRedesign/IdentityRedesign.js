@@ -1,12 +1,13 @@
 import React from "react";
 import "./identityredesign.scss";
 import Navbar from "../../components/Navbar/Navbar";
+import ColorChanger from "../../components/ColorChanger/ColorChanger";
 import Expandable from "../../components/Expandable/Expandable";
 
 
 function Landing() {
     return (
-        <>
+        <ColorChanger>
             <Navbar />
             <div className="landing_body">
                 <div className="header_container">
@@ -137,7 +138,7 @@ function Landing() {
                     <p className='subProjectDescription'></p>
                 </article>
             </div>
-        </>
+        </ColorChanger>
     );
 }
 

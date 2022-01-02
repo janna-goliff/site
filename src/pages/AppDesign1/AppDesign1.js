@@ -1,6 +1,7 @@
 import React from "react";
 import "./appdesign1.scss";
 import Navbar from "../../components/Navbar/Navbar";
+import ColorChanger from "../../components/ColorChanger/ColorChanger";
 import PhoneFrame from "../../components/PhoneFrame/PhoneFrame";
 import calendar_bw from "../../assets/eventtracker/calendar_bw.png";
 import calendar_color from "../../assets/eventtracker/calendar_color.png";
@@ -10,8 +11,6 @@ import emptystate_bw from "../../assets/eventtracker/emptystate_bw.png";
 import emptystate_color from "../../assets/eventtracker/emptystate_color.png";
 import search_bw from "../../assets/eventtracker/search_bw.png";
 import search_color from "../../assets/eventtracker/search_color.png";
-import suggestions_bw from "../../assets/eventtracker/suggestions_bw.png";
-import suggestions_color from "../../assets/eventtracker/suggestions_color.png";
 import upcoming_bw from "../../assets/eventtracker/upcoming_bw.png";
 import upcoming_color from "../../assets/eventtracker/upcoming_color.png";
 import upcoming_main_bw from "../../assets/eventtracker/upcoming_main_bw.png";
@@ -20,7 +19,7 @@ import upcoming_main_color from "../../assets/eventtracker/upcoming_main_color.p
 
 function AppDesign1() {
     return (
-        <>
+        <ColorChanger>
             <Navbar />
             <div className="app_design_1_body">
                 <div className="header_container">
@@ -51,7 +50,7 @@ function AppDesign1() {
                     <PhoneFrame imageSrc={emptystate_color} imageAlt="screenshot" />
                 </div>
             </div>
-        </>
+        </ColorChanger>
     );
 }
 

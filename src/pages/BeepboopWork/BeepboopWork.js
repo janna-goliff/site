@@ -1,6 +1,7 @@
 import React from "react";
 import "./beepboopwork.scss";
 import Navbar from "../../components/Navbar/Navbar";
+import ColorChanger from "../../components/ColorChanger/ColorChanger";
 import PhoneFrame from "../../components/PhoneFrame/PhoneFrame";
 import Expandable from "../../components/Expandable/Expandable";
 import book_desktop_orig from "../../assets/beepboop/book_page_desktop_original.png";
@@ -11,7 +12,7 @@ import book_mobile_redesign from "../../assets/beepboop/book_page_mobile_redesig
 
 function BeepboopWork() {
     return (
-        <>
+        <ColorChanger>
             <Navbar />
             <div className="landing_body">
                 <div className="header_container">
@@ -52,7 +53,7 @@ function BeepboopWork() {
                     </div>
                 </div>
             </div>
-        </>
+        </ColorChanger>
     );
 }
 

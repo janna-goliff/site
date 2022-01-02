@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
+import ColorChanger from "../../components/ColorChanger/ColorChanger";
 import "./webappdev1.scss";
 import Expandable from "../../components/Expandable/Expandable";
 import logo_img from "../../assets/treehouse/logo.png";
@@ -10,7 +11,7 @@ import messages from "../../assets/treehouse/messages.png";
 
 function WebAppDev1() {
     return (
-        <>
+        <ColorChanger>
             <Navbar />
             <div className="web_app_dev_1_body">
                 <div className="header_container">
@@ -77,7 +78,7 @@ function WebAppDev1() {
                     </div>
                 </div>
             </div>
-        </>
+        </ColorChanger>
     );
 }
 

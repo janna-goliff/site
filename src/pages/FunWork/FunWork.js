@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
+import ColorChanger from "../../components/ColorChanger/ColorChanger";
 import "./funwork.scss";
 import Expandable from "../../components/Expandable/Expandable";
 //import self_portait from "../../assets/funwork/self-portait.gif";
@@ -10,7 +11,7 @@ import q_poster from "../../assets/funwork/q-poster.png";
 
 function FunWork() {
     return (
-        <>
+        <ColorChanger>
             <Navbar />
             <div className="fun_work_body">
                 <div className="header_container">
@@ -48,7 +49,7 @@ function FunWork() {
                     </div>
                 </div>
             </div>
-        </>
+        </ColorChanger>
     );
 }
 

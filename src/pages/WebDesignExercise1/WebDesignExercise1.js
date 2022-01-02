@@ -1,6 +1,7 @@
 import React from "react";
 import "./webdesignexercise1.scss";
 import Navbar from "../../components/Navbar/Navbar";
+import ColorChanger from "../../components/ColorChanger/ColorChanger";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import Expandable from "../../components/Expandable/Expandable";
 
@@ -14,7 +15,7 @@ import messaging_view_dark_img from "../../assets/bookshare/Messaging_View_(dark
 
 function WebDesignExercise1() {
     return (
-        <>
+        <ColorChanger>
             <Navbar />
             <div className="landing_body">
                 <div className="header_container">
@@ -68,7 +69,7 @@ function WebDesignExercise1() {
                     </div>
                 </div>
             </div>
-        </>
+        </ColorChanger>
     );
 }
 
