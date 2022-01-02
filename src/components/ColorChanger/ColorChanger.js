@@ -19,7 +19,7 @@ function ColorChanger( {children} ) {
             <div className="change_bar">
                 {colorArr.map((colorName) => {
                     return (
-                        <div onClick={() => {
+                        <div className={"color_button " + colorName} onClick={() => {
                             // set color state in color var and in local storage
                             setColor(colorName);
                             localStorage.setItem("color", colorName);

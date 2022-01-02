@@ -2,9 +2,7 @@ import React from "react";
 import "./webdesignexercise1.scss";
 import Navbar from "../../components/Navbar/Navbar";
 import ColorChanger from "../../components/ColorChanger/ColorChanger";
-import PageHeader from "../../components/PageHeader/PageHeader";
 import Expandable from "../../components/Expandable/Expandable";
-
 import landing_img from "../../assets/bookshare/Landing.png";
 import book_view_img from "../../assets/bookshare/Book_View.png";
 import book_view_dark_img from "../../assets/bookshare/Book_View_(dark).png";

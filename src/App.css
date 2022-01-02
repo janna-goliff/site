@@ -8,6 +8,13 @@
   --tan2: #e9e6df;
 } */
 
+:root {
+  --mainOrange: #C75D3D;
+  --mainPurple: #917d89;
+  --mainGreen: #13582e;
+  --mainBlack: #000000;
+}
+
 #root {
   width: 100%;
 }
