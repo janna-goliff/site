@@ -27,11 +27,12 @@ function BeepboopWork() {
                 <div className="landing_frame_container">
                     <div className="frame_label_container">
                         <div className="frame_label">original: </div>
-                        <PhoneFrame imageSrc={book_mobile_orig} imageAlt="screenshot" />
+                        <img className="phone_frame_image" src={book_mobile_orig} alt={"screenshot"} />
+                        
                     </div>
                     <div className="frame_label_container">
                         <div className="frame_label">redesign: </div>
-                        <PhoneFrame imageSrc={book_mobile_redesign} imageAlt="screenshot" />
+                        <img className="phone_frame_image" src={book_mobile_redesign} alt={"screenshot"} />
                     </div>
                 </div>
                 <div className="gen_img_container">
