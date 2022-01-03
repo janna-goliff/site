@@ -8,7 +8,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import ColorChanger from "../../components/ColorChanger/ColorChanger";
 
 let data =
-  'https://raw.githubusercontent.com/janna-goliff/site/main/src/pages/vgsales.csv';
+  'https://raw.githubusercontent.com/janna-goliff/site/main/src/assets/vgsales.csv';
 
 let color = [
   '#DF0108', //red
