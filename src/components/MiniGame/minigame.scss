@@ -13,7 +13,12 @@
         .coordinate {
             background-color: var(--mainContentColor);
             height: 30px;
+            margin: 1px;
             width: 30px;
+        }
+
+        .coordinate.current {
+            background-color: black;
         }
     }
 }
