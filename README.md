@@ -2,6 +2,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It also uses a tutorial found [here](https://github.com/rafgraph/spa-github-pages): to be comtpaible with Github Pages development.
 
 ## Available Scripts
 
