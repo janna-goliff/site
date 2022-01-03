@@ -1,0 +1,40 @@
+.pageContainer {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h3.dvSubheading {
+    margin: 0 10em;
+}
+
+.dvSubheading.margin-neg {
+    margin-top: -1.5em;
+}
+
+.mb-1 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 4em;
+}
+
+.dvBody {
+    margin: auto;
+    width: 70%;
+}
+
+.dvHeader {
+    margin: -4em 0 0 0;
+}
+
+#dataVizContainerIntro {
+    margin: 1em;
+    width: 100%;
+}
+
+.pageContainer {
+    .slider {
+        color: var(--mainContentColor);
+    }
+}

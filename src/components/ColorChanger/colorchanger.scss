@@ -1,0 +1,70 @@
+.color_changer_wrapper.orange {
+  --mainContentColor: var(--mainOrange);
+  --tan1: #F9F7F3;
+  --tan1Alt: #FCF6E5;
+  --tan2: #e9e6df;
+}
+
+.color_changer_wrapper.lavender {
+  --mainContentColor: var(--mainLavender);
+  --tan1: #F9F7F3;
+  --tan1Alt: #FCF6E5;
+  --tan2: #e9e6df;
+}
+
+.color_changer_wrapper.green {
+  --mainContentColor: var(--mainGreen);
+  --tan1: #F9F7F3;
+  --tan1Alt: #FCF6E5;
+  --tan2: #e9e6df;
+}
+
+.color_changer_wrapper.black {
+  --mainContentColor: var(--mainBlack);
+  --tan1: #F9F7F3;
+  --tan1Alt: #FCF6E5;
+  --tan2: #e9e6df;
+}
+
+.color_changer_wrapper {
+  width: 100%;
+}
+
+.color_changer_wrapper {
+  .change_bar {
+    display: flex;
+    position: absolute;
+    right: 0;
+  }
+
+  .color_button {
+    border-radius: 1000px;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    margin: 5px;
+    padding: 5px 15px;
+    transition: .2s ease all;
+  }
+
+  .color_button:hover {
+    cursor: pointer;
+    padding: 5px 20px;
+  }
+
+  .color_button.orange {
+    background-color: var(--mainOrange);
+  }
+
+  .color_button.lavender {
+    background-color: var(--mainLavender);
+  }
+
+  .color_button.green {
+    background-color: var(--mainGreen);
+  }
+
+  .color_button.black {
+    background-color: var(--mainBlack);
+  }
+}

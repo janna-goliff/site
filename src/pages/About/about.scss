@@ -1,0 +1,45 @@
+.about {
+    display: block;
+}
+
+.about {
+    .portrait {
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-radius: 20px;
+        width: 300px;
+    }
+
+    .container {
+        align-items: center;
+        background-color: var(--mainContentColor);
+        border: 2px dashed var(--tan1Alt);
+        border-radius: 10px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        margin: 30px auto;
+        padding: 15px;
+        width: fit-content;
+    }
+
+    .container {
+        .main_text {
+            width: 400px;
+        }
+
+        .headline {
+            border-bottom: 2px dashed var(--tan1Alt);
+            font-size: 28px;
+            margin-left: 15px;
+            padding-bottom: 25px;
+        }
+
+        .body {
+            margin: 15px;
+        }
+        
+        .body a {
+            color: white;
+        }
+    }
+}

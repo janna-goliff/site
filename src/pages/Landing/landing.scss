@@ -1,0 +1,127 @@
+.landing_frame_container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.landing_body {
+    max-width: 600px;
+}
+
+.mainTicket {
+    align-items: center;
+    background-color: var(--mainContentColor);
+    border: 2px dashed var(--tan1Alt);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.mainTicket {
+    .ticketHeader {
+        border: 2px solid rgba(255, 255, 255, .3);
+        border-radius: 10px;
+        color: white;
+        font-family: 'Cormorant Unicase', serif;
+        font-size: 40px;
+        font-weight: 600;
+        padding: .25em 1.5em;
+    }
+
+    .ticketBody {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        font-weight: 600;
+        padding-left: 28px;
+        padding-right: 10px;
+    }
+
+    .topContent {
+        display: flex;
+        border-bottom: 1px dashed var(--tan1Alt);
+        padding-bottom: 10px;
+    }
+
+    .topContent .textContent {
+        white-space: nowrap;
+    }
+
+    .decorativeRect {
+        background-color: var(--tan1);
+        border-radius: 1000px;
+        height: .75em;
+        margin-left: 1em;
+        width: 5em;
+    }
+
+    .bottomContent {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        text-align: justify;
+    }
+
+    .bottomContent > div {
+        margin-bottom: -1em;
+        text-align: justify;
+    }
+
+    .bottomContent a {
+        color: white;
+        font-weight: 800;
+        text-decoration: none;
+    }
+
+    .bottomContent > div:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+    }
+
+    .bottomContent .spacer {
+        opacity: 0;
+    }
+}
+
+a.header_container {
+    text-decoration: none;
+}
+
+.header_container {
+    h1 {
+        color: var(--mainContentColor);
+        font-size: 32px;
+        font-weight: 600;
+    }
+    
+    .divider {
+        align-self: center;
+        border: 2px solid var(--mainContentColor);
+        border-radius: 1000px;
+        display: flex;
+        height: 7px;
+        width: 110%;
+    }
+    
+    .divider .filler {
+        background-color: var(--mainContentColor);
+        border-radius: 1000px;
+        height: 100%;
+        transition: .4s ease all;
+        width: 0%;
+    }
+}
+
+a.header_container:hover .filler {
+    width: 100%;
+}
+
+.landing_frame_container .phone_frame_image {
+    margin-top: 10px;
+}
