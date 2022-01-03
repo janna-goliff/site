@@ -13,10 +13,10 @@ function Navbar() {
                         <div className="underline" />
                     </div>
                     <div id='dropdownContent2'>
-                        <a href='/engineering/futurepiproject'>2050: an Earth Odyssey</a>
-                        <a href='/webdev/beepboop'>Beepboop internship</a>
-                        <a href='/webdev/dataportraits'>Data portraits</a>
-                        <a href='/webdev/treehouse'>Web app development (CIS557)</a>
+                        <a href='/site/engineering/futurepiproject'>2050: an Earth Odyssey</a>
+                        <a href='/site/webdev/beepboop'>Beepboop internship</a>
+                        <a href='/site/webdev/dataportraits'>Data portraits</a>
+                        <a href='/site/webdev/treehouse'>Web app development (CIS557)</a>
                     </div>
                 </div>
                 <div id='dropdownMain' className='navoption main_section_wrapper'>
@@ -25,11 +25,11 @@ function Navbar() {
                         <div className="underline" />
                     </div>
                     <div id='dropdownContent'>
-                        <a href='/design/biennialredesign'>Biennial identity redesign</a>
-                        <a href='/design/webdesignexercise1'>Web design: book sharing site</a>
-                        <a href='/design/appdesign1'>App design: event tracker</a>
-                        <a href='/design/dataviz1'>Data viz: video game history</a>
-                        <a href='/design/logodesign1'>Grace's Organics logo</a>
+                        <a href='/site/design/biennialredesign'>Biennial identity redesign</a>
+                        <a href='/site/design/webdesignexercise1'>Web design: book sharing site</a>
+                        <a href='/site/design/appdesign1'>App design: event tracker</a>
+                        <a href='/site/design/dataviz1'>Data viz: video game history</a>
+                        <a href='/site/design/logodesign1'>Grace's Organics logo</a>
                     </div>
                 </div>
                 <div className="main_section_wrapper">
