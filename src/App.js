@@ -21,37 +21,37 @@ function App() {
   return (
     <Router>
       <Switch>
-          <Route exact path="/site/about">
+          <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/site/design/biennialredesign">
+          <Route exact path="/design/biennialredesign">
             <IdentityRedesign />
           </Route>
-          <Route exact path="/site/design/webdesignexercise1">
+          <Route exact path="/design/webdesignexercise1">
             <WebDesignExercise1 />
           </Route>
-          <Route exact path="/site/design/dataviz1">
+          <Route exact path="/design/dataviz1">
             <DataViz1 />
           </Route>
-          <Route exact path="/site/design/logodesign1">
+          <Route exact path="/design/logodesign1">
             <LogoDesign1 />
           </Route>
-          <Route exact path="/site/design/appdesign1">
+          <Route exact path="/design/appdesign1">
             <AppDesign1 />
           </Route>
-          <Route exact path="/site/webdev/beepboop">
+          <Route exact path="/webdev/beepboop">
             <BeepboopWork />
           </Route>
-          <Route exact path="/site/webdev/treehouse">
+          <Route exact path="/webdev/treehouse">
             <WebAppDev1 />
           </Route>
-          <Route exact path="/site/webdev/dataportraits">
+          <Route exact path="/webdev/dataportraits">
             <DataPortraits />
           </Route>
-          <Route exact path="/site/engineering/futurepiproject">
+          <Route exact path="/engineering/futurepiproject">
             <FuturePiProject />
           </Route>
-          <Route exact path="/site/funstuff">
+          <Route exact path="/funstuff">
             <FunWork />
           </Route>
           <Route path="/">

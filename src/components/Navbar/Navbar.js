@@ -13,10 +13,10 @@ function Navbar() {
                         <div className="underline" />
                     </div>
                     <div id='dropdownContent2'>
-                        <a href='/site/engineering/futurepiproject'>2050: an Earth Odyssey</a>
-                        <a href='/site/webdev/beepboop'>Beepboop internship</a>
-                        <a href='/site/webdev/dataportraits'>Data portraits</a>
-                        <a href='/site/webdev/treehouse'>Web app development (CIS557)</a>
+                        <Link to='/engineering/futurepiproject'>2050: an Earth Odyssey</Link>
+                        <Link to='/webdev/beepboop'>Beepboop internship</Link>
+                        <Link to='/webdev/dataportraits'>Data portraits</Link>
+                        <Link to='/webdev/treehouse'>Web app development (CIS557)</Link>
                     </div>
                 </div>
                 <div id='dropdownMain' className='navoption main_section_wrapper'>
@@ -25,11 +25,11 @@ function Navbar() {
                         <div className="underline" />
                     </div>
                     <div id='dropdownContent'>
-                        <a href='/site/design/biennialredesign'>Biennial identity redesign</a>
-                        <a href='/site/design/webdesignexercise1'>Web design: book sharing site</a>
-                        <a href='/site/design/appdesign1'>App design: event tracker</a>
-                        <a href='/site/design/dataviz1'>Data viz: video game history</a>
-                        <a href='/site/design/logodesign1'>Grace's Organics logo</a>
+                        <Link to='/design/biennialredesign'>Biennial identity redesign</Link>
+                        <Link to='/design/webdesignexercise1'>Web design: book sharing site</Link>
+                        <Link to='/design/appdesign1'>App design: event tracker</Link>
+                        <Link to='/design/dataviz1'>Data viz: video game history</Link>
+                        <Link to='/design/logodesign1'>Grace's Organics logo</Link>
                     </div>
                 </div>
                 <div className="main_section_wrapper">
