@@ -2,7 +2,7 @@
   "name": "janna-goliff-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://main.d173usdfoi2ipc.amplifyapp.com/",
+  "homepage": "https://janna-goliff.github.io/site",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -15,6 +15,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "site -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,7 +44,7 @@
   },
   "devDependencies": {
     "bootstrap": "^4.5.3",
-    "gh-pages": "^3.1.0",
+    "gh-pages": "^3.2.3",
     "react-router-dom": "^5.2.0"
   }
 }
