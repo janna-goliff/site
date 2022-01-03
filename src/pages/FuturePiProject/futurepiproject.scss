@@ -18,4 +18,34 @@
             font-size: 16px;
         }
     }
+
+    .expandableImg.map {
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    .frame_caption {
+        margin: auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    .frame_container {
+        display: flex;
+        margin: 5px auto;
+        width: 100%;
+    }
+
+    .frame_container {
+        div {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .frame {
+            margin: 5px;
+            width: 85%;
+        }
+    }
 }

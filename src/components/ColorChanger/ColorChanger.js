@@ -5,7 +5,7 @@ function ColorChanger( {children} ) {
     // state to store main site color
     const [color, setColor] = useState("orange");
 
-    const colorArr = ["orange", "purple", "green", "black"];
+    const colorArr = ["orange", "lavender", "green", "black"];
 
     // check is a color choice exists in local storage
     useEffect(() => {

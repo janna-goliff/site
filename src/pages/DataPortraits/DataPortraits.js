@@ -24,7 +24,7 @@ function WebAppDev1() {
                         Below, for example, is a portrait of Bernie Sanders with a 37% threshold, representative of the percent increase from the current federal contractor minimum wage ($10.95) to a $15 hourly wage.
                         <br />
                         <br />
-                        Explore the github <a href="https://github.com/janna-goliff/dataartsite">here</a>.
+                        Explore the Github <a href="https://github.com/janna-goliff/dataartsite">here</a>.
                     </div>
                 </div>
                 <div className="portraitSet">
