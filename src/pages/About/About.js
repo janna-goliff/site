@@ -21,7 +21,7 @@ function About() {
                         I love exploring the ways design and computer science interact. 
                         <br />
                         <br />
-                        This website, and its features, were made by me! See the Github repo <a href="https://github.com/janna-goliff/site">here</a>. Deployed using AWS Amplify.
+                        This website, and its features, were made by me! See the Github repo <a href="https://github.com/janna-goliff/site">here</a>. Deployed using Github pages.
                         </div>
                     </div>
                 </div>
