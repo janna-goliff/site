@@ -1,0 +1,119 @@
+.odyssey_controller {
+    align-items: center;
+    background-color: #333333;
+    border-radius: 1000px;
+    display: flex;
+    justify-content: center;
+
+    margin: 20px auto 40px auto;
+    padding: 20px;
+    width: fit-content;
+}
+
+.odyssey_controller {
+    .joystick_buttons {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .joystick_buttons {
+        .joy_button {
+            height: 50px;
+            width: 50px;
+        }
+
+        .left, .right, .up, .down, .center {
+            align-items: center;
+            background-color: #BBBBBB;
+            display: flex;
+            justify-content: center;
+            transition: .2s ease all;
+        }
+
+        .left, .right, .up, .down {
+            div {
+                background-color: #CCCCCC;
+                height: 30px;
+                width: 30px;
+                transition: .2s ease all;
+            }
+
+            div:hover {
+                background-color: #EEEEEE;
+            }
+        }
+
+        .left {
+            border-radius: 1000px 0 0 1000px;
+        }
+
+        .left > div {
+            border-radius: 1000px 0 0 1000px;
+        }
+
+        .right {
+            border-radius: 0 1000px 1000px 0;
+        }
+
+        .right > div {
+            border-radius: 0 1000px 1000px 0;
+        }
+
+        .up {
+            border-radius: 1000px 1000px 0 0;
+        }
+
+        .up > div {
+            border-radius: 1000px 1000px 0 0;
+        }
+
+        .down {
+            border-radius: 0 0 1000px 1000px;
+        }
+
+        .down > div {
+            border-radius: 0 0 1000px 1000px;
+        }
+
+        .left:hover, .right:hover, .up:hover, .down:hover {
+            background-color: #DDDDDD;
+            cursor: pointer;
+        }
+    }
+
+    .ab_buttons {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .ab_buttons {
+        .ab_button {
+            align-items: center;
+            color: white;
+            display: flex;
+            height: 50px;
+            font-weight: 800;
+            justify-content: center;
+            width: 50px;
+        }
+
+        .ab_button:not(.none) {
+            background-color: var(--mainContentColor);
+            border-radius: 1000px;
+            transition: .2s ease all;
+        }
+
+        .ab_button:not(.none):hover {
+            cursor: pointer;
+            opacity: .75;
+        }
+    }
+
+    .image {
+        height: 224px;
+        width: 448px;
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

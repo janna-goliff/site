@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import ColorChanger from "../../components/ColorChanger/ColorChanger";
+import OdysseyGame from "../../components/OdysseyGame/OdysseyGame";
 import "./futurepiproject.scss";
 import Expandable from "../../components/Expandable/Expandable";
 import pi_proj_gif from "../../assets/futurepiproject/pi_proj.gif";
@@ -33,8 +34,13 @@ function FuturePiProject() {
                         This project used the <a href="https://www.canakit.com/raspberry-pi-4-starter-kit.html">Raspberry Pi 4 Starter Kit</a> from Canakit
                         and a <a href="https://www.adafruit.com/product/3531">128x64 OLED Bonnet</a> from Adafruit, using Adafruit's starter code to set up 
                         controls of the bonnet. See the Github repo <a href="https://github.com/janna-goliff/pi_project_2050">here</a>.
+                        <br />
+                        <br />
+                        I also made an in-browser simulator! Make sure Javascript is enabled (it should be by default) to play below.
                     </div>
                 </div>
+                <div className="try_out">Try out the simulator</div>
+                <OdysseyGame />
                 <div className="frame_caption">First three frames of the game</div>
                 <div className="frame_container">
                     <Expandable

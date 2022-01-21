@@ -19,13 +19,21 @@
         }
     }
 
+    .try_out {
+        color: var(--mainContentColor);
+        font-weight: 600;
+        margin: 60px auto 20px auto;
+        text-align: center;
+        width: 100%;
+    }
+
     .expandableImg.map {
-        margin: 10px auto;
+        margin: 60px auto 10px auto;
         width: 80%;
     }
 
     .frame_caption {
-        margin: auto;
+        margin: 60px auto 0 auto;
         text-align: center;
         width: 100%;
     }
