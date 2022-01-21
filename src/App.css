@@ -81,8 +81,6 @@ a {
 }
 
 .process_header {
-  /*border: 2px dashed var(--tan1Alt);*/
-  
   color: white;
   font-size: 24px;
   margin: auto;
@@ -104,55 +102,3 @@ a {
   font-size: 40px;
   font-weight: 800;
 }
-
-/*.process_decor {
-  background-color: var(--tan1);
-  border-radius: 1000px;
-  height: 10px;
-  position: relative;
-  width: 10px;
-}
-
-.process_decor.one {
-  left: 10px;
-  top: 0px;
-  
-}
-
-.process_decor.two {
-  left: 20px;
-  top: 0px;
-  transition-delay: .05s;
-}
-
-.process_decor.three {
-  left: 30px;
-  top: 0px;
-  transition-delay: .15s;
-}
-
-@keyframes bounce {
-  0%    { top: 0; }
-  70%   { top: -15px; }
-  100%   { top: 0; }
-}
-
-.process_header_container:hover .process_decor.one,
-.process_header_container:hover .process_decor.two,
-.process_header_container:hover .process_decor.three {
-  animation-name: bounce;
-  animation-duration: .4s; 
-  animation-iteration-count: 2;
-}
-.process_header_container:hover .process_decor.one {
-  animation-delay: 0s;
-}
-
-.process_header_container:hover .process_decor.two {
-  animation-delay: .1s;
-}
-
-.process_header_container:hover .process_decor.three {
-  animation-delay: .15s;
-} 
-*/
