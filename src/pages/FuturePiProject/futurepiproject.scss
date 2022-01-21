@@ -19,12 +19,24 @@
         }
     }
 
+    .try_out_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 60px auto;
+        width: 100%;
+    }
+
     .try_out {
+        background-color: var(--tan2);
+        border: 2px dashed var(--tan1Alt);
+        border-radius: 10px;
         color: var(--mainContentColor);
         font-weight: 600;
         margin: 60px auto 20px auto;
+        padding: 50px 10px;
         text-align: center;
-        width: 100%;
+        width: 90%;
     }
 
     .expandableImg.map {
@@ -40,8 +52,8 @@
 
     .frame_container {
         display: flex;
-        margin: 5px auto;
-        width: 100%;
+        margin: auto;
+        width: 90%;
     }
 
     .frame_container {

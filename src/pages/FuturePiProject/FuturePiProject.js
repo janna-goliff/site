@@ -22,7 +22,7 @@ function FuturePiProject() {
                 <div className="container">
                     <img className="phone_frame_image" src={pi_proj_gif} alt={"screenshot"} />
                     <div className="main_text">
-                        Using the Raspberry Pi, I built a miniature video game 
+                        Using the Raspberry Pi, I built a miniature choose-your-own-adventure game 
                         envisioning what the future might look like in 2050. 
                         Players have the option to go to the next scene, go back, or select different options using the joystick
                         as they explore this future world and spend a day in the life of a young American adult in 2050.
@@ -40,8 +40,21 @@ function FuturePiProject() {
                         A is forward, B is back, and up/down or left/right can be used to make a selection on screen with options.
                     </div>
                 </div>
-                <div className="try_out">Try out the simulator</div>
-                <OdysseyGame />
+                <div className="try_out_wrapper">
+                    <div className="try_out">
+                        <div>Try out the simulator</div>
+                        <OdysseyGame />
+                    </div>
+                </div>
+                <div className="process_header_container">
+                    <div className="process_header">
+                        <div>
+                            see the 
+                            <br />
+                            <div className="emphasized_title">PROCESS</div>
+                        </div>
+                    </div>
+                </div>
                 <div className="frame_caption">First three frames of the game</div>
                 <div className="frame_container">
                     <Expandable
