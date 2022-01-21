@@ -37,6 +37,7 @@ function FuturePiProject() {
                         <br />
                         <br />
                         I also made an in-browser simulator! Make sure Javascript is enabled (it should be by default) to play below.
+                        A is forward, B is back, and up/down or left/right can be used to make a selection on screen with options.
                     </div>
                 </div>
                 <div className="try_out">Try out the simulator</div>
