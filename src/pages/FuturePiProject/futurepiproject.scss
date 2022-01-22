@@ -40,7 +40,7 @@
     }
 
     .expandableImg.map {
-        margin: 60px auto 10px auto;
+        margin: 20px auto 10px auto;
         width: 80%;
     }
 
@@ -52,7 +52,7 @@
 
     .frame_container {
         display: flex;
-        margin: auto;
+        margin: 10px auto;
         width: 90%;
     }
 
@@ -67,6 +67,11 @@
             margin: 5px;
             width: 85%;
         }
+    }
+
+    img.final_view {
+        margin: 80px auto 20px auto;
+        width: 80%;
     }
 
     .phase_container {

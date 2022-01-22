@@ -1,0 +1,86 @@
+.tag_container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tag_container {
+    .tag {
+        align-items: center;
+        background-color: var(--mainContentColor);
+        border: 2px dashed var(--tan1Alt);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        position: relative;
+        width: 600px;
+
+    }
+
+    .tag {
+        .center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .center {
+            .star_icon {
+                height: 24px;
+                width: 24px;
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+              
+            .star_icon circle,
+            .star_icon rect {
+                fill: white;
+            }
+    
+            .text {
+                color: white;
+                font-size: 24px;
+                font-weight: 600;
+                padding: 10px 30px;
+            }
+        }
+
+        .bounce {
+            background-color: var(--tan1);
+            border-radius: 1000px;
+            position: absolute;
+            height: 10px;
+            width: 0;
+
+            transition: .2s ease all;
+        }
+
+        .bounce.left {
+            left: 200px;
+        }
+
+        .bounce.right {
+            right: 200px;
+        }
+    }
+
+    .tag:hover .star_icon {
+        transform: rotate(360deg);
+    }
+
+    .tag:hover .bounce.left {
+        left: 40px;
+        width: 30px;
+    }
+
+    .tag:hover .bounce.right {
+        right: 40px;
+        width: 30px;
+    }
+}

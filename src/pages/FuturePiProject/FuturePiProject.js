@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import ColorChanger from "../../components/ColorChanger/ColorChanger";
+import FinalProjectTag from "../../components/FinalProjectTag/FinalProjectTag";
 import OdysseyGame from "../../components/OdysseyGame/OdysseyGame";
 import "./futurepiproject.scss";
 import Expandable from "../../components/Expandable/Expandable";
@@ -16,6 +17,7 @@ import phase3a from "../../assets/futurepiproject/process/phase3a.png";
 import phase3b from "../../assets/futurepiproject/process/phase3b.png";
 import phase4a from "../../assets/futurepiproject/process/phase4a.gif";
 import phase4b from "../../assets/futurepiproject/process/phase4b.gif";
+import final_quarter_view from "../../assets/futurepiproject/final_quarter_view.png";
 
 function FuturePiProject() {
     return (
@@ -67,8 +69,8 @@ function FuturePiProject() {
                         <div className="phase_header">Phase 0: technical research</div>
                         <div className="phase_body">
                             I had no experience using a Raspberry Pi before this project, so I began with searching for 
-                            resources that would help me realize my plan. I went with a prebuilt screen option that plugged directly into the Pi
-                            so I could avoid soldering.
+                            resources that would help me realize my plan. I went with a prebuilt option that included input buttons
+                            that would plug into the Pi with a screen.
                         </div>
                     </div>
                     <Expandable
@@ -112,33 +114,6 @@ function FuturePiProject() {
                 <div className="phase_container">
                     <div className="left">
                         <Expandable
-                            imgaddress={phase3a}
-                            description="code snippets"
-                            className={'phase_img_vert'}
-                        />
-                        <Expandable
-                            imgaddress={phase3b}
-                            description="code snippets"
-                            className={'phase_img_vert bump'}
-                        />
-                    </div>
-                    <div className="text right">
-                        <div className="phase_header">Phase 3: data structures</div>
-                        <div className="phase_body">
-                            FILLER
-                        </div>
-                    </div>
-                    <div className="background_decor right"></div>
-                </div>
-                <div className="phase_container">
-                    <div className="text left">
-                        <div className="phase_header">Phase 4: hardware testing</div>
-                        <div className="phase_body">
-                            FILLER
-                        </div>
-                    </div>
-                    <div className="right">
-                        <Expandable
                             imgaddress={phase4a}
                             description="testing the pi button input 1"
                             className={'phase_img_vert'}
@@ -149,8 +124,45 @@ function FuturePiProject() {
                             className={'phase_img_vert bump'}
                         />
                     </div>
+                    <div className="text right">
+                        <div className="phase_header">Phase 3: hardware testing</div>
+                        <div className="phase_body">
+                            To make sure I felt comfortable going forward with the Pi, I tested a prebuilt program provided
+                            by Adafruit meant to work with the screen.
+                        </div>
+                    </div>
+                    <div className="background_decor right"></div>
+                </div>
+                <div className="phase_container">
+                    <div className="text left">
+                        <div className="phase_header">Phase 4: data structures</div>
+                        <div className="phase_body">
+                            Adafruit's tutorial on using their OLED screen guided me through coding the basic
+                            interactions with button input. From there, I spent time figuring out how to let the player navigate
+                            through different scenes. I landed on something similar to a linked list between different frames,
+                            with a slight deviation made for screens with different options.
+                        </div>
+                    </div>
+                    <div className="right">
+                        <Expandable
+                            imgaddress={phase3a}
+                            description="code snippets from Adafruit"
+                            className={'phase_img_vert'}
+                        />
+                        <Expandable
+                            imgaddress={phase3b}
+                            description="code snippets of data structure underlying player navigation"
+                            className={'phase_img_vert bump'}
+                        />
+                    </div>
                     <div className="background_decor left"></div>
                 </div>
+                <FinalProjectTag />
+                <Expandable
+                        imgaddress={final_quarter_view}
+                        description="three-quarter view of the Raspberry Pi on an end screen of the game"
+                        className={'final_view'}
+                    />
                 <div className="frame_caption">First three frames of the game</div>
                 <div className="frame_container">
                     <Expandable
@@ -169,6 +181,7 @@ function FuturePiProject() {
                         className={'frame'}
                     />
                 </div>
+                <div className="frame_caption">Flow chart poster of possible routes players can take</div>
                 <Expandable
                     imgaddress={pi_proj_map}
                     description="Flow chart showing the possible routes a player can take in this game"
