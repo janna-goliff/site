@@ -16,7 +16,7 @@ function Navbar() {
                         <Link to='/site/engineering/futurepiproject'>2050: an Earth Odyssey</Link>
                         <Link to='/site/webdev/beepboop'>Beepboop internship</Link>
                         <Link to='/site/webdev/dataportraits'>Data portraits</Link>
-                        <Link to='/site/webdev/treehouse'>Web app development (CIS557)</Link>
+                        <Link to='/site/webdev/treehouse'>Web app development</Link>
                     </div>
                 </div>
                 <div id='dropdownMain' className='navoption main_section_wrapper'>

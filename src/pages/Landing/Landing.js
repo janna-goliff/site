@@ -20,7 +20,7 @@ function Landing() {
                             <div className="decorativeRect"></div>
                         </div>
                         <div className="bottomContent">
-                            <div>I'm <a href="/about" className="aboutLink">Janna<div className="spacer">_</div>Goliff</a>, a</div>
+                            <div>I'm <a href="/site/about" className="aboutLink">Janna<div className="spacer">_</div>Goliff</a>, a</div>
                             <div>designer and developer</div></div> 
                     </div>
                 </div>

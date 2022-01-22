@@ -36,7 +36,7 @@ function WebAppDev1() {
                             <li>User status feed</li>
                             <li>Live video calling</li>
                         </ul>
-                        Made with Serena Ghandi and Ann Wang
+                        Made with Serena Ghandi and Ann Wang for CIS557
                         <br /> <br />
                         Visit the live site <a href="https://tranquil-depths-82554.herokuapp.com/">here</a> (this may take a minute, it's hosted on Heroku!).
                         <br /> <br />
