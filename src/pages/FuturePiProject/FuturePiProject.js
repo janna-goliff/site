@@ -9,6 +9,11 @@ import pi_proj_map from "../../assets/futurepiproject/journey_map.png";
 import title from "../../assets/futurepiproject/frames/title.png";
 import controls from "../../assets/futurepiproject/frames/controls.png";
 import exposition from "../../assets/futurepiproject/frames/exposition.png";
+import phase0 from "../../assets/futurepiproject/process/phase0.png";
+import phase1 from "../../assets/futurepiproject/process/phase1.png";
+import phase2 from "../../assets/futurepiproject/process/phase2.png";
+import phase3a from "../../assets/futurepiproject/process/phase3a.png";
+import phase3b from "../../assets/futurepiproject/process/phase3b.png";
 
 function FuturePiProject() {
     return (
@@ -54,6 +59,74 @@ function FuturePiProject() {
                             <div className="emphasized_title">PROCESS</div>
                         </div>
                     </div>
+                </div>
+                <div className="phase_container">
+                    <div className="text left">
+                        <div className="phase_header">Phase 0: technical research</div>
+                        <div className="phase_body">
+                            I had no experience using a Raspberry Pi before this project, so I began with searching for 
+                            resources that would help me realize my plan. I went with a prebuilt screen option that plugged directly into the Pi
+                            so I could avoid soldering.
+                        </div>
+                    </div>
+                    <Expandable
+                        imgaddress={phase0}
+                        description="screenshot of the Adafruit page for the OLED screen I used"
+                        className={'phase_img right'}
+                    />
+                    <div className="background_decor left"></div>
+                </div>
+                <div className="phase_container">
+                    <Expandable
+                        imgaddress={phase1}
+                        description="initial user journey diagram"
+                        className={'phase_img left'}
+                    />
+                    <div className="text right">
+                        <div className="phase_header">Phase 1: brainstorming</div>
+                        <div className="phase_body">
+                            Knowing I wanted to make choose-your-adventure style game, I began by drafting a 
+                            flow chart of potential journeys players could make thorughout the game, 
+                            considering what it would reflect on the world in the future.
+                        </div>
+                    </div>
+                    <div className="background_decor right"></div>
+                </div>
+                <div className="phase_container">
+                    <div className="text left">
+                        <div className="phase_header">Phase 2: drafting</div>
+                        <div className="phase_body">
+                            To get comfortable with the tiny format of the screens, I made a few test scenes in a 128
+                            by 64 pixel ratio. I printed these out to scale to see how legible text could be.
+                        </div>
+                    </div>
+                    <Expandable
+                        imgaddress={phase2}
+                        description="small test scenes"
+                        className={'phase_img right'}
+                    />
+                    <div className="background_decor left"></div>
+                </div>
+                <div className="phase_container">
+                    <div className="left">
+                        <Expandable
+                            imgaddress={phase3a}
+                            description="code snippets"
+                            className={'phase_img_vert'}
+                        />
+                        <Expandable
+                            imgaddress={phase3b}
+                            description="code snippets"
+                            className={'phase_img_vert bump'}
+                        />
+                    </div>
+                    <div className="text right">
+                        <div className="phase_header">Phase 3: data structures</div>
+                        <div className="phase_body">
+                            FILLER
+                        </div>
+                    </div>
+                    <div className="background_decor right"></div>
                 </div>
                 <div className="frame_caption">First three frames of the game</div>
                 <div className="frame_container">
