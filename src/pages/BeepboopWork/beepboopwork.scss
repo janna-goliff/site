@@ -10,7 +10,7 @@
         display: flex;
         justify-content: center;
         flex-wrap: nowrap;
-        margin: 10px 50px;
+        margin: 10px 50px 100px 50px;
         width: fit-content;
     }
 
@@ -46,6 +46,14 @@
             margin: auto;
             width: 700px;
         }
+    }
+
+    .phases {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
     }
 }
 
