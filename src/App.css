@@ -18,6 +18,10 @@
   --tan2: #e9e6df;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 #root {
   width: 100%;
 }

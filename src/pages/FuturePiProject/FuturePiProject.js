@@ -14,6 +14,8 @@ import phase1 from "../../assets/futurepiproject/process/phase1.png";
 import phase2 from "../../assets/futurepiproject/process/phase2.png";
 import phase3a from "../../assets/futurepiproject/process/phase3a.png";
 import phase3b from "../../assets/futurepiproject/process/phase3b.png";
+import phase4a from "../../assets/futurepiproject/process/phase4a.gif";
+import phase4b from "../../assets/futurepiproject/process/phase4b.gif";
 
 function FuturePiProject() {
     return (
@@ -127,6 +129,27 @@ function FuturePiProject() {
                         </div>
                     </div>
                     <div className="background_decor right"></div>
+                </div>
+                <div className="phase_container">
+                    <div className="text left">
+                        <div className="phase_header">Phase 4: hardware testing</div>
+                        <div className="phase_body">
+                            FILLER
+                        </div>
+                    </div>
+                    <div className="right">
+                        <Expandable
+                            imgaddress={phase4a}
+                            description="testing the pi button input 1"
+                            className={'phase_img_vert'}
+                        />
+                        <Expandable
+                            imgaddress={phase4b}
+                            description="testing the pi button input 1"
+                            className={'phase_img_vert bump'}
+                        />
+                    </div>
+                    <div className="background_decor left"></div>
                 </div>
                 <div className="frame_caption">First three frames of the game</div>
                 <div className="frame_container">
