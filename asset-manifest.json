@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/site/static/css/main.96fa5577.css",
-    "main.js": "/site/static/js/main.b03f81df.js",
+    "main.css": "/site/static/css/main.df847ee2.css",
+    "main.js": "/site/static/js/main.9e767f12.js",
     "static/js/377.4ed50a6e.chunk.js": "/site/static/js/377.4ed50a6e.chunk.js",
+    "static/media/final_quarter_view.png": "/site/static/media/final_quarter_view.53cdad1ee1e2cfe68197.png",
     "static/media/self.png": "/site/static/media/self.ea937c385eaa26ba0ea3.png",
     "static/media/q-poster.png": "/site/static/media/q-poster.478375bdd5d61c75adec.png",
     "static/media/pink-floyd-poster.png": "/site/static/media/pink-floyd-poster.a76cfd1aa1dd74d67c58.png",
@@ -11,6 +12,7 @@
     "static/media/bernie_orig.jpg": "/site/static/media/bernie_orig.f154e27c5f9897ae7f14.jpg",
     "static/media/Landing.png": "/site/static/media/Landing.6b0a045d9a9ecdaeaac8.png",
     "static/media/clubdetail_color.png": "/site/static/media/clubdetail_color.b3ed45995c21ceb58722.png",
+    "static/media/phase1.png": "/site/static/media/phase1.44b371ba8ffe645d14e7.png",
     "static/media/journey_map.png": "/site/static/media/journey_map.33a6dfcbd0eeb2c7e9b9.png",
     "static/media/nature-scene.gif": "/site/static/media/nature-scene.07c1c6d39f7c56d825de.gif",
     "static/media/Main_View_(dark).png": "/site/static/media/Main_View_(dark).811fea6faabfed7a796e.png",
@@ -23,13 +25,19 @@
     "static/media/bernie_bw.jpg": "/site/static/media/bernie_bw.7b6e02daca646a71770e.jpg",
     "static/media/Book_View_(dark).png": "/site/static/media/Book_View_(dark).bc675e3a283d523291cf.png",
     "static/media/Book_View.png": "/site/static/media/Book_View.512193dae8e63fff4ee8.png",
+    "static/media/phase2.png": "/site/static/media/phase2.33cd0e338c459f4fbc99.png",
     "static/media/upcoming_color.png": "/site/static/media/upcoming_color.41a7248b82e68f788ef2.png",
     "static/media/emptystate_color.png": "/site/static/media/emptystate_color.b52fef43214ea5911bf3.png",
+    "static/media/phase4a.gif": "/site/static/media/phase4a.411039b10b602a7b7b1b.gif",
     "static/media/book_page_desktop_original.png": "/site/static/media/book_page_desktop_original.5dbe0677954945b1e32c.png",
+    "static/media/phase4b.gif": "/site/static/media/phase4b.9dd46420168559664dde.gif",
     "static/media/Messaging_View_(dark).png": "/site/static/media/Messaging_View_(dark).ad084350810e56c7e31f.png",
+    "static/media/phase0.png": "/site/static/media/phase0.4f5c36a05456ea7c95a8.png",
     "static/media/calendar_color.png": "/site/static/media/calendar_color.6a3f63ecdfeb99c01125.png",
     "static/media/Messaging_View.png": "/site/static/media/Messaging_View.71c23ae948d6fa12d52f.png",
+    "static/media/phase3a.png": "/site/static/media/phase3a.a7e58055fae605b05ae3.png",
     "static/media/book_page_desktop_redesign.png": "/site/static/media/book_page_desktop_redesign.87f0b62d53c70ba6329f.png",
+    "static/media/phase3b.png": "/site/static/media/phase3b.eeeec295bc5d04e9e22a.png",
     "static/media/home.png": "/site/static/media/home.4a93a80d57d37bc18ef2.png",
     "static/media/logo.png": "/site/static/media/logo.175e52ee8d057e45e383.png",
     "static/media/home_page_mobile_redesign.PNG": "/site/static/media/home_page_mobile_redesign.4f9ae4c85389053e0fc9.PNG",
@@ -45,12 +53,12 @@
     "static/media/emptystate_bw.png": "/site/static/media/emptystate_bw.8296fddc59cf7549b68d.png",
     "static/media/exposition.png": "/site/static/media/exposition.0438a578e2fed95a83f1.png",
     "index.html": "/site/index.html",
-    "main.96fa5577.css.map": "/site/static/css/main.96fa5577.css.map",
-    "main.b03f81df.js.map": "/site/static/js/main.b03f81df.js.map",
+    "main.df847ee2.css.map": "/site/static/css/main.df847ee2.css.map",
+    "main.9e767f12.js.map": "/site/static/js/main.9e767f12.js.map",
     "377.4ed50a6e.chunk.js.map": "/site/static/js/377.4ed50a6e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.96fa5577.css",
-    "static/js/main.b03f81df.js"
+    "static/css/main.df847ee2.css",
+    "static/js/main.9e767f12.js"
   ]
 }
