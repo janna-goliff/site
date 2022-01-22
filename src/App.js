@@ -15,6 +15,7 @@ import BeepboopWork from "./pages/BeepboopWork/BeepboopWork";
 import DataPortraits from "./pages/DataPortraits/DataPortraits";
 import WebAppDev1 from "./pages/WebAppDev1/WebAppDev1";
 import FuturePiProject from "./pages/FuturePiProject/FuturePiProject";
+import PhotoAvgDataViz from "./pages/PhotoAvgDataViz/PhotoAvgDataViz";
 import FunWork from "./pages/FunWork/FunWork";
 
 function App() {
@@ -38,6 +39,9 @@ function App() {
           </Route>
           <Route exact path="/site/design/appdesign1">
             <AppDesign1 />
+          </Route>
+          <Route exact path="/site/design/photoavgdataviz">
+            <PhotoAvgDataViz />
           </Route>
           <Route exact path="/site/webdev/beepboop">
             <BeepboopWork />

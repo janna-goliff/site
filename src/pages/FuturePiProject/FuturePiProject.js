@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import ColorChanger from "../../components/ColorChanger/ColorChanger";
-import FinalProjectTag from "../../components/FinalProjectTag/FinalProjectTag";
 import OdysseyGame from "../../components/OdysseyGame/OdysseyGame";
+import FinalProjectTag from "../../components/FinalProjectTag/FinalProjectTag";
 import "./futurepiproject.scss";
 import Expandable from "../../components/Expandable/Expandable";
 import pi_proj_gif from "../../assets/futurepiproject/pi_proj.gif";
@@ -157,7 +157,7 @@ function FuturePiProject() {
                     </div>
                     <div className="background_decor left"></div>
                 </div>
-                <FinalProjectTag />
+                <FinalProjectTag text="RESULTS"/>
                 <Expandable
                         imgaddress={final_quarter_view}
                         description="three-quarter view of the Raspberry Pi on an end screen of the game"

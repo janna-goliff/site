@@ -1,4 +1,8 @@
 .beepboop_work_body {
+    padding-bottom: 30px;
+}
+
+.beepboop_work_body {
     .intro {
         align-items: center;
         display: flex;
@@ -30,7 +34,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-bottom: 1em;
+        margin-bottom: 100px;
         width: 100%;
     }
     
@@ -40,6 +44,12 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+        }
+
+        .gen_img_subcontainer {
+            .label {
+                margin: 30px auto 10px auto;
+            }
         }
     
         .gen_img {

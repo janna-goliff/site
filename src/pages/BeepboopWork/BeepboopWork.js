@@ -2,8 +2,8 @@ import React from "react";
 import "./beepboopwork.scss";
 import Navbar from "../../components/Navbar/Navbar";
 import ColorChanger from "../../components/ColorChanger/ColorChanger";
-import PhoneFrame from "../../components/PhoneFrame/PhoneFrame";
 import Expandable from "../../components/Expandable/Expandable";
+import FinalProjectTag from "../../components/FinalProjectTag/FinalProjectTag";
 import book_desktop_orig from "../../assets/beepboop/book_page_desktop_original.png";
 import book_desktop_redesign from "../../assets/beepboop/book_page_desktop_redesign.png";
 import book_mobile_orig from "../../assets/beepboop/book_page_mobile_original.png";
@@ -50,7 +50,24 @@ function BeepboopWork() {
                         <div className="text_body">Design and engineering choices were informed by prioritization of acessibility for non-digital natives and users in areas with slow internet connections and/or users without a desktop computer.</div>
                     </div>
                 </div>
-
+                <div className="gen_img_container">
+                    <div className="gen_img_subcontainer">
+                        <div className="label">original: </div>
+                        <Expandable
+                            imgaddress={book_desktop_orig}
+                            description=""
+                            className={'gen_img'}
+                        />
+                    </div>
+                    <div className="gen_img_subcontainer">
+                        <div className="label">redesign: </div>
+                        <Expandable
+                            imgaddress={book_desktop_redesign}
+                            description=""
+                            className={'gen_img'}
+                        />
+                    </div>
+                </div>
                 <div className="process_header_container">
                     <div className="process_header">
                         <div>
@@ -164,24 +181,7 @@ function BeepboopWork() {
                     </div>
                     <div className="background_decor right"></div>
                 </div>
-                <div className="gen_img_container">
-                    <div className="gen_img_subcontainer">
-                        <div className="label">original: </div>
-                        <Expandable
-                            imgaddress={book_desktop_orig}
-                            description=""
-                            className={'gen_img'}
-                        />
-                    </div>
-                    <div className="gen_img_subcontainer">
-                        <div className="label">redesign: </div>
-                        <Expandable
-                            imgaddress={book_desktop_redesign}
-                            description=""
-                            className={'gen_img'}
-                        />
-                    </div>
-                </div>
+                <FinalProjectTag text="more TBA"/>
             </div>
         </ColorChanger>
     );
