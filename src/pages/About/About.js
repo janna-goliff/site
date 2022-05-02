@@ -18,10 +18,10 @@ function About() {
                             I'm a student at UPenn double majoring in Design and Computer Science.
                         </div>
                         <div className="body">
-                        I love exploring the ways design and computer science interact. 
+                            I love exploring the ways design and computer science interact. 
                         <br />
                         <br />
-                        This website, and its features, were made by me! See the Github repo <a href="https://github.com/janna-goliff/site">here</a>. Deployed using Github pages.
+                            This website, and its features, were made by me! See the Github repo <a href="https://github.com/janna-goliff/site">here</a>. Deployed using Github pages.
                         </div>
                     </div>
                 </div>
