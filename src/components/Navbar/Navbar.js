@@ -28,7 +28,6 @@ function Navbar() {
                         <Link to='/site/design/photoavgdataviz'>Data viz: photo averages</Link>
                         <Link to='/site/design/biennialredesign'>Biennial identity redesign</Link>
                         <Link to='/site/design/webdesignexercise1'>Web design: book sharing site</Link>
-                        <Link to='/site/design/appdesign1'>App design: event tracker</Link>
                         <Link to='/site/design/dataviz1'>Data viz: video game history</Link>
                         <Link to='/site/design/logodesign1'>Grace's Organics logo</Link>
                     </div>
