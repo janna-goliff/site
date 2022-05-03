@@ -26,6 +26,7 @@ function Navbar() {
                     </div>
                     <div id='dropdownContent'>
                         <Link to='/site/design/pennintouchredesign'>PennInTouch Redesign</Link>
+                        <Link to='/site/design/appdesignclimbr'>App Design: Climbr</Link>
                         <Link to='/site/design/photoavgdataviz'>Data viz: photo averages</Link>
                         <Link to='/site/design/biennialredesign'>Biennial identity redesign</Link>
                         <Link to='/site/design/webdesignexercise1'>Web design: book sharing site</Link>

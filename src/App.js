@@ -18,6 +18,7 @@ import FuturePiProject from "./pages/FuturePiProject/FuturePiProject";
 import PhotoAvgDataViz from "./pages/PhotoAvgDataViz/PhotoAvgDataViz";
 import FunWork from "./pages/FunWork/FunWork";
 import PennInTouchRedesign from "./pages/PennInTouchRedesign/PennInTouchRedesign";
+import AppDesignClimbr from "./pages/AppDesignClimbr/AppDesignClimbr";
 
 function App() {
   return (
@@ -46,6 +47,9 @@ function App() {
           </Route>
           <Route exact path="/site/design/pennintouchredesign">
             <PennInTouchRedesign />
+          </Route>
+          <Route exact path="/site/design/appdesignclimbr">
+            <AppDesignClimbr />
           </Route>
           <Route exact path="/site/webdev/beepboop">
             <BeepboopWork />
