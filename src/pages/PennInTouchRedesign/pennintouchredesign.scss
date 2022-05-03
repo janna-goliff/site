@@ -1,0 +1,212 @@
+.pennintouch_redesign {
+    padding-bottom: 30px;
+}
+
+.pennintouch_redesign {
+
+    .figma_container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .figma_title {
+        color: var(--mainContentColor);
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 30px
+    }
+
+    .phase_container .background_decor {
+        height: 325px;
+    }
+
+    .phase_container.research_synthesis {
+        padding-top: 60px;
+    }
+
+    .phase_container.wireframes {
+        margin-top: 100px;
+    }
+
+    .phase_container.wireframes {
+        .slideshow .gen_img {
+            width: 60%;
+        }
+    }
+
+    .phase_container {
+        .laptop {
+            position: relative;
+            width: 700px;
+            z-index: 100;
+        }
+
+        .laptop:hover {
+            box-shadow: none;
+        }
+    }
+
+    .phase_container.finals {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .phase_container {
+        .final_container {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin: 50px auto;
+        }
+
+        .noOriginal {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        
+            border: 2px solid var(--mainContentColor);
+            border-radius: 1000px;
+            color: var(--mainContentColor);
+            font-weight: 700;
+            margin: 20px;
+            opacity: .5;
+            padding: 10px 20px;
+        
+            width: fit-content;
+        }
+
+        .final_container {
+            .final_midterm {
+                width: 90%;
+            }
+
+            .card_container {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .card_container {
+                .card {
+                    background-color: var(--mainContentColor);
+                    border: 2px dashed var(--tan1Alt);
+                    border-radius: 20px;
+                    color: white;
+
+                    padding: 20px;
+
+                    width: 20vw;
+                }
+
+                .card {
+                    h2 {
+                        margin-bottom: 50px;
+                    }
+
+                    .card_header {
+                        margin-bottom: 16px;
+                    }   
+
+                    .card_content {
+                        font-weight: 700;
+                        margin-bottom: 30px;
+                    }
+                }
+
+                .reveal_button {
+
+                }
+            }
+        }
+    }
+
+    .intro {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .intro > div:not(.main_text) {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .intro .gen_img.desktop {
+        width: 80%;
+    }
+
+    .intro .gen_img.desktop:hover {
+        box-shadow: none;
+    }
+
+    .main_text {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+
+        margin-bottom: 20px;
+    }
+
+    .main_text > div {
+        margin: 30px 60px;
+        width: 50%;
+    }
+
+    .main_text .what_is_container {
+        .title {
+            color: var(--mainContentColor);
+        }
+    }
+
+    .main_text .project_info_card {
+        background-color: var(--mainContentColor);
+        border: 2px dashed var(--tan1Alt);
+        border-radius: 20px;
+        color: white;
+
+        padding: 30px 30px;
+
+        display: grid;
+        grid-template-columns: 50% 50%;
+        column-gap: 10px;
+        row-gap: 25px;
+    }
+
+    .main_text .project_info_card {
+        .title {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .decor {
+            font-weight: 500;
+        }
+
+        .project_info {
+            display: flex;
+            flex-direction: column;
+            font-size: 16px;
+        }
+
+        .project_info {
+            .subtitle {
+                margin-bottom: 10px;
+            }
+
+            .content {
+                font-weight: 700;
+            }
+        }
+    }
+}
+

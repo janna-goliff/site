@@ -17,6 +17,7 @@ import WebAppDev1 from "./pages/WebAppDev1/WebAppDev1";
 import FuturePiProject from "./pages/FuturePiProject/FuturePiProject";
 import PhotoAvgDataViz from "./pages/PhotoAvgDataViz/PhotoAvgDataViz";
 import FunWork from "./pages/FunWork/FunWork";
+import PennInTouchRedesign from "./pages/PennInTouchRedesign/PennInTouchRedesign";
 
 function App() {
   return (
@@ -42,6 +43,9 @@ function App() {
           </Route>
           <Route exact path="/site/design/photoavgdataviz">
             <PhotoAvgDataViz />
+          </Route>
+          <Route exact path="/site/design/pennintouchredesign">
+            <PennInTouchRedesign />
           </Route>
           <Route exact path="/site/webdev/beepboop">
             <BeepboopWork />
