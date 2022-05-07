@@ -231,7 +231,7 @@ function VRRoom() {
                         <Slideshow slideArray={roomPictures} />
                     </div>
                 </div>
-                <div className="process_header_container">
+                {/* <div className="process_header_container">
                     <div className="process_header">
                         <div>
                             see the 
@@ -271,7 +271,7 @@ function VRRoom() {
                         </div>
                         <div className="background_decor left"></div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </ColorChanger>
     );
