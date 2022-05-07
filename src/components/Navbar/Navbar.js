@@ -25,6 +25,7 @@ function Navbar() {
                         <div className="underline" />
                     </div>
                     <div id='dropdownContent'>
+                        <Link to='/site/design/vrroom'>VR Room</Link>
                         <Link to='/site/design/pennintouchredesign'>PennInTouch Redesign</Link>
                         <Link to='/site/design/appdesignclimbr'>App Design: Climbr</Link>
                         <Link to='/site/design/photoavgdataviz'>Data viz: photo averages</Link>

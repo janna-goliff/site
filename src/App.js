@@ -19,6 +19,7 @@ import PhotoAvgDataViz from "./pages/PhotoAvgDataViz/PhotoAvgDataViz";
 import FunWork from "./pages/FunWork/FunWork";
 import PennInTouchRedesign from "./pages/PennInTouchRedesign/PennInTouchRedesign";
 import AppDesignClimbr from "./pages/AppDesignClimbr/AppDesignClimbr";
+import VRRoom from "./pages/VRRoom/VRRoom";
 
 function App() {
   return (
@@ -50,6 +51,9 @@ function App() {
           </Route>
           <Route exact path="/site/design/appdesignclimbr">
             <AppDesignClimbr />
+          </Route>
+          <Route exact path="/site/design/vrroom">
+            <VRRoom />
           </Route>
           <Route exact path="/site/webdev/beepboop">
             <BeepboopWork />
