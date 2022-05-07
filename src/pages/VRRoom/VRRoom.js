@@ -114,12 +114,12 @@ function VRRoom() {
                                 <br />
                                 Exploring media that were completely novel to me, I wanted to interrogate the reasons behind documentation: what deems something worthy of documentation, and how do we choose to do so?
                             </div>
-                            <div className="prototype_link">
+                            {/* <div className="prototype_link">
                                 <a href="#figma_prototype">See the process</a>
                             </div>
                             <div className="prototype_link">
                                 <a href="#figma_prototype">See the project</a>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="project_info_card">
                             <div className="title">Project Info</div>
