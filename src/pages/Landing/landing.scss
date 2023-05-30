@@ -49,6 +49,7 @@
     }
 
     .topContent .textContent {
+        font-weight: 400;
         white-space: nowrap;
     }
 
@@ -68,6 +69,7 @@
     }
 
     .bottomContent > div {
+        font-weight: 400;
         margin-bottom: -1em;
         text-align: justify;
     }
@@ -97,7 +99,7 @@ a.header_container {
     h1 {
         color: var(--mainContentColor);
         font-size: 32px;
-        font-weight: 600;
+        font-weight: 400;
     }
     
     .divider {

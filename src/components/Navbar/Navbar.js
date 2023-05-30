@@ -13,10 +13,10 @@ function Navbar() {
                         <div className="underline" />
                     </div>
                     <div id='dropdownContent2'>
+                        <Link to='/site/webdev/beepboop'>Beepboop Full-Stack + Design Work</Link>
                         <Link to='/site/engineering/futurepiproject'>2050: an Earth Odyssey</Link>
-                        <Link to='/site/webdev/beepboop'>Beepboop internship</Link>
-                        <Link to='/site/webdev/dataportraits'>Data portraits</Link>
-                        <Link to='/site/webdev/treehouse'>Web app development</Link>
+                        {/* <Link to='/site/webdev/dataportraits'>Data portraits</Link> */}
+                        {/* <Link to='/site/webdev/treehouse'>Web app development</Link> */}
                     </div>
                 </div>
                 <div id='dropdownMain' className='navoption main_section_wrapper'>
@@ -25,20 +25,20 @@ function Navbar() {
                         <div className="underline" />
                     </div>
                     <div id='dropdownContent'>
-                        <Link to='/site/design/vrroom'>VR Room</Link>
                         <Link to='/site/design/appdesignclimbr'>App Design: Climbr</Link>
+                        <Link to='/site/design/vrroom'>VR Room</Link>
                         <Link to='/site/design/pennintouchredesign'>PennInTouch Redesign</Link>
-                        <Link to='/site/design/photoavgdataviz'>Data viz: photo averages</Link>
+                        {/* <Link to='/site/design/photoavgdataviz'>Data viz: photo averages</Link> */}
                         <Link to='/site/design/biennialredesign'>Biennial identity redesign</Link>
-                        <Link to='/site/design/webdesignexercise1'>Web design: book sharing site</Link>
-                        <Link to='/site/design/dataviz1'>Data viz: video game history</Link>
-                        <Link to='/site/design/logodesign1'>Grace's Organics logo</Link>
+                        {/* <Link to='/site/design/webdesignexercise1'>Web design: book sharing site</Link>
+                        <Link to='/site/design/dataviz1'>Data viz: video game history</Link> */}
+                        {/* <Link to='/site/design/logodesign1'>Grace's Organics logo</Link> */}
                     </div>
                 </div>
-                <div className="main_section_wrapper">
+                {/* <div className="main_section_wrapper">
                     <Link className="main_section" to="/site/funstuff">Fun stuff</Link>
                     <div className="underline" />
-                </div>
+                </div> */}
                 <div className="main_section_wrapper">
                     <Link className="main_section" to="/site/about">About</Link>
                     <div className="underline" />

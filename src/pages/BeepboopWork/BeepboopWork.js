@@ -41,7 +41,7 @@ function BeepboopWork() {
                         </div>
                     </div>
                     <div className="main_text">
-                        <div className="text_body">As a full-stack software engineer and design intern at Beepboop, I architected the complete redesign of their student-facing website, the Speak App.</div>
+                        <div className="text_body">As a full-stack software engineer and design lead at Beepboop, I architected the complete redesign of their student-facing website, the Speak App.</div>
                         <br />
                         <br />
                         <div className="text_body">My work included developing mockups of mobile-friendly designs in Figma, implementing them on the frontend using React, and creating and optimizing API endpoints on the backend using Firebase and Node.js</div>
@@ -56,7 +56,7 @@ function BeepboopWork() {
                         <Expandable
                             imgaddress={book_desktop_orig}
                             description=""
-                            className={'gen_img'}
+                            className={'gen_img no_shadow'}
                         />
                     </div>
                     <div className="gen_img_subcontainer">
@@ -64,7 +64,7 @@ function BeepboopWork() {
                         <Expandable
                             imgaddress={book_desktop_redesign}
                             description=""
-                            className={'gen_img'}
+                            className={'gen_img no_shadow'}
                         />
                     </div>
                 </div>

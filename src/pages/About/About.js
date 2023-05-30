@@ -15,10 +15,10 @@ function About() {
                     <img className="portrait" src={self} alt="portrait of Janna Goliff" />
                     <div className="main_text">
                         <div className="headline">
-                            I'm a student at UPenn double majoring in Design and Computer Science.
+                            I'm a full-stack developer and designer based out of Philadelphia.
                         </div>
                         <div className="body">
-                            I love exploring the ways design and computer science interact. 
+                            I'm also a recent graduate from UPenn double majoring in Design and Computer Science.
                         <br />
                         <br />
                             This website, and its features, were made by me! See the Github repo <a href="https://github.com/janna-goliff/site">here</a>. Deployed using Github pages.
