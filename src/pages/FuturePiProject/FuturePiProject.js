@@ -69,7 +69,7 @@ function FuturePiProject() {
                         <div className="phase_header">Phase 0: technical research</div>
                         <div className="phase_body">
                             I had no experience using a Raspberry Pi before this project, so I began with searching for 
-                            resources that would help me realize my plan. I went with a prebuilt option that included input buttons
+                            resources that would help me realize my plan. I went with a prebuilt OLED Bonnet that included input buttons
                             that would plug into the Pi with a screen.
                         </div>
                     </div>

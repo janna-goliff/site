@@ -14,9 +14,9 @@ function Landing() {
                     <svg className="star_icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144"><rect x="67.2" width="9.6" height="144"/><rect x="67.2" width="9.6" height="144" transform="translate(-26.35 98.35) rotate(-60)"/><rect x="67.2" width="9.6" height="144" transform="translate(98.35 -26.35) rotate(60)"/><circle cx="72" cy="72" r="18.47"/></svg>
                     <h1>Fifth Ural Industrial Biennial Redesign</h1>
                     <div>
-                    The Fifth Ural Industrial Biennial focuses on themes of the DIGITAL,
+                    As a case study on building hollistic identities, I chose The Fifth Ural Industrial Biennial to analyze and redesign. focuses on themes of the DIGITAL,
                     IMMORTALITY, AND DEATH. To reflect the expansive reach of the
-                    Biennial’s themes, I chose to reimagine it with a bright, vibrant color palette 
+                    Biennial's themes, I chose to reimagine it with a bright, vibrant color palette.
                     The locations of the biennial, an optical factory and theater,
                     inspired the use of imagery related to opticality and op-art.
                     </div>
@@ -54,9 +54,8 @@ function Landing() {
                     </div>
                     <p className='subProjectDescription'>
                     The poster was the first project I started on for this redesign.
-                    Inspired by the themes of the digital, immortality, and death, I
-                    felt the new identity's palette should reflect the expansive
-                    nature of the biennial.
+                    The thematic range of the biennial inspired the choice to expand 
+                    its color palette outside of the original design.
                     </p>
                 </article>
                 <article className='individualProject'>
@@ -86,8 +85,8 @@ function Landing() {
                     ></iframe>
                     </div>
                     <p className='subProjectDescription'>
-                    These motion pieces utilize the two languages of the biennial to
-                    make an engaging graphic. Made using Adobe After Effects.
+                    Leveraging the bilingual aspect of the biennial, I experimented with motion graphics 
+                    that use both English and Russian. Made using Adobe After Effects.
                     </p>
                 </article>
                 <article className='individualProject'>
@@ -117,7 +116,9 @@ function Landing() {
                         />
                     </div>
                     <p className='subProjectDescription'>
-                    For the publication, I aimed to unify the visual identity with other materials created, carrying similar motifs into the cover design.
+                    Carrying the established motifs around opticality into a publication for 
+                    the biennial, I designed a book that would sample artists' work to create 
+                    striking fields of color as a backdrop to their work.
                     </p>
                 </article>
                 <article className='individualProject'>

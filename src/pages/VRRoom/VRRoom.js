@@ -30,6 +30,9 @@ import room_picture_6 from "../../assets/vrroom/unity-screenshots/screenshot-6.p
 import room_picture_7 from "../../assets/vrroom/unity-screenshots/screenshot-7.png"
 import room_picture_8 from "../../assets/vrroom/unity-screenshots/screenshot-8.png"
 
+import instructional_poster from "../../assets/vrroom/instructional-poster.png"
+import install_main from "../../assets/vrroom/install-edited.png"
+
 function VRRoom() {
     const roomPictures = [
         {
@@ -114,12 +117,6 @@ function VRRoom() {
                                 <br />
                                 Exploring media that were completely novel to me, I wanted to interrogate the reasons behind documentation: what deems something worthy of documentation, and how do we choose to do so?
                             </div>
-                            {/* <div className="prototype_link">
-                                <a href="#figma_prototype">See the process</a>
-                            </div>
-                            <div className="prototype_link">
-                                <a href="#figma_prototype">See the project</a>
-                            </div> */}
                         </div>
                         <div className="project_info_card">
                             <div className="title">Project Info</div>
@@ -149,8 +146,10 @@ function VRRoom() {
                         <div className="video_caption">
                             Timelapse video of what the user sees and what they're doing
                         </div>
-                        <div className="video_description">
+                        <div className="video_description project">
                             The project combines 3D modelling, game development, and Photoshop. Every object that appears in the VR room is one I 3D modelled in Blender, then textured, arranaged, and set up interactions for in Unity. Several interactions involved light scripting using C#. 
+                            <br /><br />
+                            I had never done 3D modelling before starting this project, much less integrated it from Blender into Unity, so many of the technologies I used were things I learned as I went.
                         </div>
                         <video className="video" controls class="center" width="50%" height="50%" autoplay="" loop="" preload="" muted="">
                             <source src={realtime_video} type="video/mp4" />
@@ -231,47 +230,28 @@ function VRRoom() {
                         <Slideshow slideArray={roomPictures} />
                     </div>
                 </div>
-                {/* <div className="process_header_container">
-                    <div className="process_header">
-                        <div>
-                            see the 
-                            <br />
-                            <div className="emphasized_title">PROCESS</div>
+                <div className="phases">
+                    <h1 className="title">Exhibition Installation</h1>
+                    <div className="install_container">
+                        <Expandable
+                            imgaddress={install_main}
+                            description="photo of exhibition with an instructional poster and monitor streaming the Oculus app"
+                            className={'mainPhoto'}
+                        />
+                        <div className="install caption">
+                            Above is a photo of the exhibition installation, showing a livestream of what users see while wearing the headset and instructions on how to set it up and/or troubleshoot.
+                            <br /> <br />
+                            To read more about thhe exhibition as a whole, <a href="https://www.design.upenn.edu/post/undergraduate-design-work-display" target="_blank" rel="noreferrer">check out this article!</a>
+                            <br /> <br />
+                            Below, check out the instructions on display during the exhibition.
                         </div>
+                        <Expandable
+                            imgaddress={instructional_poster}
+                            description="poster describing how to run the Oculus app"
+                            className={'poster'}
+                        />
                     </div>
                 </div>
-                <div className="phases">
-                    <div className="init phase_container">
-                        <div className="text left">
-                            <div className="phase_header">Initial Research</div>
-                            <div className="phase_body">
-                                As an avid rock climber, I've used a handful of climbing apps. After doing a general survey of the existing apps available, I wanted to get the input of other climbers of what parts of climbing they're most interested in.
-                                To do this, I conducted a survey of over 25 climbers, and in-depth interviews with three.
-                                <br />
-                                <br />
-                                A key takeaway was the importance of the social aspect of climbing: many of the aspects of climbing discussed (technique, initial entry to climbing, finding new places/groups to climb with), are inherently social activities. 
-                                Another important insight is that climbing can differ from other forms of sport/exercise in that some climbers are less interested in improving the grade of the climbs they do and more interested in tracking how regularly they're climbing.
-                            </div>
-                        </div>
-                        <div className="background_decor left"></div>
-                    </div>
-                    <div className="phase_container">
-                        <div className="text left">
-                            <div className="phase_header">High Fidelity Wireframes, V1</div>
-                            <div className="phase_body">
-                                After establishing the initial structure and user flow of the Climbr app, I began to focus on establishing a design system of primary colors, UI components, and icons to use.
-                                Icons used are from FontAwesome.
-                                <br />
-                                <br />
-                                I wanted to place the app in the ranks with other modern, light-hearted apps without being too distracting from the content.
-                            </div>
-                        </div>
-                        <div className="right">
-                            
-                        </div>
-                        <div className="background_decor left"></div>
-                    </div>
-                </div> */}
             </div>
         </ColorChanger>
     );

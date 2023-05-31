@@ -129,9 +129,7 @@ function AppDesignClimbr() {
                                 <br />
                                 It's an app made by a climber, for climbers, and with the input of climbers of all levels throughout the development process.
                             </div>
-                            <div className="prototype_link">
-                                <a href="#figma_prototype">Jump to the prototype</a>
-                            </div>
+                            <a className="prototype_link" href="#figma_prototype">Jump to the prototype</a>
                         </div>
                         <div className="project_info_card">
                             <div className="title">Project Info</div>

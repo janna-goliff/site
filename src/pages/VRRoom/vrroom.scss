@@ -45,6 +45,25 @@
                 }
             }
         }
+
+        .install.caption {
+            margin: 60px auto 0 auto;
+            width: 50%;
+        }
+
+        .install_container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .install_container .mainPhoto {
+            width: 100%;
+        }
+
+        .install_container .poster {
+            margin: 60px auto;
+            width: 50%;
+        }
     }
 
     .header {
@@ -74,6 +93,10 @@
     .video_description {
         margin: 2em 0;
         width: 70%;
+    }
+
+    .video_description.project {
+        width: 50%;
     }
 
     .prototype_link {

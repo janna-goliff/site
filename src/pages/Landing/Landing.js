@@ -24,10 +24,19 @@ function Landing() {
                             <div>designer and developer</div></div> 
                     </div>
                 </div>
-                <MiniGame />
+                <div className="instruction caption">
+                    You're probably here to review my portfolio, but here are some things to ask me about to get the conversation going, ranging from serious to un-serious!
+                    <ol>
+                        <li>What was it like being the only engineer at your last company less than six months after graduating? (Spoiler: It was hard!)</li>
+                        <li>What are your thoughts on VR?</li>
+                        <li>Why are you a vegetarian?</li>
+                        <li>Did you name your cat, Jenna, after yourself?</li>
+                    </ol>
+                    Or jump straight in and look at my most recent work below.
+                </div>
                 <Link to="/site/webdev/beepboop" className="header_container landing">
                     <svg className="star_icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144"><rect x="67.2" width="9.6" height="144"/><rect x="67.2" width="9.6" height="144" transform="translate(-26.35 98.35) rotate(-60)"/><rect x="67.2" width="9.6" height="144" transform="translate(98.35 -26.35) rotate(60)"/><circle cx="72" cy="72" r="18.47"/></svg>
-                    <h1>Most recent work: Beepboop Mobile-first Redesign</h1>
+                    <h1>Most recent work: Full-stack engineering and design at Beepboop</h1>
                     <div className="divider">
                         <div className="filler"></div>
                     </div>
