@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import './slideshow.scss';
 import Expandable from "../Expandable/Expandable";
-import arrow from "../../assets/slide_arrow.png"
 
 /**
  * Component for rendering a page header section
@@ -16,7 +15,9 @@ function Slideshow(props) {
             <div className="subtitle">{props.slideArray[slide].subtitle}</div>
             <div className="sliders">
                 <div className="arrow" onClick={() => setSlide(slide - 1 > -1 ? slide - 1 : props.slideArray.length - 1)}>
-                    <img className="leftArrow" src={arrow} alt="leftArrow" />
+                    <svg className="leftArrow mainArrow" alt="leftArrow" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 379.22 308.81"><defs>
+                        </defs><line className="cls-2" x1="359.22" y1="154.41" x2="22.47" y2="154.41"/><polyline className="cls-1" points="147.42 20 20 154.41 147.42 288.81"/>
+                    </svg>
                 </div>
                 <Expandable 
                     imgaddress={props.slideArray[slide].imgSrc}
@@ -24,7 +25,9 @@ function Slideshow(props) {
                     className={'gen_img'}
                 />
                 <div className="arrow" onClick={() => setSlide(slide + 1 !== props.slideArray.length ? slide + 1 : 0)} >
-                    <img className="rightArrow" src={arrow} alt="rightArrow" />
+                    <svg className="rightArrow mainArrow" alt="rightArrow" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 379.22 308.81"><defs>
+                        </defs><line className="cls-2" x1="359.22" y1="154.41" x2="22.47" y2="154.41"/><polyline className="cls-1" points="147.42 20 20 154.41 147.42 288.81"/>
+                    </svg>
                 </div>
             </div>
             <div className="caption_container">

@@ -20,6 +20,7 @@ import FunWork from "./pages/FunWork/FunWork";
 import PennInTouchRedesign from "./pages/PennInTouchRedesign/PennInTouchRedesign";
 import AppDesignClimbr from "./pages/AppDesignClimbr/AppDesignClimbr";
 import VRRoom from "./pages/VRRoom/VRRoom";
+import BeepboopUserFlow from "./pages/BeepboopUserFlow/BeepboopUserFlow";
 
 function App() {
   return (
@@ -48,6 +49,9 @@ function App() {
           </Route>
           <Route exact path="/site/design/pennintouchredesign">
             <PennInTouchRedesign />
+          </Route>
+          <Route exact path="/site/design/beepboopuserflow">
+            <BeepboopUserFlow />
           </Route>
           <Route exact path="/site/design/appdesignclimbr">
             <AppDesignClimbr />

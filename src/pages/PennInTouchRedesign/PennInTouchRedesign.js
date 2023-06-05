@@ -83,7 +83,7 @@ function PennInTouchRedesign() {
             subtitle: "Synthesis",
             imgSrc: research_summary,
             captionTitle: "APPROACH",
-            caption: "Identifying common patterns, noting where interviewees felt most strongly, finding strngths of other tools being used"
+            caption: "Identifying common patterns, noting where interviewees felt most strongly, finding strengths of other tools being used"
         }
     ]
 

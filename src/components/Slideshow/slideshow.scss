@@ -40,8 +40,9 @@
             justify-content: center;
 
             border-radius: 1000px;
-            height: 45px;
-            width: 45px;
+            padding: 20px;
+
+            transition: .2s ease all;
         }
 
         .arrow:hover {
@@ -52,11 +53,18 @@
 
         .leftArrow, .rightArrow {
             margin: 0;
-            width: 15px;
+            height: 30px;
+            width: 30px;
         }
 
-        .leftArrow {
+        .rightArrow {
             transform: rotate(180deg);
+        }
+
+        .mainArrow {
+            .cls-1{fill:none;stroke-linejoin:round;}
+            .cls-1,.cls-2{stroke:var(--mainContentColor);stroke-linecap:round;stroke-width:40px;}
+            .cls-2{fill:#fff;stroke-miterlimit:10;}
         }
     }
 
@@ -72,6 +80,16 @@
             font-weight: 700;
             font-size: 24px;
             margin-right: 40px;
+        }
+
+        .text {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            
+            height: 75px;
+            width: 200px;
         }
     }
 }

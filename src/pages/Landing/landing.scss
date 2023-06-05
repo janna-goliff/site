@@ -10,9 +10,54 @@
     max-width: 600px;
 }
 
+.greetingToggle {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--mainContentColor);
+    border: 2px solid var(--mainContentColor);
+    border-radius: 1000px;
+    color: white;
+    font-weight: 700;
+    margin: 20px;
+    padding: 10px 20px;
+
+    transition: .2s ease all;
+    width: fit-content;
+}
+
+.greetingText {
+    transition: .2s ease all;
+
+    align-items: flex-start;
+    border: 2px dashed var(--mainContentColor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 30px 15px;
+    text-align: left;
+}
+
+.greetingText.expanded {
+    height: 100%;
+}
+
+.greetingToggle:hover {
+    cursor: pointer;
+    padding: 10px 30px;
+}
+
 .instruction.caption {
-    margin: 60px auto 0 auto;
+    color: var(--mainContentColor);
+    font-weight: 600;
+    margin: 0 auto;
     width: 95%;
+}
+
+.instruction.caption ol {
+    font-weight: 400;
 }
 
 .mainTicket {
@@ -98,6 +143,7 @@
 
 a.header_container {
     text-decoration: none;
+    transition: .2s ease all;
 }
 
 .header_container {
