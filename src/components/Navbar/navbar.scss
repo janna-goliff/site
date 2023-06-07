@@ -66,8 +66,7 @@
         z-index: 100;
       }
       
-      #dropdownMain:hover #dropdownContent,
-      #dropdownContent>a:hover {
+      #dropdownMain:hover #dropdownContent {
         visibility: visible;
       }
       
@@ -95,8 +94,7 @@
         z-index: 100;
       }
       
-      #dropdownMain2:hover #dropdownContent2,
-      #dropdownContent2:hover {
+      #dropdownMain2:hover #dropdownContent2 {
         visibility: visible;
       }
 

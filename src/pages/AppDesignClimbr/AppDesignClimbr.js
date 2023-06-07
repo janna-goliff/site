@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./appdesignclimbr.scss";
 import Navbar from "../../components/Navbar/Navbar";
 import ColorChanger from "../../components/ColorChanger/ColorChanger";
@@ -53,6 +53,10 @@ import final_6b from "../../assets/climbr/final/search-results-full.png";
 import final_7 from "../../assets/climbr/final/Profile.png";
 
 function AppDesignClimbr() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+    
     const researchArray = [
         {
             title: "USER RESEARCH",

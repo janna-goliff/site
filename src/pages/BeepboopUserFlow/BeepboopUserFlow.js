@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./beepboopuserflow.scss";
 import Navbar from "../../components/Navbar/Navbar";
 import ColorChanger from "../../components/ColorChanger/ColorChanger";
@@ -30,6 +30,10 @@ import redesign_signup3error from "../../assets/beepboopuserflow/redesign/redesi
 import redesign_login from "../../assets/beepboopuserflow/redesign/redesign_login.png";
 
 function PennInTouchRedesign() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+
     const originalArray = [
         {
             title: "INITIAL STATE",

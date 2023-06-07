@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./vrroom.scss";
 import Navbar from "../../components/Navbar/Navbar";
 import ColorChanger from "../../components/ColorChanger/ColorChanger";
@@ -34,6 +34,10 @@ import instructional_poster from "../../assets/vrroom/instructional-poster.png"
 import install_main from "../../assets/vrroom/install-edited.png"
 
 function VRRoom() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+      
     const roomPictures = [
         {
             title: "",
