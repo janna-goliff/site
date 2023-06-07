@@ -82,10 +82,11 @@ function BeepboopWork() {
                         <div className="text left">
                             <div className="phase_header">Phase 0: identifying a need</div>
                             <div className="phase_body">
-                                When discussing what I'll be working on, the needs of a student using the Speak App were prioritized.
-                                Identifying, for example, that our catalog page had the potential to be more engaging and fun for students
-                                to interact with, we were able to being making a plan for its redesign. Another goal we had was to integrate
-                                student progress in the modules into the page's redesign.
+                                When identifying key areas of the platform to improve upon, the Beepboop team took a user-centered approach. 
+                                We began by acknowledging that our catalog page (where class types were listed) had the potential to be more engaging and fun for students
+                                to interact with. We then let these areas of improvement guide its redesign, asking questions like: 
+                                How do we underscore the fun, brand-forward content of classes while students browse them? 
+                                How can we motivate students to want to take more classes and improve, without them feeling performance anxiety in class?
                             </div>
                         </div>
                         <Expandable
@@ -116,8 +117,8 @@ function BeepboopWork() {
                         <div className="text right">
                             <div className="phase_header">Phase 1: prototyping and mockups</div>
                             <div className="phase_body">
-                                As the sole designer for Beepboop's Speak App redesign, I start with fairly high-fidelity mockups
-                                to present to the CTO and CEO as a baseline for where we can begin, and iterate based on their responses.
+                                As the sole designer for this redesign project, I started with fairly high fidelity mockups
+                                to present to the CTO and CEO as a baseline for where we can begin, and iterated based on their responses.
                             </div>
                         </div>
                         <div className="background_decor right"></div>
@@ -174,9 +175,11 @@ function BeepboopWork() {
                         <div className="phase_header">Phase 3: mockups round 3</div>
                         <div className="phase_body">
                             Revisiting our initial goals, we wanted to place emphasis on how many times a student
-                            has taken a Drill. 
-
-                            I also began including the actual assets that would be used on page in this design.
+                            has taken a class - both to motivate them to want to take more, and let them see their progress over time. 
+                            <br />
+                            <br />
+                            At this point, we also began considering the tech lift we would need for this project: how could we take this 
+                            opportunity to also improve site performance by optimizing our backend requests?
                         </div>
                     </div>
                     <div className="background_decor right"></div>

@@ -9,7 +9,10 @@ import RevealButton from "../../components/RevealButton/RevealButton";
 
 import orig_login from "../../assets/beepboopuserflow/orig_login.png";
 import orig_signup from "../../assets/beepboopuserflow/orig_signup.png";
+import orig_signup_error from "../../assets/beepboopuserflow/orig_signup_error.png"
 import orig_new_student_welcome_nonvip from "../../assets/beepboopuserflow/orig_new_student_welcome_nonvip.png";
+
+import newstudent_problems from "../../assets/beepboopuserflow/newstudentwelcome/newstudentwelcome_problems.png";
 
 import newstudent_step1 from "../../assets/beepboopuserflow/newstudentwelcome/userflow_v1_p1.png";
 import newstudent_step2 from "../../assets/beepboopuserflow/newstudentwelcome/userflow_v1_p2.png";
@@ -17,12 +20,14 @@ import newstudent_step3 from "../../assets/beepboopuserflow/newstudentwelcome/us
 import newstudent_step4 from "../../assets/beepboopuserflow/newstudentwelcome/userflow_v1_p4.png";
 import newstudent_step5 from "../../assets/beepboopuserflow/newstudentwelcome/userflow_v1_p5.png";
 
-import grad_reqs_3d_mockup from "../../assets/pennintouchredesign/grad-reqs-3d-mockup.png";
+import newstudentwelcome_3d_mockup from "../../assets/beepboopuserflow/newstudentwelcome/mockup.png";
 
-import final_landing_expanded from "../../assets/pennintouchredesign/final-landing-expanded.png";
-import final_planning_mock from "../../assets/pennintouchredesign/final-planning-mock.png";
-import final_planning_myp from "../../assets/pennintouchredesign/final-planning-myp.png";
-import final_planning_reqs from "../../assets/pennintouchredesign/final-planning-reqs.png";
+import redesign_signup1 from "../../assets/beepboopuserflow/redesign/redesign_signup1.png";
+import redesign_signup1error from "../../assets/beepboopuserflow/redesign/redesign_signup1error.png";
+import redesign_signup2 from "../../assets/beepboopuserflow/redesign/redesign_signup2.png";
+import redesign_signup3 from "../../assets/beepboopuserflow/redesign/redesign_signup3.png";
+import redesign_signup3error from "../../assets/beepboopuserflow/redesign/redesign_signup3error.png";
+import redesign_login from "../../assets/beepboopuserflow/redesign/redesign_login.png";
 
 function PennInTouchRedesign() {
     const originalArray = [
@@ -51,36 +56,36 @@ function PennInTouchRedesign() {
 
     const newstudentArray = [
         {
-            title: "MOCK-UPS",
-            subtitle: "New Student Welcome",
+            title: "AFTER",
+            subtitle: "Step 1 of 5",
             imgSrc: newstudent_step1,
             captionTitle: "GOAL",
             caption: "Energize students, confirm account creation"
         },
         {
-            title: "MOCK-UPS",
-            subtitle: "New Student Welcome",
+            title: "AFTER",
+            subtitle: "Step 2 of 5",
             imgSrc: newstudent_step2,
             captionTitle: "GOAL",
             caption: "Establish class philosophy; expectation setting"
         },
         {
-            title: "MOCK-UPS",
-            subtitle: "New Student Welcome",
+            title: "AFTER",
+            subtitle: "Step 3 of 5",
             imgSrc: newstudent_step3,
             captionTitle: "GOAL",
             caption: "Communicate key product terminology"
         },
         {
-            title: "MOCK-UPS",
-            subtitle: "New Student Welcome",
+            title: "AFTER",
+            subtitle: "Step 4 of 5",
             imgSrc: newstudent_step4,
             captionTitle: "GOAL",
             caption: "Explain freemium subscription model to reduce frustration at paywalled features"
         },
         {
-            title: "MOCK-UPS",
-            subtitle: "New Student Welcome",
+            title: "AFTER",
+            subtitle: "Step 5 of 5",
             imgSrc: newstudent_step5,
             captionTitle: "GOAL",
             caption: "Create clear CTA for students to continue site engagement"
@@ -92,7 +97,7 @@ function PennInTouchRedesign() {
             <div className="beepboop_userflow">
                 <div className="header_container">
                     <svg className="star_icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144"><rect x="67.2" width="9.6" height="144"/><rect x="67.2" width="9.6" height="144" transform="translate(-26.35 98.35) rotate(-60)"/><rect x="67.2" width="9.6" height="144" transform="translate(98.35 -26.35) rotate(60)"/><circle cx="72" cy="72" r="18.47"/></svg>
-                    <h1>Beepboop User Flow Case Study</h1>
+                    <h1>Beepboop User Flow Redesign Project</h1>
                 </div>
                 <div className="intro">
                     <Expandable
@@ -102,14 +107,14 @@ function PennInTouchRedesign() {
                     />
                     <div className="main_text">
                         <div className="what_is_container">
-                            <h1 className="title">The project</h1>
+                            <h1 className="title">The funnel problem</h1>
                             <div>
-                                Beepboop's user onboarding process was an underserved part of the student platform. 
-                                Although functional from a technical standpoint, we knew there were areas for improvement.
+                                Beepboop is an early-stage startup building a platform for online language learning. For this project, I was lead designer and engineer.
+                                As a team, we knew Beepboop's user onboarding process was an underserved part of the student-facing platform: <p className="emphasizedText">over 85% of first-time users were dropping out of the sign-up phase of our funnel.</p> 
                                 <br />
                                 <br />
                                 This project started out as a vague recognition of some of the pain points of 
-                                Beepboop's onboarding process, and shifted into a mult-phase plan that, while 
+                                Beepboop's onboarding process, and shifted into a multi-phase plan that, while 
                                 not executed in completion before my time ended, served as a valuable UX exploration.
                                 <br />
                                 <br />
@@ -246,14 +251,13 @@ function PennInTouchRedesign() {
                         <div className="text left longer">
                             <div className="phase_header">No Wireframes?</div>
                             <div className="phase_body">
-                                Beepboop's design team (at this point in time), was only me. I was also the only developer, 
-                                so we didn't have the resources to allocate towards making wireframes and doing more thorough 
-                                usability testing. Instead, I made a quick series of high-fidelity mockups showing what a potential
-                                redesign of a single page could look like.
+                                As both sole designer and developer on this project, I knew we didn't have the resources to allocate towards making wireframes, low-fidelity designs, and thorough 
+                                usability testing. Instead, I made a quick series of high fidelity mockups showing what a potential
+                                redesign of a single page could look like. <p className="emphasizedText">My position as developer also allowed me to make design decisions I knew would only require front-end changes and enable a more rapid deployment of changes.</p>
                                 <br />
                                 <br />
-                                Based on my interviews, informal discussions with teachers, 
-                                and project planning sessions with our CEO, I identified the page with the highest potential impact to be the 
+                                Based on my interviews, informal discussions with teachers using our platform, 
+                                and project planning sessions with our CEO, I identified the page with both the highest potential impact and lowest tech lift to be the 
                                 "New Student Welcome" page, where all new accounts are routed to after they're created.
                             </div>
                         </div>
@@ -263,12 +267,20 @@ function PennInTouchRedesign() {
                     </div>
                 </div>
                 <div className="phase_container wireframes">
-                        <Slideshow slideArray={newstudentArray} />
+                    <div className="problemsContainer">
+                        <h3 className="title">BEFORE</h3>
+                        <Expandable
+                            imgaddress={newstudent_problems}
+                            description="screenshot of new student page"
+                            className="problemsScreenshot"
+                        />
                     </div>
+                    <Slideshow slideArray={newstudentArray} />
+                </div>
                 <div className="phase_container">
                     <div className="left">
                         <Expandable
-                            imgaddress={grad_reqs_3d_mockup}
+                            imgaddress={newstudentwelcome_3d_mockup}
                             description="laptop"
                             className={'laptop'}
                         />
@@ -277,31 +289,45 @@ function PennInTouchRedesign() {
                         <div className="phase_header">No Testing?</div>
                         <div className="phase_body">
                             The fast-paced workflow and limited design capacity on my team meant 
-                            that after a few minor changes suggested by our CEO, the mockups were 
+                            that after a few minor changes suggested by our CEO, the mockups I made were 
                             ready to be built out on the front-end and deployed.
                         </div>
                     </div>
                     <div className="background_decor right"></div>
                 </div>
+                <div className="phase_container">
+                    <div className="text left">
+                        <div className="phase_header">What's next?</div>
+                        <div className="phase_body">
+                            Ideally, we would take time to monitor the success of these changes: 
+                            is a higher proportion of users making accounts? Without a dedicated user 
+                            research team, combined with limited capacity to track user behavior without large tech lifts, we made 
+                            the decision to continue making changes to improve the user onboarding process before seeing results.
+                        </div>
+                    </div>
+                    <div className="right">
+                    </div>
+                    <div className="background_decor left"></div>
+                </div>
                 <div className="phase_container finals">
-                    <div className="final_container">
+                <div className="final_container">
                         <Expandable 
-                            imgaddress={final_landing_expanded}
+                            imgaddress={redesign_login}
                             description="laptop"
                             className={'final_midterm'}
                         />
                         <div className="card_container">
                             <div className="card">
-                                <h2>Home Screen</h2>
+                                <h2>Login page</h2>
                                 <div className="content_container">
                                     <div className="card_header">Function</div>
-                                    <div className="card_content">Landing screen when users login in to PennInTouch</div>
+                                    <div className="card_content">Let users with existing accounts know where to login</div>
                                     <div className="card_header">Changes made</div>
-                                    <div className="card_content">Mock schedule is emphasized, made more visible, viewing announcements and deadlines is simplified</div>
+                                    <div className="card_content">Separated login and sign-up functions</div>
                                 </div>
                             </div>
                             <RevealButton 
-                                imgaddress={""}
+                                imgaddress={orig_login}
                                 description=""
                                 className={''}
                             />
@@ -309,22 +335,22 @@ function PennInTouchRedesign() {
                     </div>
                     <div className="final_container">
                         <Expandable 
-                            imgaddress={final_planning_mock}
+                            imgaddress={redesign_signup1}
                             description="laptop"
                             className={'final_midterm'}
                         />
                         <div className="card_container">
                             <div className="card">
-                                <h2>Mock Schedules</h2>
+                                <h2>Sign-up page</h2>
                                 <div className="content_container">
                                     <div className="card_header">Function</div>
-                                    <div className="card_content">Let students create multiple possible schedules for the upcoming semesters</div>
+                                    <div className="card_content">Confirm student is signing up for correct language to learn</div>
                                     <div className="card_header">Changes made</div>
-                                    <div className="card_content">Mock schedules are larger, all immediately viewable, adding is clear</div>
+                                    <div className="card_content">Separated sign-up into multiple steps, users have to explicitly choose a language</div>
                                 </div>
                             </div>
                             <RevealButton 
-                                imgaddress={""}
+                                imgaddress={orig_signup}
                                 description=""
                                 className={''}
                             />
@@ -332,18 +358,18 @@ function PennInTouchRedesign() {
                     </div>
                     <div className="final_container">
                         <Expandable 
-                            imgaddress={final_planning_myp}
+                            imgaddress={redesign_signup1error}
                             description="laptop"
                             className={'final_midterm'}
                         />
                         <div className="card_container">
                             <div className="card">
-                                <h2>Multi-Year Plan</h2>
+                                <h2>Sign-up page (error)</h2>
                                 <div className="content_container">
                                     <div className="card_header">Function</div>
-                                    <div className="card_content">Let students plan their courses across multiple years</div>
+                                    <div className="card_content">Warn student if they select they want to learn the language brwoser is rendered in</div>
                                     <div className="card_header">Changes made</div>
-                                    <div className="card_content">Functionality previously did not exist; added as a result of user research</div>
+                                    <div className="card_content">Added additional layer of error protection</div>
                                 </div>
                             </div>
                             <div className="noOriginal">No Original</div>
@@ -351,22 +377,68 @@ function PennInTouchRedesign() {
                     </div>
                     <div className="final_container">
                         <Expandable 
-                            imgaddress={final_planning_reqs}
+                            imgaddress={redesign_signup2}
                             description="laptop"
                             className={'final_midterm'}
                         />
                         <div className="card_container">
                             <div className="card">
-                                <h2>Graduation Requirements</h2>
+                                <h2>Sign-up page</h2>
                                 <div className="content_container">
                                     <div className="card_header">Function</div>
-                                    <div className="card_content">Let students view what requirements they need to fulfill in order to graduate</div>
+                                    <div className="card_content">Make user input feel easier and less intimidating</div>
                                     <div className="card_header">Changes made</div>
-                                    <div className="card_content">Removed verbose copy, established stronger hierchy of information</div>
+                                    <div className="card_content">Separated sign-up into multiple steps, larger input fields</div>
                                 </div>
                             </div>
                             <RevealButton 
-                                imgaddress={""}
+                                imgaddress={orig_signup}
+                                description=""
+                                className={''}
+                            />
+                        </div>
+                    </div>
+                    <div className="final_container">
+                        <Expandable 
+                            imgaddress={redesign_signup3}
+                            description="laptop"
+                            className={'final_midterm'}
+                        />
+                        <div className="card_container">
+                            <div className="card">
+                                <h2>Sign-up page</h2>
+                                <div className="content_container">
+                                    <div className="card_header">Function</div>
+                                    <div className="card_content">Final required input fields for users</div>
+                                    <div className="card_header">Changes made</div>
+                                    <div className="card_content">Separated sign-up into multiple steps, larger input fields</div>
+                                </div>
+                            </div>
+                            <RevealButton 
+                                imgaddress={orig_signup}
+                                description=""
+                                className={''}
+                            />
+                        </div>
+                    </div>
+                    <div className="final_container">
+                        <Expandable 
+                            imgaddress={redesign_signup3error}
+                            description="laptop"
+                            className={'final_midterm'}
+                        />
+                        <div className="card_container">
+                            <div className="card">
+                                <h2>Sign-up page (error)</h2>
+                                <div className="content_container">
+                                    <div className="card_header">Function</div>
+                                    <div className="card_content">Make it clear when users have made an error in their input</div>
+                                    <div className="card_header">Changes made</div>
+                                    <div className="card_content">Distinct visual indication of an error; responsive to user input (previous version would indicate error before user finished) </div>
+                                </div>
+                            </div>
+                            <RevealButton 
+                                imgaddress={orig_signup_error}
                                 description=""
                                 className={''}
                             />

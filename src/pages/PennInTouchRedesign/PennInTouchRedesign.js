@@ -191,7 +191,7 @@ function PennInTouchRedesign() {
                         <div className="text left">
                             <div className="phase_header">Assessment of PennInTouch</div>
                             <div className="phase_body">
-                                To begin the redesign, I took a critical look at the key painpoints of the existing PennInTouch to determine what areas and key functions I wanted to focus on for the redesign.
+                                To begin the redesign, I took a critical look at the key pain points of the existing PennInTouch to determine what areas and key functions I wanted to focus on for the redesign.
                                 <br />
                                 <br />
                                 *Note: The University of Pennsylvania has now switched to a new student registration portal, called Path@Penn.
@@ -220,7 +220,7 @@ function PennInTouchRedesign() {
                         <div className="text left">
                             <div className="phase_header">Wireframes</div>
                             <div className="phase_body">
-                            Guided by the user insights I developed from my research, I began to create wireframes of the PennInTouch redesign.
+                            Guided by the user insights I developed from my research, I identified key functions of PennInTouch and began to create wireframes of their redesign.
                             </div>
                         </div>
                         <div className="right">

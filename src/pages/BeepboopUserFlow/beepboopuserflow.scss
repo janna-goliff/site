@@ -50,13 +50,48 @@
     }
 
     .phase_container.wireframes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
         margin-top: 100px;
     }
 
     .phase_container.wireframes {
+        .problemsContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background-color: var(--mainContentColor);
+            width: 100vw;
+        }
+
+        .problemsContainer {
+            .problemsScreenshot {
+                box-shadow: none;
+                margin: 20px auto 100px auto;
+                width: 80%;
+            }
+    
+            .title {
+                color: var(--tan1);
+                font-weight: 700;
+                font-size: 24px;
+                letter-spacing: 0.4em;
+                margin: 60px auto 20px auto;
+            }
+        }
+
         .slideshow .gen_img {
             border-radius: 10px;
             width: 80%;
+        }
+
+        .slideshow .title {
+            margin: 60px auto 20px auto;
         }
     }
 

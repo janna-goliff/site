@@ -147,7 +147,7 @@ function VRRoom() {
                             Timelapse video of what the user sees and what they're doing
                         </div>
                         <div className="video_description project">
-                            The project combines 3D modelling, game development, and Photoshop. Every object that appears in the VR room is one I 3D modelled in Blender, then textured, arranaged, and set up interactions for in Unity. Several interactions involved light scripting using C#. 
+                            The project combines 3D modelling, game development, and Photoshop. Every object that appears in the VR room is one I 3D modelled in Blender, then textured, arranged, and set up interactions for in Unity. Several interactions involved light scripting using C#. 
                             <br /><br />
                             I had never done 3D modelling before starting this project, much less integrated it from Blender into Unity, so many of the technologies I used were things I learned as I went.
                         </div>
@@ -241,7 +241,7 @@ function VRRoom() {
                         <div className="install caption">
                             Above is a photo of the exhibition installation, showing a livestream of what users see while wearing the headset and instructions on how to set it up and/or troubleshoot.
                             <br /> <br />
-                            To read more about thhe exhibition as a whole, <a href="https://www.design.upenn.edu/post/undergraduate-design-work-display" target="_blank" rel="noreferrer">check out this article!</a>
+                            To read more about the exhibition as a whole, <a href="https://www.design.upenn.edu/post/undergraduate-design-work-display" target="_blank" rel="noreferrer">check out this article!</a>
                             <br /> <br />
                             Below, check out the instructions on display during the exhibition.
                         </div>

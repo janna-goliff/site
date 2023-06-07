@@ -5,6 +5,9 @@ import Navbar from "../../components/Navbar/Navbar";
 import ColorChanger from "../../components/ColorChanger/ColorChanger";
 import book_mobile_redesign from "../../assets/beepboop/book_page_mobile_redesign.png";
 import home_mobile_redesign from "../../assets/beepboop/home_page_mobile_redesign.PNG";
+import main_beepboopuserflow from "../../assets/homepage/beepboopuserflow.png";
+import main_climbr from "../../assets/homepage/climbr.png";
+import main_vrrom from "../../assets/homepage/vrroom.png";
 
 function Landing() {
     const [displayGreeting, setDisplayGreeting] = useState(false);
@@ -40,17 +43,32 @@ function Landing() {
                         Or jump straight in and look at my most recent work below.
                     </div>
                 }
-                <Link to="/site/webdev/beepboop" className="header_container landing">
-                    <svg className="star_icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144"><rect x="67.2" width="9.6" height="144"/><rect x="67.2" width="9.6" height="144" transform="translate(-26.35 98.35) rotate(-60)"/><rect x="67.2" width="9.6" height="144" transform="translate(98.35 -26.35) rotate(60)"/><circle cx="72" cy="72" r="18.47"/></svg>
-                    <h1>Most recent work: Full-stack engineering and design at Beepboop</h1>
-                    <div className="divider">
-                        <div className="filler"></div>
+                <Link to="/site/design/beepboopuserflow" className="header_container_overarching">
+                    <div className="header_container landing">
+                        <svg className="star_icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144"><rect x="67.2" width="9.6" height="144"/><rect x="67.2" width="9.6" height="144" transform="translate(-26.35 98.35) rotate(-60)"/><rect x="67.2" width="9.6" height="144" transform="translate(98.35 -26.35) rotate(60)"/><circle cx="72" cy="72" r="18.47"/></svg>
+                        <h1>Most recent work: Full-stack engineering and design at Beepboop</h1>
+                        <div className="divider">
+                            <div className="filler"></div>
+                        </div>
+                    </div>
+                    <div className="header_background_container">
+                        <div className="background_overlay"></div>
+                        <img src={main_beepboopuserflow} alt="user flow" className="header_background"/>
                     </div>
                 </Link>
-                <div className="landing_frame_container">
-                    <img className="phone_frame_image" src={home_mobile_redesign} alt={"screenshot"} />
-                    <img className="phone_frame_image" src={book_mobile_redesign} alt={"screenshot"} />
-                </div>
+                <Link to="/site/design/appdesignclimbr" className="header_container_overarching">
+                    <div className="header_container landing">
+                        <svg className="star_icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144"><rect x="67.2" width="9.6" height="144"/><rect x="67.2" width="9.6" height="144" transform="translate(-26.35 98.35) rotate(-60)"/><rect x="67.2" width="9.6" height="144" transform="translate(98.35 -26.35) rotate(60)"/><circle cx="72" cy="72" r="18.47"/></svg>
+                        <h1>App design concept for tracking climbing data</h1>
+                        <div className="divider">
+                            <div className="filler"></div>
+                        </div>
+                    </div>
+                    <div className="header_background_container">
+                        <div className="background_overlay"></div>
+                        <img src={main_climbr} alt="climbing app" className="header_background"/>
+                    </div>
+                </Link>
             </div>
         </ColorChanger>
     );

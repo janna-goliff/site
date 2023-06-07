@@ -13,7 +13,7 @@ function Navbar() {
                         <div className="underline" />
                     </div>
                     <div id='dropdownContent2'>
-                        <Link to='/site/webdev/beepboop'>Beepboop Full-Stack + Design Work</Link>
+                        <Link to='/site/webdev/beepboop'>Beepboop Mobile-First Redesign</Link>
                         <Link to='/site/engineering/futurepiproject'>2050: an Earth Odyssey</Link>
                         {/* <Link to='/site/webdev/dataportraits'>Data portraits</Link> */}
                         {/* <Link to='/site/webdev/treehouse'>Web app development</Link> */}

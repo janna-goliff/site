@@ -141,9 +141,20 @@
     }
 }
 
-a.header_container {
+.header_container_overarching {
+    margin: 0 auto 350px auto;
+    text-decoration: none;
+}
+
+.header_container {
+    position: relative;
+}
+
+.header_container {
     text-decoration: none;
     transition: .2s ease all;
+
+    z-index: 100;
 }
 
 .header_container {
@@ -151,6 +162,7 @@ a.header_container {
         color: var(--mainContentColor);
         font-size: 32px;
         font-weight: 400;
+        text-decoration: none;
     }
     
     .divider {
@@ -171,10 +183,57 @@ a.header_container {
     }
 }
 
-a.header_container:hover .filler {
+.header_container:hover .filler {
     width: 100%;
 }
 
 .landing_frame_container .phone_frame_image {
     margin-top: 10px;
 }
+
+.header_background_container {
+    position: relative;
+}
+
+.header_background_container {
+    .background_overlay {
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        height: 300px;
+        width: 600px;
+
+        z-index: 50;
+
+        opacity: 0;
+
+        transition: .2s ease all;
+    }
+
+    .header_background {
+        background-color: var(--mainContentColor);
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        height: 300px;
+        width: 600px;
+
+        z-index: 1;
+
+        opacity: 1;
+        transition: .2s ease all;
+    }
+}
+
+.header_container_overarching:hover {
+    .background_overlay {
+        opacity: .7;
+    }
+
+    .background_overlay + .header_background {
+        opacity: .8;
+    }
+}   

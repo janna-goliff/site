@@ -389,10 +389,10 @@ function AppDesignClimbr() {
                     <div className="text left" style={{width: "60%"}}>
                         <div className="phase_header">User Testing + Final Designs</div>
                         <div className="phase_body">
-                            I knew getting the app prototype into the hands of the user was an essential stpe before my final designs: creating in isolation has benefits, but test users could provide insights I may have been ignorant of.
+                            I knew getting the app prototype into the hands of the user was an essential step before my final designs: creating in isolation has benefits, but test users could provide insights I may have been ignorant of.
                             <br />
                             <br />
-                            One of the key issues that came up across different users was an inability to identify what actions they could take next. With suggestions from othe designers, I decided to introduce a bold, complementary accent color to make the action items of each screen easily identifiable.
+                            One of the key issues that came up across different users was an inability to identify what actions they could take next. With suggestions from other designers, I decided to introduce a bold, complementary accent color to make the action items of each screen easily identifiable.
                         </div>
                     </div>
                     <div className="right">
