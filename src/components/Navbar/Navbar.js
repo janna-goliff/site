@@ -41,6 +41,10 @@ function Navbar() {
                     <div className="underline" />
                 </div> */}
                 <div className="main_section_wrapper">
+                    <a target="_blank" rel="noopener noreferrer" className="main_section" href="https://docs.google.com/document/d/1JYqAnsLnR08J2nMYhpooTWkUeYiRZDKvzhNHKrBSfZg/edit?usp=sharing">Resume</a>
+                    <div className="underline" />
+                </div>
+                <div className="main_section_wrapper">
                     <Link className="main_section" to="/site/about">About</Link>
                     <div className="underline" />
                 </div>

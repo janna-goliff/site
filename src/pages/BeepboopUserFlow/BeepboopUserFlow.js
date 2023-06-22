@@ -138,7 +138,7 @@ function PennInTouchRedesign() {
                             </div>
                             <div className="project_info">
                                 <div className="subtitle">Tools Used</div>
-                                <div className="content">Figma, React, Node.js</div>
+                                <div className="content">Figma, React, Node.js, Firebase (GCP)</div>
                             </div>
                             <div className="project_info">
                                 <div className="subtitle">Final Product</div>
