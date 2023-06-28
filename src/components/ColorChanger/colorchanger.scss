@@ -31,6 +31,10 @@
 }
 
 .color_changer_wrapper {
+  .size_warning {
+    display: none;
+  }
+
   .change_bar {
     display: flex;
     position: absolute;
@@ -66,5 +70,20 @@
 
   .color_button.black {
     background-color: var(--mainBlack);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .color_changer_wrapper {
+    .size_warning {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+
+      background-color: var(--mainContentColor);
+      font-weight: 600;
+      color: white;
+    }
   }
 }

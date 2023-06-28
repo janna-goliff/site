@@ -16,6 +16,7 @@ function ColorChanger( {children} ) {
 
     return (
         <div className={"color_changer_wrapper " + color}>
+            <div className="size_warning">Hello! This site wasn't designed responsively and is best viewed on a larger screen.</div>
             <div className="change_bar">
                 {colorArr.map((colorName) => {
                     return (
