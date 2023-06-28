@@ -52,6 +52,8 @@ import final_6a from "../../assets/climbr/final/search-results.png";
 import final_6b from "../../assets/climbr/final/search-results-full.png";
 import final_7 from "../../assets/climbr/final/Profile.png";
 
+import final_landing_desktop from "../../assets/climbr/final/landing-desktop.png"
+
 function AppDesignClimbr() {
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -482,6 +484,14 @@ function AppDesignClimbr() {
                                 <div className="caption">Landing page data display settings</div>
                             </div>
                         </div>
+                        <div className="wireframe_container">
+                                <Expandable
+                                    imgaddress={final_landing_desktop}
+                                    description=""
+                                    className={'gen_img wireframe desktop'}
+                                />
+                                <div className="caption">Desktop view of landing page</div>
+                            </div>
                 </div>
                 <div className="phase_container finals" id="figma_prototype">
                     <div className="figma_container">
