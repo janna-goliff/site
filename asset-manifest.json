@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/site/static/css/main.bc4939eb.css",
-    "main.js": "/site/static/js/main.c10bd5f6.js",
+    "main.css": "/site/static/css/main.473e6457.css",
+    "main.js": "/site/static/js/main.43ed3229.js",
     "static/js/377.8a6a03c8.chunk.js": "/site/static/js/377.8a6a03c8.chunk.js",
     "static/media/timelapse-edited.mp4": "/site/static/media/timelapse-edited.77a9d56d1cf8a03035f1.mp4",
     "static/media/realtime-video.mp4": "/site/static/media/realtime-video.7f59d975545fb9a1625c.mp4",
@@ -35,6 +35,7 @@
     "static/media/journal-flip-2.png": "/site/static/media/journal-flip-2.4bca438901e86c8aadca.png",
     "static/media/key-hands.png": "/site/static/media/key-hands.adf4be4beaefb52d828f.png",
     "static/media/clubdetail_color.png": "/site/static/media/clubdetail_color.b3ed45995c21ceb58722.png",
+    "static/media/landing-desktop.png": "/site/static/media/landing-desktop.36e9817d835ed64c09c1.png",
     "static/media/grad-reqs-3d-mockup.png": "/site/static/media/grad-reqs-3d-mockup.16eecf6dfb07248e2408.png",
     "static/media/redesign_signup3error.png": "/site/static/media/redesign_signup3error.0ae901d956daea54ec4e.png",
     "static/media/wireframe-mockup.png": "/site/static/media/wireframe-mockup.5b24e214a0e43f8e2844.png",
@@ -153,12 +154,12 @@
     "static/media/emptystate_bw.png": "/site/static/media/emptystate_bw.8296fddc59cf7549b68d.png",
     "static/media/exposition.png": "/site/static/media/exposition.0438a578e2fed95a83f1.png",
     "index.html": "/site/index.html",
-    "main.bc4939eb.css.map": "/site/static/css/main.bc4939eb.css.map",
-    "main.c10bd5f6.js.map": "/site/static/js/main.c10bd5f6.js.map",
+    "main.473e6457.css.map": "/site/static/css/main.473e6457.css.map",
+    "main.43ed3229.js.map": "/site/static/js/main.43ed3229.js.map",
     "377.8a6a03c8.chunk.js.map": "/site/static/js/377.8a6a03c8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc4939eb.css",
-    "static/js/main.c10bd5f6.js"
+    "static/css/main.473e6457.css",
+    "static/js/main.43ed3229.js"
   ]
 }
