@@ -73,6 +73,14 @@
   }
 }
 
+@media screen and (max-width: 700px) {
+  .color_changer_wrapper {
+    .change_bar {
+      display: none;
+    }
+  }
+}
+
 @media screen and (max-width: 950px) {
   .color_changer_wrapper {
     .size_warning {

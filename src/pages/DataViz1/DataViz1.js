@@ -47,8 +47,6 @@ d3.csv(data).then(function (data) {
     mapConsoleIndex.set(key, j % 11);
     j++;
   });
-
-  console.log(mapConsoleIndex);
 });
 
 function getMostPopularGameGlobal(startYear, endYear) {
@@ -442,9 +440,7 @@ function update2(year,type) {
     g.append('g')
       .attr('transform', 'translate(0,' + height + ')')
       .call(d3.axisBottom(xScale))
-     
 
-      console.log("genreNamesLength: ", genreNames.length)
     if (genreNames.length > 10 && type==='publisher') {
       g
       .selectAll("text")
@@ -480,7 +476,6 @@ function update2(year,type) {
     g.selectAll('.tick line').attr('stroke', 'black');
     g.selectAll('.tick text').attr('fill', 'black');
 
-    console.log("rerendering bars!")
     g.selectAll('.bar')
       .data(dataByYear)
       .enter()
@@ -653,7 +648,6 @@ class DataViz1 extends React.Component {
 
     onGenreChange(event) {
       let value = event.target.value
-      console.log("VALUE: ", value)
       update2(value, "genre")
       this.setState({
         genreValue: event.target.value
@@ -662,7 +656,6 @@ class DataViz1 extends React.Component {
 
     onPlatformChange(event) {
       let value = event.target.value
-      console.log("VALUE: ", value)
       update2(value, "platform")
       this.setState({
         platformValue: event.target.value
@@ -671,7 +664,6 @@ class DataViz1 extends React.Component {
 
     onPublisherChange(event) {
       let value = event.target.value
-      console.log("VALUE: ", value)
       update2(value, "publisher")
       this.setState({
         publisherValue: event.target.value
@@ -701,7 +693,6 @@ class DataViz1 extends React.Component {
       parent3.removeChild(parent3.firstChild);
     }
 
-    console.log(this.state.genreValue)
     update2(parseInt(this.state.genreValue), "genre")
     update2(parseInt(this.state.platformValue), "platform")
     update2(parseInt(this.state.publisherValue), "publisher")

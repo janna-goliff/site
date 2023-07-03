@@ -7,6 +7,13 @@
 }
 
 .navbar_wrapper {
+    .mainArrow {
+      display: none;
+    }
+
+    .menu_icon {
+      display: none;
+    }
     .navbar_name {
         color: var(--mainContentColor);
         font-family: 'Cormorant Unicase', serif;
@@ -114,4 +121,86 @@
       #dropdownContent2 a:last-child {
         border-radius: 0 0 10px 10px;
       }
+}
+
+@media screen and (max-width: 700px) {
+  .navbar_wrapper {
+    position: relative;
+  }
+
+  .navbar_wrapper {
+    .navbar_name {
+      margin: 0 .5rem;
+    }
+
+    .menu_icon {
+      display: inline;
+    }
+
+    .menu_icon:hover {
+      cursor: pointer;
+    }
+
+    .menu_icon svg {
+      height: 1rem;
+      width: 1rem;
+    }
+
+    .menu_icon svg rect {
+      fill: var(--mainContentColor);
+    }
+
+    .navbar_links {
+      display: none;
+    }
+
+    .navbar_links.expanded {
+      background-color: var(--tan1);
+      display: flex;
+      flex-direction: column;
+
+      position: absolute;
+      top: 4rem;
+      right: 0;
+
+      z-index: 100;
+    }
+
+    .navbar_links.expanded .underline {
+      display: none;
+    }
+
+    #dropdownContent2, 
+    #dropdownContent {
+      border-radius: 0;
+      box-shadow: none;
+      position: relative;
+      visibility: visible;
+    }
+
+    #dropdownContent a:last-child, 
+    #dropdownContent2 a:last-child {
+      border-radius: 0;
+    }
+
+    .main_section_wrapper a.main_section {
+      color: var(--mainContentColor);
+      display: block;
+      font-weight: 400;
+      padding: 15px 40px 15px 0;
+      text-decoration: none;
+    }
+
+    .main_section_wrapper a.main_section:hover {
+      background-color: var(--tan2);
+    }
+
+    .mainArrow {
+      display: inline;
+      height: 1rem;
+      rotate: 180deg;
+      padding-left: 0.75rem;
+      fill: var(--mainContentColor);
+    }
+  }
 }
