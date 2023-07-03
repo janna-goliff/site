@@ -44,7 +44,8 @@ a {
   font-size: 1em;
   margin: 2.5em 2em 1em 2em;
   position: relative;
-  width: auto;
+  width: 100%;
+
 }
 
 .header_container:not(.landing) {
@@ -171,3 +172,36 @@ a {
   right: -300px;
 }
 
+@media screen and (max-width: 700px) {
+  .header_container:not(.landing) {
+    font-size: 14px;
+  }
+  
+  .header_container h1 {
+    font-size: 14px;
+    width: 80vw;
+  }
+
+  .phase_container {
+    flex-direction: column;
+    margin: 50px auto;
+    width: auto;
+  }
+
+  .phase_container {
+    .text {
+      padding: 2rem 1rem;
+    }
+
+    .background_decor {
+      border-radius: 0;
+      height: 100%;
+      top: 0;
+    }
+
+    .left, .right {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

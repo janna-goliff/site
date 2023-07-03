@@ -43,3 +43,27 @@
         }
     }
 }
+
+@media screen and (max-width: 700px) {
+    .about {
+        margin: auto;
+        width: 90%;
+    }
+
+    .about {
+        .container {
+            flex-direction: column;
+        }
+
+        .container {
+            .portrait, 
+            .main_text {
+                width: 80%;
+            } 
+
+            .main_text {
+                margin-top: 20px;
+            }
+        }
+    }
+}

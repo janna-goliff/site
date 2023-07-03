@@ -75,3 +75,28 @@
     }
 }
 
+@media screen and (max-width: 700px) {
+    .beepboop_work_body {
+        .landing_frame_container {
+            flex-direction: column;
+        }
+
+        .gen_img_container {
+            flex-direction: column;
+        }
+
+        .intro {
+            flex-direction: column;
+            width: 100vw;
+        }
+
+        .main_text {
+            margin: 1rem;
+        }
+
+        .gen_img_container {
+            margin: 1rem;
+            width: calc(100vw - 2rem);
+        }
+    }
+}
