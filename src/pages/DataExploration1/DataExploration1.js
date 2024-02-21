@@ -5,10 +5,32 @@ import Navbar from "../../components/Navbar/Navbar";
 import ColorChanger from "../../components/ColorChanger/ColorChanger";
 import "./dataexploration1.scss";
 
-let dataLocation = 'https://raw.githubusercontent.com/janna-goliff/site/main/src/assets/intercountry_adoption_into_US_over_2001_2020.csv';
+//let dataLocation = 'https://raw.githubusercontent.com/janna-goliff/site/main/src/assets/intercountry_adoption_into_US_over_2001_2020.csv';
 
-function barChart() {
-    let svg = d3.select('#barChart');
+let dataLocation = 'https://raw.githubusercontent.com/janna-goliff/site/main/src/assets/placeholder.csv';
+
+// takes a year indexed InternMap and string representing a year
+// returns data for the given year, sorted by highest to lowest adoptions top 50 countries
+function processAdoptionsByYearData(data, yearString) {
+    console.log("data in process: ", data);
+    console.log("yearString: ", yearString);
+    // grab by year
+    let dataReturn = data
+        .get(yearString);
+        console.log("dataReturn: ", dataReturn);
+    dataReturn = dataReturn
+        .sort((a, b) => d3.descending(
+            parseInt(a.Number_of_Completed_Adoptions_to_US), 
+            parseInt(b.Number_of_Completed_Adoptions_to_US)))
+        .slice(0, 50);
+
+        return dataReturn;
+}
+
+//add moving percentage horizontal bar chart?
+function barChart(adoptionData) {
+    // grab initial svg sizes
+    let svg = d3.select('#barChartAdoptionsByYear');
     let margin = 350;
     let width = svg.attr('width') - margin;
     let height = svg.attr('height') - margin;
@@ -17,23 +39,20 @@ function barChart() {
     let yScale = d3.scaleLinear().range([height, 0]);
     let g = svg
         .append('g')
+        .attr('id', 'barInner')
         .attr('transform', 'translate(' + 175 + ',' + 100 + ')');
 
-    d3.csv(dataLocation).then(function (data) {
-        // format data into numbers
-        data.forEach(function (d) {
+    // grab and format data
+        
+
+        // grab by year
+        let dataByYear = processAdoptionsByYearData(adoptionData, "2001");
+        console.log("dataByYear", dataByYear);
+
+        // format Year column data into int
+        dataByYear.forEach(function (d) {
             d.Number_of_Completed_Adoptions_to_US = parseInt(d.Number_of_Completed_Adoptions_to_US);
         });
-
-        // group by year
-        let dataByYear = d3.group(data, (d) => d.Year);
-        
-        // sorts data by year, programatically choses a year, then sorts that year's data
-        // by highest # of adoptions, taking top 50 results 
-        dataByYear = dataByYear
-            .get("2001")
-            .sort((a, b) => d3.descending(a.Number_of_Completed_Adoptions_to_US, b.Number_of_Completed_Adoptions_to_US))
-            .slice(0, 50);
 
         // set x domain to use country names
         xScale.domain(
@@ -50,7 +69,6 @@ function barChart() {
         .attr('class', 'x_axis')
         .attr('transform', 'translate(0,' + height + ')')
         .call(d3.axisBottom(xScale))
-
 
         // x axis bottom scale labels, rotate and adjusted
         g.selectAll('.tick text')
@@ -73,52 +91,113 @@ function barChart() {
             .tickSizeInner(-width) // sets tick lines to expand into grid lines
         )
         .attr('class', 'y_axis')
-        .append('text')
+        .append('text') // create text lbale for y axis
         .attr('class', 'yAxisTextLabel')
         .attr('y', 6)
         .attr('dx', '-' + (height / 2)+ 'px')
         .attr('dy', '-3em')
         .text('Country');
 
-    g.selectAll('.domain').attr('stroke', 'black');
-    g.selectAll('.tick line').attr('stroke', 'black');
-    
-
-    g.selectAll('.bar')
-        .data(dataByYear)
-        .enter()
-        .append('rect')
-        .attr('class', 'bar')
-        .attr('x', function (d) {
-           // console.log(d);
-            return xScale(d.Country);
-        })
-        .attr('y', function (d) {
-            return yScale(d.Number_of_Completed_Adoptions_to_US);
-        })
-        .attr('width', xScale.bandwidth())
-        .transition()
-        .duration(1500)
-        .attr('height', function (d) {
-            return height - yScale(d.Number_of_Completed_Adoptions_to_US);
-        })
-        .attr('fill', function (d, i) {
-         return 'black';
-        });
-    });;
+    // g.selectAll('.bar')
+    //     .data(dataByYear)
+    //     .enter()
+    //     .append('rect')
+    //     .attr('class', 'bar')
+        // .attr('x', function (d) {
+        //     return xScale(d.Country);
+        // })
+        // .attr('y', function (d) {
+        //     return yScale(d.Number_of_Completed_Adoptions_to_US);
+        // })
+        // .attr('width', xScale.bandwidth())
+        // .transition()
+        // .duration(1500)
+        // .attr('height', function (d) {
+        //     return height - yScale(d.Number_of_Completed_Adoptions_to_US);
+        // })
+        // .attr('fill', function (d, i) {
+        //  return 'black';
+        // });
 }
+
+// A function that create / update the plot for a given variable:
+function updateBarChart(adoptionData, year) {
+    let svg = d3.select("#barChartAdoptionsByYear");
+    let margin = 350;
+    let width = svg.attr('width') - margin;
+    let height = svg.attr('height') - margin;
+    console.log(width, height)
+
+    let xScale = d3.scaleBand().range([0, width]).padding(0.4);
+    let yScale = d3.scaleLinear().range([height, 0]);
+
+    console.log("adoptionData in update: ", adoptionData, year)
+    console.log("year in update:", year)
+    let data = processAdoptionsByYearData(adoptionData, year.toString());
+
+    // Create the u variable
+    var u = svg.selectAll("rect")
+    .data(data)
+
+    u
+    .enter()
+    .append("rect") // Add a new rect for each new elements
+    .merge(u) // get the already existing elements as well
+    .transition() // and apply changes to all of them
+    .duration(1000)
+        .attr("x", function(d) { return xScale(d.Country); })
+        .attr("y", function(d) { return yScale(d.Number_of_Completed_Adoptions_to_US); })
+        .attr("width", xScale.bandwidth())
+        .attr("height", function(d) { return height - yScale(d.Number_of_Completed_Adoptions_to_US); })
+        .attr("fill", "#69b3a2")
+
+
+    //     let g = d3.select("#barInner").selectAll('.bar');
+    //     g
+    //     .data(data)
+    //     .enter()
+    //     .append('rect')
+    //     .attr('class', 'bar')
+    //   .enter()
+    //   .append("rect")
+    //   .merge(g)
+    //   .transition()
+    //   .duration(1000)
+    //   .attr('x', function (d) {
+    //     return xScale(d.Country);
+    //     })
+    //     .attr('y', function (d) {
+    //         return yScale(d.Number_of_Completed_Adoptions_to_US);
+    //     })
+    //     .attr('width', xScale.bandwidth())
+    //     .transition()
+    //     .duration(1500)
+    //     .attr('height', function (d) {
+    //         return height - yScale(d.Number_of_Completed_Adoptions_to_US);
+    //     })
+    //     .attr("fill", "#69b3a2")
+  }
 
 function DataExploration1() {
     // track what step of react-scrollama
     const [currentStepIndex, setCurrentStepIndex] = useState(null);
+    const [adoptionData, setAdoptionData] = useState(null);
 
-    useEffect(()=>{
-        barChart();
+    useEffect(() => {
+        d3.csv(dataLocation).then(function (data) {
+            const dataGroupedByYear = d3.group(data, (d) => d.Year);
+            setAdoptionData(dataGroupedByYear);
+            barChart(dataGroupedByYear);
+            updateBarChart( dataGroupedByYear, "2001");
+            console.log("data: ", dataGroupedByYear);
+        })
     }, []);
 
     // scrollama event handlers
     function onStepEnter({ data }) {
-        setCurrentStepIndex(data);
+        console.log("adoptionData on step enter: ", adoptionData);
+        setCurrentStepIndex(data); 
+        updateBarChart( adoptionData, data < 3 ? (2001 + data) : (2002 + data));
     }
 
     return (
@@ -141,12 +220,10 @@ function DataExploration1() {
                     </div>
                 </div>
                 <div className="container">
-                    <svg width='1300' height='800' id='barChart'></svg>
-                </div>
-                <div className="container">
                     <div style={{ display: 'flex', flexDirection: 'column', margin: '50vh 0', border: '2px dashed skyblue' }}>
                         <div style={{ position: 'sticky', top: 0, border: '1px solid orchid' }}>
                             I'm sticky. The current triggered step index is: {currentStepIndex}
+                            <svg width='1300' height='800' id='barChartAdoptionsByYear'></svg>
                         </div>
                         <Scrollama offset={0.5} onStepEnter={onStepEnter} debug>
                             {[1, 2, 3, 4].map((_, stepIndex) => (
