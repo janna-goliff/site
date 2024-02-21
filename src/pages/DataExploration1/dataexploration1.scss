@@ -65,3 +65,23 @@ margin-bottom: 0;
     padding: 1rem;
     font-size: 1.5rem;
 }
+
+.x_axis {
+    .xAxisLabel {
+        fill: black;
+        font-size: 2em;
+        margin: 1em;
+    }
+}
+
+.y_axis {
+    .yAxisTextLabel {
+        fill: black;
+        font-size: 2em;
+        transform: rotate(-90deg);
+    }
+
+    .tick line {
+        stroke: rgba(0, 0, 0, .05);
+    }
+}
