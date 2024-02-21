@@ -44,7 +44,7 @@ class Expandable extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='expandable'>
         <img
           src={this.props.imgaddress}
           alt={this.props.description}

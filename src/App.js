@@ -21,6 +21,7 @@ import PennInTouchRedesign from "./pages/PennInTouchRedesign/PennInTouchRedesign
 import AppDesignClimbr from "./pages/AppDesignClimbr/AppDesignClimbr";
 import VRRoom from "./pages/VRRoom/VRRoom";
 import BeepboopUserFlow from "./pages/BeepboopUserFlow/BeepboopUserFlow";
+import DataExploration1 from "./pages/DataExploration1/DataExploration1";
 
 function App() {
   return (
@@ -70,6 +71,9 @@ function App() {
           </Route>
           <Route exact path="/site/engineering/futurepiproject">
             <FuturePiProject />
+          </Route>
+          <Route exact path="/site/engineering/dataexploration1">
+            <DataExploration1 />
           </Route>
           <Route exact path="/site/funstuff">
             <FunWork />
