@@ -99,11 +99,18 @@
         background: rgb(0,0,0);
         background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(52,0,0,1) 100%);
 
-        padding: 6em 30vw 4em 5em;
+        padding: 6em 5em 4em 5em;
         position: relative;
+
+        width: 100vw;
     }
 
     .essay_intro {
+        .essay_big_heading {
+            width: 70vw;
+            max-width: 800px;
+        }
+
         .essay_big_heading {
             .essay_big_quote {
                 color: white;
@@ -126,13 +133,15 @@
         .essay_body {
             color: white;
             padding: 4em 10em 4em 0;
+            width: 50vw;
+            max-width: 800px;
         } 
 
         .intro_picture_container {
             position: absolute;
 
             bottom: 0;
-            right: 0;
+            right: 13vw;
 
             display: flex;
             flex-direction: column;
@@ -143,6 +152,7 @@
         .intro_picture_container {
             .intro_image {
                 height: 600px;
+                width: fit-content;
             }
 
             .intro_image_caption {

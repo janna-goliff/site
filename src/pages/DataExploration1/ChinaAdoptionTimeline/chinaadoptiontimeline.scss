@@ -7,16 +7,21 @@
     .year {
         position: sticky;
         top: 0;
+        right: 0;
         display: flex;
         flex-direction: column;
+
+        color: white;
     }
 
     .yearTextContainer {
         display: flex;
         align-items: center;
     }
+    
     .yearInfoContainer {
         display: flex;
+        padding-top: 3em;
     }
 
     .yearTextContainer {
@@ -36,6 +41,7 @@
         color: white;
         padding: 0 0 0 2em;
         width: 30vw;
+        height: 5em;
     }
     
     .scrolly {
@@ -44,14 +50,36 @@
     }
 
     .stepContainer {
-        background-color: white;
+        background-color: rbga(255, 255, 255, .1);
         margin: 10vh 0;
-        border: 1px solid gray;
+        //border: 1px solid gray;
         height: 600px;
     }
 
     #dotChartChinaAdoptionsByYear {
         position: sticky;
         top: 0;
+    }
+
+    .full_image_spread {
+        padding: 0 0 5em;
+        width: 60vw;
+    }
+
+    .full_image_spread {
+        img {
+            width: 100%;
+        }
+
+        .caption {
+            color: white;
+            opacity: .5;
+
+            padding: 1em 0;
+        }
+
+        .caption_link {
+            padding-left: 1em;
+        }
     }
 }
