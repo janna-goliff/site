@@ -121,8 +121,13 @@ function getYearInfo(year) {
         "1995": "2,000+ children are adopted from China into the US, almost all infants or toddler girls.",
         "1997": "In the US, The Small Business and Job Protection Act of 1996 creates an adoption tax credit with a maximum amount of $5,000.",
         "2001": "The Economic Growth and Tax Relief Reconciliation Act of 2001 temporarily extended and expanded the adoption tax credit, doubling it from $5,000 to $10,000.",
+        "2002": "Adoptions from China into the US continue to boom.",
+        "2003": "Adoptions from China into the US continue to boom.",
+        "2004": "Adoptions from China into the US reach an all-time high.",
+        "2007": "Adoptions from China into the US begin to decline.",
+        "2010": "Adoptions from China into the US continue to decline.",
         "2015": "China's one-child limit was increased to allow two children, decreasing the pool of adoptable children.",
-        "2021": "China's one-child policy was relaxed even further to allow for three children."
+        "2021": "China's one-child policy was relaxed even further to allow for three children; 0 children are adopted into the US from China."
     }
     return yearCaptions[yearKey] ? yearCaptions[yearKey] : "";
 }
@@ -148,13 +153,19 @@ function renderNonSvgContent(year) {
     return isNonSvgYear !== undefined;
 }
 
+function getStepClass(index) {
+    if (index === 12) return "final_step";
+    if (index === 9 || index === 10) return "short_step";
+    if (index === 0 ) return "long_step";
+    return "";
+}
+
 function ChinaAdoptionTimeline() {
     // track what step of react-scrollama
     const [currentStepIndex, setCurrentStepIndex] = useState(0);
 
     useEffect(() => {
         createInitialDotChart();
-        // updateDotChart( 1988 );
     }, [])
 
     // scrollama event handlers
@@ -173,7 +184,7 @@ function ChinaAdoptionTimeline() {
                 <Scrollama offset={0.3} onStepEnter={onStepEnter}>
                     {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((_, stepIndex) => (
                     <Step data={stepIndex} key={stepIndex}>
-                        <div className="stepContainer">
+                        <div className={"stepContainer " + (getStepClass(stepIndex))}>
                             <div className="yearInfoContainer">
                                 <div className="yearTextContainer">
                                     <div className="yearLine"></div>
@@ -181,7 +192,7 @@ function ChinaAdoptionTimeline() {
                                 </div>
                                 <div className="yearInfo">{getYearInfo(calculateYear(stepIndex))}</div>
                             </div>
-                        I'm a Scrollama Step of index {stepIndex}
+                        {/* USE FOR DEBUG I'm a Scrollama Step of index {stepIndex} */}
                         {
                             renderNonSvgContent(calculateYear(stepIndex)) && 
                             getYearContent(calculateYear(stepIndex)) 
@@ -191,17 +202,15 @@ function ChinaAdoptionTimeline() {
                     ))}
                 </Scrollama>
             </div>
-            <div className="year">
-                {/* I'm sticky. The current triggered step index is: {currentStepIndex} */}
-                {/* <div className="yearInfoContainer">
-                    <div className="yearTextContainer">
-                        <div className="yearLine"></div>
-                        <div className="yearTextLabel">{calculateYear(currentStepIndex)}</div>
+            {(calculateYear(currentStepIndex) !== "1970s" && calculateYear(currentStepIndex) !== "1979") &&
+                <div className="year">
+                    <div className="key">
+                        <div className="dot"></div>
+                        <div>= 1 adopted child</div>
                     </div>
-                    <div className="yearInfo">{getYearInfo(calculateYear(currentStepIndex))}</div>
-                </div> */}
-                <svg width='600' height='1000' id='dotChartChinaAdoptionsByYear'></svg>
-            </div>
+                    <svg width='600' height='1000' id='dotChartChinaAdoptionsByYear'></svg>
+                </div>
+            }
         </div>
     );
 }
