@@ -1,7 +1,6 @@
 .chinaAdoptionTimelineContainer {
+    border-left: 2px dashed white;
     display: flex;
-    flex-direction: column;
-    border-left: 2px dashed skyblue;
 }
 
 .chinaAdoptionTimelineContainer {
@@ -12,10 +11,36 @@
         flex-direction: column;
     }
 
-    .yearTextLabel {
-        padding: 2em 0 0 100px;
-        font-weight: 600;
-        color: var(--mainContentColor)
+    .yearTextContainer {
+        display: flex;
+        align-items: center;
+    }
+    .yearInfoContainer {
+        display: flex;
+    }
+
+    .yearTextContainer {
+        .yearLine {
+            border-top: 2px dashed white;
+            width: 6em;
+        }
+
+        .yearTextLabel {
+            font-size: 2em;
+            font-weight: 600;
+            color: white;
+        }
+    }
+
+    .yearInfo {
+        color: white;
+        padding: 0 0 0 2em;
+        width: 30vw;
+    }
+    
+    .scrolly {
+        display: flex;
+        flex-direction: column;
     }
 
     .stepContainer {
@@ -23,5 +48,10 @@
         margin: 10vh 0;
         border: 1px solid gray;
         height: 600px;
+    }
+
+    #dotChartChinaAdoptionsByYear {
+        position: sticky;
+        top: 0;
     }
 }

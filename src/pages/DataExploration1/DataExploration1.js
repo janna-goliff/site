@@ -252,8 +252,13 @@ function DataExploration1() {
                         </div>
                     </div>
                 </div>
+                <div className="timeline_container">
+                    <div className="timeline">
+                        <ChinaAdoptionTimeline />
+                    </div>
+                </div>
                 <div className="container">
-                    <ChinaAdoptionTimeline />
+                    
                 </div>
                 <div className="container">
                     <div style={{ display: 'flex', flexDirection: 'column', margin: '50vh 0', border: '2px dashed skyblue' }}>

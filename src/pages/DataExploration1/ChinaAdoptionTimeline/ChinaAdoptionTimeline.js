@@ -91,8 +91,8 @@ function updateDotChart(year) {
         .attr('cx', function(d, i) {return circlePadding * (i % numberOfDotsInRow);})
         .attr('cy', function(d, i) {return circlePadding *  Math.floor(i / numberOfDotsInRow)}) //i < 11 0, i < 21 1, i < 31 2
         .attr('r', circleRadius)
-        .attr('fill', "black")
-        .style('stroke', 'black')
+        .attr('fill', "white")
+        .style('stroke', 'white')
     
     u.exit()
     .transition() // and apply changes to all of them
@@ -104,6 +104,16 @@ function updateDotChart(year) {
 function calculateYear(stepIndex) {
     const year = [1979, 1988, 1992, 1995, 1997, 2001, 2002, 2004, 2007, 2010, 2015, 2021][stepIndex]
     return year;
+}
+
+function getYearInfo(year) {
+    const yearKey = year.toString();
+    const yearCaptions = {
+        "1970s": "China releases large amounts of family-planning materials to encourage a lower birth rate.",
+        "1979": "China implements the one-child policy, mandating that couples only have one child or face a variety of different penalties.",
+        "1988": "Few records of children adopted from China to the US; at this point, the international adoption process is heavily regulated and difficult to navigate.\n\nChina soon makes the adoption process more accessible to foreigners, with the regulation that “only foreigners of Chinese heritage, non-Chinese foreigners with strong ties to the country, or long-term foreign residents of China were eligible to adopt”."
+    }
+    return yearCaptions[yearKey] ? yearCaptions[yearKey] : "";
 }
 
 function ChinaAdoptionTimeline() {
@@ -129,20 +139,28 @@ function ChinaAdoptionTimeline() {
         <div className="chinaAdoptionTimelineContainer">
             <div className="year">
                 {/* I'm sticky. The current triggered step index is: {currentStepIndex} */}
-                <div className="yearTextLabel">{calculateYear(currentStepIndex)}</div>
+                <div className="yearInfoContainer">
+                    <div className="yearTextContainer">
+                        <div className="yearLine"></div>
+                        <div className="yearTextLabel">{calculateYear(currentStepIndex)}</div>
+                    </div>
+                    <div className="yearInfo">{getYearInfo(calculateYear(currentStepIndex))}</div>
+                </div>
                 <svg width='600' height='1000' id='dotChartChinaAdoptionsByYear'></svg>
             </div>
-            <Scrollama offset={0.3} onStepEnter={onStepEnter}>
-                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((_, stepIndex) => (
-                <Step data={stepIndex} key={stepIndex}>
-                    
-                    <div className="stepContainer">
-                    I'm a Scrollama Step of index {stepIndex}
-                    {stepIndex === 1 ? "China one child policy" : ""}
-                    </div>
-                </Step>
-                ))}
-            </Scrollama>
+            <div className="scrolly">
+                <Scrollama offset={0.3} onStepEnter={onStepEnter}>
+                    {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((_, stepIndex) => (
+                    <Step data={stepIndex} key={stepIndex}>
+                        
+                        <div className="stepContainer">
+                        I'm a Scrollama Step of index {stepIndex}
+                        {stepIndex === 1 ? "China one child policy" : ""}
+                        </div>
+                    </Step>
+                    ))}
+                </Scrollama>
+            </div>
         </div>
     );
 }
