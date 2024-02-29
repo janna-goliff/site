@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/site/static/css/main.473e6457.css",
-    "main.js": "/site/static/js/main.43ed3229.js",
+    "main.css": "/site/static/css/main.8a34de14.css",
+    "main.js": "/site/static/js/main.ea636dce.js",
     "static/js/377.8a6a03c8.chunk.js": "/site/static/js/377.8a6a03c8.chunk.js",
     "static/media/timelapse-edited.mp4": "/site/static/media/timelapse-edited.77a9d56d1cf8a03035f1.mp4",
     "static/media/realtime-video.mp4": "/site/static/media/realtime-video.7f59d975545fb9a1625c.mp4",
@@ -45,6 +45,7 @@
     "static/media/journal-flip-1.png": "/site/static/media/journal-flip-1.f60011409ed875e7f916.png",
     "static/media/light-onn.png": "/site/static/media/light-onn.50051e2deacd6b4114bd.png",
     "static/media/phone-on.png": "/site/static/media/phone-on.1dd863149d9e8ec96913.png",
+    "static/media/janna_baby.png": "/site/static/media/janna_baby.9a9ac22bb28673e250d1.png",
     "static/media/phase1.png": "/site/static/media/phase1.44b371ba8ffe645d14e7.png",
     "static/media/mockup.png": "/site/static/media/mockup.c67c82e45a44a0df3d5b.png",
     "static/media/journey_map.png": "/site/static/media/journey_map.33a6dfcbd0eeb2c7e9b9.png",
@@ -112,6 +113,7 @@
     "static/media/phase3b.png": "/site/static/media/phase3b.eeeec295bc5d04e9e22a.png",
     "static/media/search-results-full.png": "/site/static/media/search-results-full.10cc9b126e80a52069dd.png",
     "static/media/orig_timeout.png": "/site/static/media/orig_timeout.65a01e589ee816bfeb44.png",
+    "static/media/familly_planning_70s.jpeg": "/site/static/media/familly_planning_70s.1bd24c893df23502d5c3.jpeg",
     "static/media/catalog_phase1a.png": "/site/static/media/catalog_phase1a.58c4c97feb64f3d58ff7.png",
     "static/media/orig-planning-mock.png": "/site/static/media/orig-planning-mock.74a138a13e0ad16ede40.png",
     "static/media/catalog_phase3a.png": "/site/static/media/catalog_phase3a.ebaec0f504dd88c2a8cc.png",
@@ -154,12 +156,12 @@
     "static/media/emptystate_bw.png": "/site/static/media/emptystate_bw.8296fddc59cf7549b68d.png",
     "static/media/exposition.png": "/site/static/media/exposition.0438a578e2fed95a83f1.png",
     "index.html": "/site/index.html",
-    "main.473e6457.css.map": "/site/static/css/main.473e6457.css.map",
-    "main.43ed3229.js.map": "/site/static/js/main.43ed3229.js.map",
+    "main.8a34de14.css.map": "/site/static/css/main.8a34de14.css.map",
+    "main.ea636dce.js.map": "/site/static/js/main.ea636dce.js.map",
     "377.8a6a03c8.chunk.js.map": "/site/static/js/377.8a6a03c8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.473e6457.css",
-    "static/js/main.43ed3229.js"
+    "static/css/main.8a34de14.css",
+    "static/js/main.ea636dce.js"
   ]
 }
