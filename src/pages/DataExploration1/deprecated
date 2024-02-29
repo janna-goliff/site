@@ -1,0 +1,118 @@
+import * as d3 from 'd3';
+
+// Number_of_Completed_Adoptions_to_US
+function intializeHorizontalBarChart(barChartId, year, data) {
+    let svg = d3.select(barChartId);
+
+    let margin = 50;
+    let width = svg.attr('width') - margin;
+    let height = svg.attr('height') - margin;
+
+    let xScale = d3.scaleBand().range([0, width]).padding(0.4);
+    let yScale = d3.scaleLinear().range([height, 0]);
+
+    // set x domain to use Year
+    xScale.domain(
+        data.map(function (d) {
+            return d.Year;
+        })
+    );
+
+    // set y domain to use range of 0 to max # of adoptions
+    yScale.domain([0, 10000]);
+    
+    // Get array of all unique country names
+    // const keys = d3.group(data, (d) => d.Country).keys();
+    // console.log("keys",[...keys]);
+    
+    const countryUniqueList = d3.union(data.map(d => d.Country));
+    console.log(countryUniqueList)
+    
+    const stackedData = d3.stack()
+    .keys(countryUniqueList) 
+    .value(
+        ([, group], key) => {
+            console.log(group, key)
+            return group.get(key).Number_of_Completed_Adoptions_to_US
+        }
+        
+      )
+    (d3.index(data, d => d.Year, d => d.Country));
+
+    //console.log("stacked Data", stackedData)
+    // color palette
+  var color = d3.scaleOrdinal()
+  .domain(d3.union(data.map(d => d.Country)))
+  .range(d3.schemeSet2);
+
+    // Add axes
+    // Add X axis
+  var x = d3.scaleLinear()
+  .domain(d3.extent(data, function(d) { return d.Year; }))
+  .range([ 0, width ]);
+var xAxis = svg.append("g")
+  .attr("transform", "translate(0," + height + ")")
+  .call(d3.axisBottom(x).ticks(5))
+
+// Add X axis label:
+svg.append("text")
+    .attr("text-anchor", "end")
+    .attr("x", width)
+    .attr("y", height+40 )
+    .text("Time (year)");
+
+// Add Y axis label:
+svg.append("text")
+    .attr("text-anchor", "end")
+    .attr("x", 0)
+    .attr("y", -20 )
+    .text("# of baby born")
+    .attr("text-anchor", "start")
+
+// Add Y axis
+var y = d3.scaleLinear()
+  .domain([0, 20000])
+  .range([ height, 0 ]);
+svg.append("g")
+  .call(d3.axisLeft(y).ticks(5))
+
+  // Create the scatter variable: where both the circles and the brush take place
+  var areaChart = svg.append('g')
+    .attr("clip-path", "url(#clip)")
+
+  // Area generator
+  var areaGenerator = d3.area()
+    .x(function(d, i) {  //Year
+        console.log(d, i)
+        console.log("*****x: ", (d[i].data[0]))
+        console.log("*****x scale: ", x(d[i].data[0]))
+        return x(d[i].data[0]);  })
+    .y0(function(d, i) { //Lower bound country
+        console.log("*****y0", y(d[i][0]))
+        return y(d[i][0]); })
+    .y1(function(d, i) { // Actual value
+        console.log("*****y1", y(d[i][1]))
+        return y(d[i][1]); })
+
+  // Show the areas
+  areaChart
+    .selectAll("mylayers")
+    .data(stackedData)
+    .enter()
+    .append("path")
+      .attr("class", function(d) { 
+        console.log("d.key", d.key)
+        return "myArea " + d.key })
+      .style("fill", 
+        "grey"
+        // function(d) {
+        
+        // return d.key === "China" ? "#d60f04" : "var(--mainContentColor"}
+        )
+      .attr("d", function(d) {
+        console.log("d inside attr: ", d)
+        console.log("returning", areaGenerator(stackedData))
+        return areaGenerator(stackedData)})
+
+    return {height, xScale, yScale, color};
+}

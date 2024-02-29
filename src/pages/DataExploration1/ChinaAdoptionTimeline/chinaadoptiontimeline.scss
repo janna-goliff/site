@@ -1,0 +1,27 @@
+.chinaAdoptionTimelineContainer {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px dashed skyblue;
+}
+
+.chinaAdoptionTimelineContainer {
+    .year {
+        position: sticky;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .yearTextLabel {
+        padding: 2em 0 0 100px;
+        font-weight: 600;
+        color: var(--mainContentColor)
+    }
+
+    .stepContainer {
+        background-color: white;
+        margin: 10vh 0;
+        border: 1px solid gray;
+        height: 600px;
+    }
+}

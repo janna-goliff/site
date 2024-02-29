@@ -4,6 +4,9 @@ import { Scrollama, Step } from 'react-scrollama';
 import Navbar from "../../components/Navbar/Navbar";
 import ColorChanger from "../../components/ColorChanger/ColorChanger";
 import "./dataexploration1.scss";
+import ChinaAdoptionTimeline from "./ChinaAdoptionTimeline/ChinaAdoptionTimeline";
+
+import janna_baby from "../../assets/dataexploration1/janna_baby.png";
 
 /**
  * Helpful tutorials:
@@ -12,10 +15,12 @@ import "./dataexploration1.scss";
 
 let dataLocation = 'https://raw.githubusercontent.com/janna-goliff/site/main/src/assets/intercountry_adoption_into_US_over_2001_2020.csv';
 
-//let dataLocation = 'https://raw.githubusercontent.com/janna-goliff/site/main/src/assets/placeholder.csv';
+// Used for debugging
+// let dataLocation = 'https://raw.githubusercontent.com/janna-goliff/site/main/src/assets/placeholder.csv';
 
 const translateX = 100;
 const translateY = 100;
+
 // controls how many countries are rendered in bar chart
 const numberOfCountries = 25;
 
@@ -42,6 +47,7 @@ function initializeBarChart(barChartId, year, data) {
     let xScale = d3.scaleBand().range([0, width]).padding(0.4);
     let yScale = d3.scaleLinear().range([height, 0]);
 
+    console.log("*******", year, "*********")
     let dataByYear = processAdoptionsByYearData(data, year);
 
     // set x domain to use country names
@@ -56,6 +62,8 @@ function initializeBarChart(barChartId, year, data) {
 
     return {height, width, xScale, yScale, dataByYear};
 }
+
+
 
 // add moving percentage horizontal bar chart?
 function createInitialBarChart(adoptionData) {
@@ -179,6 +187,16 @@ function DataExploration1() {
     const [currentStepIndex, setCurrentStepIndex] = useState(null);
     const [adoptionData, setAdoptionData] = useState(null);
 
+    function renderText(stepIndex) {
+        if (stepIndex === 0) {
+            return "China's One Child Policy"
+        }
+        if (stepIndex === 11) {
+            return "A diplomatic rift with the U.S. led to a ban of new American adoptions of Russian children as of 2013"
+        }
+        return "";
+    }
+
     useEffect(() => {
         d3.csv(dataLocation).then(function (data) {
             // format data into numbers
@@ -206,21 +224,36 @@ function DataExploration1() {
     return (
         <ColorChanger>
             <Navbar />
-            <div className="data_portaits">
+            <div className="adoption_timeline">
                 <div className="header_container">
                     <svg className="star_icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144"><rect x="67.2" width="9.6" height="144"/><rect x="67.2" width="9.6" height="144" transform="translate(-26.35 98.35) rotate(-60)"/><rect x="67.2" width="9.6" height="144" transform="translate(98.35 -26.35) rotate(60)"/><circle cx="72" cy="72" r="18.47"/></svg>
-                    <h1>Data exploration</h1>
+                    <h1>China's One-Child Policy: A Personal Visual Essay</h1>
                 </div>
                 <div className="container">
-                    <div className="main_text">
-                        Inspired by organizations like the Percentage Project, which leverage portraiture to humanize statistics about equity in computer science, I wanted to both experiment with image processing and create thought-provoking data visualizations. My data portraits project uses skimage to convert images to greyscale, create a mask of area to fill with a given color based on percentage thresholds, and then replace those areas on the original image. 
-                        <br />
-                        <br />
-                        Below, for example, is a portrait of Bernie Sanders with a 37% threshold, representative of the percent increase from the current federal contractor minimum wage ($10.95) to a $15 hourly wage.
-                        <br />
-                        <br />
-                        Explore the Github <a href="https://github.com/janna-goliff/dataartsite">here</a>.
+                    <div className="essay_intro">
+                        <div className="essay_big_heading">
+                            <h2 className="essay_big_quote">
+                                Cradled in the arms of an efficient law, the new Chinese export-the healthy, beautiful baby girl-is the reason why China has become the favorite surrogate nursery of the United States, if not the world.
+                            </h2>
+                            <div className="essay_attribution">
+                                Robert Gordon in “The New Chinese Export: Orphaned Children, an Overview of Adopting Children from China” Transnational Law 10, Spring 1997
+                            </div>
+                        </div>
+                        <div className="essay_body">
+                            China's “One-Child Policy” is one of the most extreme family planning measures ever implemented; its origins are deeply complex, but the effects in China and across the world are evident. In China, a strong cultural preference for male children over female children led to a sex ratio heavily skewed towards males, and an abundance of infant girls in orphanages. 
+                            <br /><br />
+                            I was adopted as an effect of this policy in 2001. In an effort to explore how visualizing the data related to China's one-child policy can bring about new interpretations of its meaning in my own life, I've created a scrollytelling visual essay discussing the historic and cultural contexts around it.
+                            <br /><br />
+                            The US Department of State already has detailed statistical tools that allow users to explore country-by-country yearly adoption data. Rather than recreate a tool that already exists, I wanted to explore how highlighting certain aspects of this data in new, interactive ways could inform a more personal understanding.
+                        </div>
+                        <div className="intro_picture_container">
+                            <img className="intro_image" src={janna_baby} alt="Picture of Janna" />
+                            <div className="intro_image_caption">The photo my parents received before adopting me</div>
+                        </div>
                     </div>
+                </div>
+                <div className="container">
+                    <ChinaAdoptionTimeline />
                 </div>
                 <div className="container">
                     <div style={{ display: 'flex', flexDirection: 'column', margin: '50vh 0', border: '2px dashed skyblue' }}>
@@ -229,22 +262,28 @@ function DataExploration1() {
                             Year is: { currentStepIndex < 3 ? (2001 + currentStepIndex) : (2002 + currentStepIndex) }
                             <svg width='1300' height='600' id='barChartAdoptionsByYear'></svg>
                         </div>
-                        <Scrollama offset={0.3} onStepEnter={onStepEnter} debug>
-                            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19].map((_, stepIndex) => (
+                        <Scrollama offset={0.3} onStepEnter={onStepEnter}>
+                            {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18].map((_, stepIndex) => (
                             <Step data={stepIndex} key={stepIndex}>
-                                <div
-                                style={{
-                                    margin: '30vh 0',
-                                    border: '1px solid gray',
-                                    opacity: currentStepIndex === stepIndex ? 1 : 0.2,
-                                    padding: '10em'
-                                }}
-                                >
+                                
+                                <div className="adoptionChartStepContainer">
                                 I'm a Scrollama Step of index {stepIndex}
+                                { renderText(stepIndex) }
+                                {stepIndex === 1 ? "China one child policy" : ""}
                                 </div>
                             </Step>
                             ))}
                         </Scrollama>
+                    </div>
+                </div>
+                <div className="container">
+                    <div style={{ display: 'flex', flexDirection: 'column', margin: '50vh 0', border: '2px dashed skyblue' }}>
+                        <div style={{ position: 'relative', top: 0, border: '1px solid orchid' }}>
+                            {/* I'm sticky. The current triggered step index is: {currentStepIndex} */}
+                            Year is: { currentStepIndex < 3 ? (2001 + currentStepIndex) : (2002 + currentStepIndex) }
+                            <svg width='1300' height='300' id='horizontalBarChartAdoptionsByYear'></svg>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
