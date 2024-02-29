@@ -1,0 +1,58 @@
+.allCountriesAdoptions {
+    background-color: black;
+}
+
+.allCountriesAdoptions {
+    .step {
+        margin: 0 auto 2rem auto;
+        background-color: #3b3b3b;
+        color: #fff;
+    }
+    
+    .step:last-child {
+        margin-bottom: 0;
+    }
+    
+    .step.is-active {
+            background-color: goldenrod;
+            color: #3b3b3b;
+    }
+    
+    .step p {
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .adoptionChartStepContainer {
+        margin: 30vh 0;
+        border: 1px solid gray;
+        padding: 10em;
+    }
+    
+    #barChartAdoptionsByYear {
+        transform: translateX(-100px);
+    }
+
+    #barChartAdoptionsByYear {
+        .x_axis {
+            .xAxisLabel {
+                fill: white;
+                font-size: 2em;
+                margin: 1em;
+            }
+        }
+        
+        .y_axis {
+            .yAxisTextLabel {
+                fill: white;
+                font-size: 2em;
+                transform: rotate(-90deg);
+            }
+        
+            .tick line {
+                stroke: rgba(255, 255, 255, .1);
+            }
+        }
+    }
+}

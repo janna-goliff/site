@@ -1,100 +1,4 @@
-.adoption_timeline {
-    #scrolly {
-        position: relative;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        background-color: #f3f3f3;
-        padding: 1rem;
-    }
-    
-    #scrolly > * {
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-    }
-    
-    article {
-        position: relative;
-        padding: 0 1rem;
-        max-width: 20rem;
-    }
-    
-    figure {
-        position: -webkit-sticky;
-        position: sticky;
-        width: 100%;
-        margin: 0;
-        -webkit-transform: translate3d(0, 0, 0);
-        -moz-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        background-color: #8a8a8a;
-        z-index: 0;
-    }
-    
-    figure p {
-        text-align: center;
-        padding: 1rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -moz-transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        font-size: 8rem;
-        font-weight: 900;
-        color: #fff;
-    }
-    
-    .step {
-        margin: 0 auto 2rem auto;
-        background-color: #3b3b3b;
-        color: #fff;
-    }
-    
-    .step:last-child {
-        margin-bottom: 0;
-    }
-    
-    .step.is-active {
-            background-color: goldenrod;
-            color: #3b3b3b;
-    }
-    
-    .step p {
-        text-align: center;
-        padding: 1rem;
-        font-size: 1.5rem;
-    }
-    
-    .adoptionChartStepContainer {
-        margin: 30vh 0;
-        border: 1px solid gray;
-        padding: 10em;
-    }
-    
-    #barChartAdoptionsByYear {
-        .x_axis {
-            .xAxisLabel {
-                fill: black;
-                font-size: 2em;
-                margin: 1em;
-            }
-        }
-        
-        .y_axis {
-            .yAxisTextLabel {
-                fill: black;
-                font-size: 2em;
-                transform: rotate(-90deg);
-            }
-        
-            .tick line {
-                stroke: rgba(0, 0, 0, .05);
-            }
-        }
-    }
-    
+.adoption_timeline { 
     .essay_intro {
         background: rgb(0,0,0);
         background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(52,0,0,1) 100%);
@@ -168,6 +72,25 @@
         background-color: black;
         padding: 5em;
         width: 100%;
+    }
+
+    .essay_transition_quote_container {
+        background-color: black;
+        color: white;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2.75em;
+
+        font-style: italic;
+        font-weight: 300;
+
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .essay_transition_quote {
+        max-width: 800px;
     }
 }
 

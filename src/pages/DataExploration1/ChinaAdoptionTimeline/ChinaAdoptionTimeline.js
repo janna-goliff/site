@@ -66,7 +66,7 @@ function createInitialDotChart(year) {
         .data(data)
         .enter().append("circle")
         .attr('cx', function(d, i) {return circlePadding * (i % numberOfDotsInRow);})
-        .attr('cy', function(d, i) {return circlePadding *  Math.floor(i / numberOfDotsInRow)}) //i < 11 0, i < 21 1, i < 31 2
+        .attr('cy', function(d, i) {return circlePadding *  Math.floor(i / numberOfDotsInRow)})
         .attr('r', circleRadius)
         .attr('fill', "black")
         .style('stroke', 'black');
