@@ -1,4 +1,65 @@
 .adoption_timeline { 
+    .main_text {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+
+        margin: 5em 0 10em 0;
+        width: 100vw;
+    }
+
+    .main_text > div {
+        margin: 30px 60px;
+        width: 50%;
+    }
+
+    .main_text .what_is_container {
+        .title {
+            color: var(--mainContentColor);
+        }
+    }
+
+    .main_text .project_info_card {
+        background-color: var(--mainContentColor);
+        border: 2px dashed var(--tan1Alt);
+        border-radius: 20px;
+        color: white;
+
+        padding: 30px 30px;
+
+        display: grid;
+        grid-template-columns: 50% 50%;
+        column-gap: 10px;
+        row-gap: 25px;
+    }
+
+    .main_text .project_info_card {
+        .title {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .decor {
+            font-weight: 500;
+        }
+
+        .project_info {
+            display: flex;
+            flex-direction: column;
+            font-size: 16px;
+        }
+
+        .project_info {
+            .subtitle {
+                margin-bottom: 10px;
+            }
+
+            .content {
+                font-weight: 700;
+            }
+        }
+    }
+
     .essay_intro {
         background: rgb(0,0,0);
         background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(52,0,0,1) 100%);

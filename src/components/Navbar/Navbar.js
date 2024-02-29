@@ -22,6 +22,7 @@ function Navbar() {
                         <div className="underline" />
                     </div>
                     <div id='dropdownContent2'>
+                        <Link to='/site/engineering/dataexploration1'>D3 Visual Essay</Link>
                         <Link to='/site/webdev/beepboop'>Beepboop Mobile-First Redesign</Link>
                         <Link to='/site/engineering/futurepiproject'>2050: an Earth Odyssey</Link>
                         {/* <Link to='/site/webdev/dataportraits'>Data portraits</Link> */}

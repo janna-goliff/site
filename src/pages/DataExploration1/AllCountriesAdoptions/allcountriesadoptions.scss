@@ -1,8 +1,24 @@
 .allCountriesAdoptions {
     background-color: black;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .allCountriesAdoptions {
+    .yearLabel {
+        position: sticky;
+        top: 0;
+        
+        display: flex;
+        flex-direction: column;
+        color: white;
+    }
+
+    .yearLabelText {
+        padding: 2em 0 0 5em;
+    }
+
     .step {
         margin: 0 auto 2rem auto;
         background-color: #3b3b3b;
@@ -14,8 +30,8 @@
     }
     
     .step.is-active {
-            background-color: goldenrod;
-            color: #3b3b3b;
+        background-color: goldenrod;
+        color: #3b3b3b;
     }
     
     .step p {
@@ -26,12 +42,9 @@
     
     .adoptionChartStepContainer {
         margin: 30vh 0;
-        border: 1px solid gray;
+        // USE FOR DEBUG
+        // border: 1px solid gray;
         padding: 10em;
-    }
-    
-    #barChartAdoptionsByYear {
-        transform: translateX(-100px);
     }
 
     #barChartAdoptionsByYear {

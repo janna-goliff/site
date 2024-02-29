@@ -121,7 +121,7 @@ function updateBarChart(adoptionData, year) {
 
     d3.select(".x_axis").transition().duration(1000).call(d3.axisBottom(xScale))
     .selectAll('.tick text')
-    .attr('fill', 'white')
+    .attr('fill', 'rgba(255, 255, 255)')
     .attr('text-anchor', 'end')
     .attr('dx', '-1em')
     .attr('dy', '-.5em')
@@ -174,7 +174,7 @@ function updateBarChart(adoptionData, year) {
         .attr('transform', 'translate(' + translateX + ',' + translateY + ')')
         .attr("fill", function(d) {
             return d.Country === "China" ? "rgba(163, 35, 0, .5)" : "rgba(0, 0, 0, 0)"})
-        .attr("stroke", "white")
+        .attr("stroke", "rgba(255, 255, 255, .75)")
         .attr("class", ".bar");
   }
 
@@ -219,37 +219,19 @@ function AllCountriesAdoptions() {
 
     return (
         <div className="allCountriesAdoptions">
-           <div className="container">
-                    <div style={{ display: 'flex', flexDirection: 'column', margin: '50vh 0', border: '2px dashed skyblue' }}>
-                        <div style={{ position: 'sticky', top: 0, border: '1px solid orchid' }}>
-                            {/* I'm sticky. The current triggered step index is: {currentStepIndex} */}
-                            Year is: { currentStepIndex < 3 ? (2001 + currentStepIndex) : (2002 + currentStepIndex) }
-                            <svg width='1300' height='600' id='barChartAdoptionsByYear'></svg>
-                        </div>
-                        <Scrollama offset={0.3} onStepEnter={onStepEnter}>
-                            {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18].map((_, stepIndex) => (
-                            <Step data={stepIndex} key={stepIndex}>
-                                
-                                <div className="adoptionChartStepContainer">
-                                I'm a Scrollama Step of index {stepIndex}
-                                { renderText(stepIndex) }
-                                {stepIndex === 1 ? "China one child policy" : ""}
-                                </div>
-                            </Step>
-                            ))}
-                        </Scrollama>
+            <div className="yearLabel">
+                {/* I'm sticky. The current triggered step index is: {currentStepIndex} */}
+                <div className="yearLabelText">Year is: { currentStepIndex < 3 ? (2001 + currentStepIndex) : (2002 + currentStepIndex) }</div>
+                <svg width='1300' height='600' id='barChartAdoptionsByYear'></svg>
+            </div>
+            <Scrollama offset={0.3} onStepEnter={onStepEnter}>
+                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18].map((_, stepIndex) => (
+                <Step data={stepIndex} key={stepIndex}>
+                    <div className="adoptionChartStepContainer">
                     </div>
-                </div>
-                <div className="container">
-                    <div style={{ display: 'flex', flexDirection: 'column', margin: '50vh 0', border: '2px dashed skyblue' }}>
-                        <div style={{ position: 'relative', top: 0, border: '1px solid orchid' }}>
-                            {/* I'm sticky. The current triggered step index is: {currentStepIndex} */}
-                            Year is: { currentStepIndex < 3 ? (2001 + currentStepIndex) : (2002 + currentStepIndex) }
-                            <svg width='1300' height='300' id='horizontalBarChartAdoptionsByYear'></svg>
-                        </div>
-                        
-                    </div>
-                </div>
+                </Step>
+                ))}
+            </Scrollama>
         </div>
     );
 }

@@ -20,6 +20,37 @@ function DataExploration1() {
                     <svg className="star_icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144"><rect x="67.2" width="9.6" height="144"/><rect x="67.2" width="9.6" height="144" transform="translate(-26.35 98.35) rotate(-60)"/><rect x="67.2" width="9.6" height="144" transform="translate(98.35 -26.35) rotate(60)"/><circle cx="72" cy="72" r="18.47"/></svg>
                     <h1>China's One-Child Policy: A Personal Visual Essay</h1>
                 </div>
+                <div className="main_text">
+                        <div className="what_is_container">
+                            <h1 className="title">About the Project</h1>
+                            <div>
+                                As a personal project in exploring "scrollytelling" and how interactive visualizations can inform our understandings of statistics over time, I created this D3 visual essay about US foreign adoptions from China.
+                                <br />
+                                <br />
+                                I challenged myself to integrate different types of visualizations.
+                            </div>
+                        </div>
+                        <div className="project_info_card">
+                            <div className="title">Project Info</div>
+                            <div className="decor"></div>
+                            <div className="project_info">
+                                <div className="subtitle">Goal</div>
+                                <div className="content">Explore D3 as a storytelling medium</div>
+                            </div>
+                            <div className="project_info">
+                                <div className="subtitle">Timeline</div>
+                                <div className="content">1 week</div>
+                            </div>
+                            <div className="project_info">
+                                <div className="subtitle">Tools Used</div>
+                                <div className="content">Javascript (D3, React), Figma</div>
+                            </div>
+                            <div className="project_info">
+                                <div className="subtitle">Final Product</div>
+                                <div className="content">Interactive visual essay</div>
+                            </div>
+                        </div>
+                    </div>
                 <div className="container">
                     <div className="essay_intro">
                         <div className="essay_big_heading">
@@ -35,7 +66,8 @@ function DataExploration1() {
                             <br /><br />
                             I was adopted as an effect of this policy in 2001. In an effort to explore how visualizing the data related to China's one-child policy can bring about new interpretations of its meaning in my own life, I've created a scrollytelling visual essay discussing the historic and cultural contexts around it.
                             <br /><br />
-                            The US Department of State already has detailed statistical tools that allow users to explore country-by-country yearly adoption data. Rather than recreate a tool that already exists, I wanted to explore how highlighting certain aspects of this data in new, interactive ways could inform a more personal understanding.
+                            The US Department of State already has <a href="https://travel.state.gov/content/travel/en/Intercountry-Adoption/adopt_ref/adoption-statistics-esri.html?wcmmode=disabled" className="link" target="_blank" rel="noopener noreferrer">detailed statistical tools</a> that allow users to explore country-by-country yearly adoption data. Rather than recreate a tool that already exists, I wanted to explore how highlighting certain aspects of this data in new, interactive ways could inform a more personal understanding.
+                            My sources come from the US Department of State and <a href="https://www.hcch.net/en/publications-and-studies/details4/?pid=6775&dtid=32" className="link" target="_blank" rel="noopener noreferrer">the HCCH</a>.
                         </div>
                         <div className="intro_picture_container">
                             <img className="intro_image" src={janna_baby} alt="Picture of Janna" />
